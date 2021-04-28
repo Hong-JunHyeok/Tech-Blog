@@ -18,6 +18,7 @@
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-remark": "^4.1.0",
     "github-markdown-css": "^4.0.0",
+    "highlight.js": "^10.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.2.3"

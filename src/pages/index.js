@@ -1,16 +1,20 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Common/Layout"
 import Banner from "../components/Main/Banner/Banner"
 import PostItem from "../components/Main/PostItem/PostItem"
 import PostList from "../components/Main/PostList/PostList"
+import "github-markdown-css"
 
 export default function Home({ data }) {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => (
-    <Link to={node.fields.slug} style={{
-      textDecoration : 'none',
-      color: 'inherit'
-    }}>
+    <Link
+      to={node.fields.slug}
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+      }}
+    >
       <PostItem
         title={node.frontmatter.title}
         desc={node.frontmatter.desc}
