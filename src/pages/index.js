@@ -36,7 +36,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
-    allMarkdownRemark(sort: { fields: id, order: ASC }) {
+    allMarkdownRemark(sort: { fields: frontmatter___createdAt, order: DESC }) {
       edges {
         node {
           frontmatter {
