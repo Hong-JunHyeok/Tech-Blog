@@ -5,6 +5,7 @@ import styled from "styled-components"
 import * as sizes from "../styles/sizes.json"
 import * as colors from "../styles/colors.json"
 import TimeCounting from "time-counting"
+import DEFAULT from "../assets/image/default_profile.svg"
 import "highlight.js/styles/github.css"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 deckDeckGoHighlightElement()
@@ -16,23 +17,26 @@ export default function BlogPost({ data }) {
       <PageTemplate>
         <Header>
           <div className="info">
-            <h1>{post.frontmatter.title}</h1>
-            <img src={post.frontmatter.profile} alt="" />
+            <h1>{post.frontmatter.title || "제목이 입력되지 않았습니다."}</h1>
+            <img src={post.frontmatter.profile || DEFAULT} alt="" />
           </div>
           <div className="meta">
             <Name>{post.frontmatter.name}</Name>
             <CreatedAt>
-              {TimeCounting(post.frontmatter.createdAt, {
-                lang: "ko",
-                calculate: "day",
-              })}
+              {post.frontmatter.createdAt
+                ? TimeCounting(post.frontmatter.createdAt, {
+                    lang: "ko",
+                    calculate: "day",
+                  })
+                : "언제 작성했는지 입력해주세요"}
             </CreatedAt>
           </div>
         </Header>
-        <div
+        {post.html ? <div
           className="markdown-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        /> : "내용을 입력해주세요"}
+        
       </PageTemplate>
     </Layout>
   )

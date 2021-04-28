@@ -10,7 +10,7 @@ export default function PostItem({ title, desc, createdAt, name, profile }) {
   return (
     <Container>
       <Header>
-        <h1>{title}</h1>
+        <h1>{title || "제목이 입력되지 않았습니다."}</h1>
         <img src={profile || DEFAULT} alt="" />
       </Header>
       <Description>
