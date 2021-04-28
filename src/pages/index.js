@@ -5,6 +5,8 @@ import Banner from "../components/Main/Banner/Banner"
 import PostItem from "../components/Main/PostItem/PostItem"
 import PostList from "../components/Main/PostList/PostList"
 import "github-markdown-css"
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
 
 export default function Home({ data }) {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => (
