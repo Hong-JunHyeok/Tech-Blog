@@ -3,24 +3,29 @@ import styled from "styled-components"
 import DEFAULT from "../../../assets/image/default_profile.svg"
 import * as colors from "../../../styles/colors.json"
 import * as sizes from "../../../styles/sizes.json"
-import TimeCounting from 'time-counting'
+import TimeCounting from "time-counting"
 
 export default function PostItem({ title, desc, createdAt, name, profile }) {
+  console.log(title, desc, createdAt, name, profile)
   return (
     <Container>
       <Header>
         <h1>{title}</h1>
-        <img src={profile} alt="" />
+        <img src={profile || DEFAULT} alt="" />
       </Header>
-      <Description>{desc}</Description>
+      <Description>
+        {desc || "이 포스트의 요약이 입력되지 않았습니다."}
+      </Description>
       <Meta>
         <span className="createdAt">
-          {TimeCounting(createdAt, {
-            lang: "ko",
-            calculate: "day",
-          })}
+          {createdAt
+            ? TimeCounting(createdAt, {
+                lang: "ko",
+                calculate: "day",
+              })
+            : "언제 작성했는지 입력해주세요"}
         </span>
-        <span className="name">{name}</span>
+        <span className="name">{name || "이름을 입력해주세요"}</span>
       </Meta>
     </Container>
   )
@@ -42,6 +47,7 @@ const Header = styled.div`
   }
   img {
     width: 68px;
+    height: 68px;
     border-radius: 50%;
   }
 `
@@ -67,9 +73,9 @@ const Meta = styled.div`
 `
 
 PostItem.defaultProps = {
-  title: "기본 제목입니다.",
-  desc: "이 포스트의 기본 요약본입니다.",
-  createdAt: "2021-04-28",
-  name: "홍길동",
+  title: "제목이 입력되지 않았습니다.",
+  desc: "이 포스트의 요약이 입력되지 않았습니다.",
+  createdAt: "언제 작성했는지 입력해주세요",
+  name: "이름이 없습니다.",
   profile: DEFAULT,
 }
