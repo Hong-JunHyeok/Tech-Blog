@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import * as colors from "../../../styles/colors.json"
 import * as sizes from "../../../styles/sizes.json"
@@ -9,7 +10,11 @@ export default function Layout({ children }) {
       <Header>
         <HeaderContainer>
           <TitleContainer>
-            <h1>DEVLOG</h1>
+            <Link to="/" style={{
+              textDecoration : 'none'
+            }}>
+              <h1>DEVLOG</h1>
+            </Link>
           </TitleContainer>
         </HeaderContainer>
       </Header>
