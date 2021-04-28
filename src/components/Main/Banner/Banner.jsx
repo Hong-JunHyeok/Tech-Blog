@@ -39,7 +39,13 @@ const BannerContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media(max-width : 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
+
 const BannerContent = styled.div`
   max-width: ${sizes.large_width}px;
   margin: 0 auto;
