@@ -14,7 +14,13 @@ export default function Banner() {
             <br />
             <Special>DEVLOG</Special>에 기여해주세요!
           </p>
-          <button>기여하기</button>
+          <button
+            onClick={() => {
+              window.open("https://github.com/Hong-JunHyeok/Tech-Blog","_blank");
+            }}
+          >
+            기여하기
+          </button>
         </BannerContent>
       </BannerContainer>
     </BannerDiv>
@@ -22,9 +28,9 @@ export default function Banner() {
 }
 
 const Special = styled.span`
-    font-weight: bold;
-    font-size: 28px;
-`;
+  font-weight: bold;
+  font-size: 28px;
+`
 
 const BannerDiv = styled.section`
   width: 100%;
@@ -39,7 +45,7 @@ const BannerContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @media(max-width : 768px) {
+  @media (max-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
