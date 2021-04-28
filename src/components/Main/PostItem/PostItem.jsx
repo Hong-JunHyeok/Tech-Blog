@@ -36,6 +36,7 @@ const Header = styled.div`
   }
   img {
     width: 68px;
+    border-radius: 50%;
   }
 `
 
