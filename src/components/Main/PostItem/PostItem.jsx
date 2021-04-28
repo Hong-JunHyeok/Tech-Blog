@@ -3,6 +3,7 @@ import styled from "styled-components"
 import DEFAULT from "../../../assets/image/default_profile.svg"
 import * as colors from "../../../styles/colors.json"
 import * as sizes from "../../../styles/sizes.json"
+import TimeCounting from 'time-counting'
 
 export default function PostItem({ title, desc, createdAt, name, profile }) {
   return (
@@ -13,7 +14,12 @@ export default function PostItem({ title, desc, createdAt, name, profile }) {
       </Header>
       <Description>{desc}</Description>
       <Meta>
-        <span className="createdAt">{createdAt}</span>
+        <span className="createdAt">
+          {TimeCounting(createdAt, {
+            lang: "ko",
+            calculate: "day",
+          })}
+        </span>
         <span className="name">{name}</span>
       </Meta>
     </Container>

@@ -5,8 +5,6 @@ import Banner from "../components/Main/Banner/Banner"
 import PostItem from "../components/Main/PostItem/PostItem"
 import PostList from "../components/Main/PostList/PostList"
 import "github-markdown-css"
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-deckDeckGoHighlightElement();
 
 export default function Home({ data }) {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => (
@@ -21,6 +19,8 @@ export default function Home({ data }) {
         title={node.frontmatter.title}
         desc={node.frontmatter.desc}
         profile={node.frontmatter.profile}
+        name={node.frontmatter.name}
+        createdAt={node.frontmatter.createdAt}
         key={node.id}
       />
     </Link>
@@ -43,6 +43,8 @@ export const query = graphql`
             profile
             title
             desc
+            createdAt
+            name
           }
           id
           fields {
