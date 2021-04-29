@@ -1,12 +1,7 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  pathPrefix: "/Tech-Blog",
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -29,8 +24,4 @@ module.exports = {
       },
     },
   ],
-}
-
-module.exports = {
-  pathPrefix: "reponame",
 }
