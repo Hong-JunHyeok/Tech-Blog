@@ -28,6 +28,9 @@ const Header = styled.header`
   width: 100%;
   height: 60px;
   border-bottom: 1px solid ${colors.light_gray};
+  position: fixed;
+  background-color: white;
+  z-index : 10000;
 `
 const HeaderContainer = styled.div`
   max-width: ${sizes.large_width}px;
@@ -56,6 +59,7 @@ const ContentDiv = styled.article`
   /* max-width: ${sizes.large_width}px;
   margin: 0 auto; */
   min-height: 80vh;
+  padding-top: 60px;
 `
 
 const Footer = styled.footer`
