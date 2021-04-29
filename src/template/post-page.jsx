@@ -12,6 +12,7 @@ deckDeckGoHighlightElement()
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
+  console.log(post.frontmatter.createdAt)
   return (
     <Layout>
       <PageTemplate>
@@ -23,11 +24,7 @@ export default function BlogPost({ data }) {
           <div className="meta">
             <Name>{post.frontmatter.name}</Name>
             <CreatedAt>
-              {post.frontmatter.createdAt
-                ? TimeCounting(post.frontmatter.createdAt, {
-                    lang: "ko",
-                  })
-                : "언제 작성했는지 입력해주세요"}
+              {post.frontmatter.createdAt || "언제 작성했는지 입력해주세요"}
             </CreatedAt>
           </div>
         </Header>

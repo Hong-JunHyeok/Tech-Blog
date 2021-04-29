@@ -1,7 +1,7 @@
 ---
 title : 개츠비란 무엇인가?
 name : 홍준혁
-createdAt: 2021-04-29 08:41:00
+createdAt: 2021년 4월 29일
 profile: "https://avatars.githubusercontent.com/u/48292190?v=4"
 desc : Gatsby로 정적웹사이트를 만드는 방법을 알아보도록 합시다!
 ---

@@ -17,12 +17,7 @@ export default function PostItem({ title, desc, createdAt, name, profile }) {
       </Description>
       <Meta>
         <span className="createdAt">
-          {createdAt
-            ? TimeCounting(createdAt, {
-                lang: "ko",
-                calculate: "day",
-              })
-            : "언제 작성했는지 입력해주세요"}
+          {createdAt || "언제 작성했는지 입력해주세요"}
         </span>
         <span className="name">{name || "이름을 입력해주세요"}</span>
       </Meta>

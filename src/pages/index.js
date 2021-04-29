@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Common/Layout"
 import Banner from "../components/Main/Banner/Banner"
@@ -14,6 +14,7 @@ export default function Home({ data }) {
         textDecoration: "none",
         color: "inherit",
       }}
+      key={node.id}
     >
       <PostItem
         title={node.frontmatter.title}
@@ -21,7 +22,6 @@ export default function Home({ data }) {
         profile={node.frontmatter.profile}
         name={node.frontmatter.name}
         createdAt={node.frontmatter.createdAt}
-        key={node.id}
       />
     </Link>
   ))
