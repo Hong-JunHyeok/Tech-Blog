@@ -26,17 +26,19 @@ export default function BlogPost({ data }) {
               {post.frontmatter.createdAt
                 ? TimeCounting(post.frontmatter.createdAt, {
                     lang: "ko",
-                    calculate: "day",
                   })
                 : "언제 작성했는지 입력해주세요"}
             </CreatedAt>
           </div>
         </Header>
-        {post.html ? <div
-          className="markdown-body"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        /> : "내용을 입력해주세요"}
-        
+        {post.html ? (
+          <div
+            className="markdown-body"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        ) : (
+          "내용을 입력해주세요"
+        )}
       </PageTemplate>
     </Layout>
   )
