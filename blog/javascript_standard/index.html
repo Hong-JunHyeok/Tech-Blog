@@ -1,0 +1,1253 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/Tech-Blog/styles.984b861128ea69ac6677.css" id="gatsby-global-css">@font-face{font-family:Noto Sans KR;src:url(/Tech-Blog/static/NotoSansKR-Bold-29abf35d525346faa333575d2fdc90c8.otf)}@font-face{font-family:Noto Sans KR;src:url(/Tech-Blog/static/NotoSansKR-Light-7bad2c5773f7229b193149e1db41b884.otf)}@font-face{font-family:Noto Sans KR;src:url(/Tech-Blog/static/NotoSansKR-Regular-457762eaaf7bb2aa28936d961835b922.otf)}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:Noto Sans KR}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.markdown-body .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1:hover .anchor .octicon-link:before,.markdown-body h2:hover .anchor .octicon-link:before,.markdown-body h3:hover .anchor .octicon-link:before,.markdown-body h4:hover .anchor .octicon-link:before,.markdown-body h5:hover .anchor .octicon-link:before,.markdown-body h6:hover .anchor .octicon-link:before{width:16px;height:16px;content:" ";display:inline-block;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'/%3E%3C/svg%3E")}.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body details{display:block}.markdown-body summary{display:list-item}.markdown-body a{background-color:initial}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body strong{font-weight:inherit;font-weight:bolder}.markdown-body h1{margin:.67em 0}.markdown-body img{border-style:none}.markdown-body code,.markdown-body kbd,.markdown-body pre{font-family:monospace,monospace;font-size:1em}.markdown-body hr{box-sizing:initial;overflow:visible}.markdown-body input{font:inherit;margin:0;overflow:visible}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body input{font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body a{color:#0366d6;text-decoration:none}.markdown-body a:hover{text-decoration:underline}.markdown-body strong{font-weight:600}.markdown-body hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border-bottom:1px solid #dfe2e5}.markdown-body hr:after,.markdown-body hr:before{display:table;content:""}.markdown-body hr:after{clear:both}.markdown-body table{border-spacing:0;border-collapse:collapse}.markdown-body td,.markdown-body th{padding:0}.markdown-body details summary{cursor:pointer}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:0;margin-bottom:0}.markdown-body h1{font-size:32px}.markdown-body h1,.markdown-body h2{font-weight:600}.markdown-body h2{font-size:24px}.markdown-body h3{font-size:20px}.markdown-body h3,.markdown-body h4{font-weight:600}.markdown-body h4{font-size:16px}.markdown-body h5{font-size:14px}.markdown-body h5,.markdown-body h6{font-weight:600}.markdown-body h6{font-size:12px}.markdown-body p{margin-top:0;margin-bottom:10px}.markdown-body blockquote{margin:0}.markdown-body ol,.markdown-body ul{padding-left:0;margin-top:0;margin-bottom:0}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body dd{margin-left:0}.markdown-body code,.markdown-body pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}.markdown-body pre{margin-top:0;margin-bottom:0}.markdown-body input::-webkit-inner-spin-button,.markdown-body input::-webkit-outer-spin-button{margin:0;-webkit-appearance:none;appearance:none}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .border{border:1px solid #e1e4e8!important}.markdown-body .border-0{border:0!important}.markdown-body .border-bottom{border-bottom:1px solid #e1e4e8!important}.markdown-body .rounded-1{border-radius:3px!important}.markdown-body .bg-white{background-color:#fff!important}.markdown-body .bg-gray-light{background-color:#fafbfc!important}.markdown-body .text-gray-light{color:#6a737d!important}.markdown-body .pl-3,.markdown-body .px-3{padding-left:16px!important}.markdown-body .px-3{padding-right:16px!important}.markdown-body .f6{font-size:12px!important}.markdown-body .lh-condensed{line-height:1.25!important}.markdown-body .text-bold{font-weight:600!important}.markdown-body .pl-c{color:#6a737d}.markdown-body .pl-c1,.markdown-body .pl-s .pl-v{color:#005cc5}.markdown-body .pl-e,.markdown-body .pl-en{color:#6f42c1}.markdown-body .pl-s .pl-s1,.markdown-body .pl-smi{color:#24292e}.markdown-body .pl-ent{color:#22863a}.markdown-body .pl-k{color:#d73a49}.markdown-body .pl-pds,.markdown-body .pl-s,.markdown-body .pl-s .pl-pse .pl-s1,.markdown-body .pl-sr,.markdown-body .pl-sr .pl-cce,.markdown-body .pl-sr .pl-sra,.markdown-body .pl-sr .pl-sre{color:#032f62}.markdown-body .pl-smw,.markdown-body .pl-v{color:#e36209}.markdown-body .pl-bu{color:#b31d28}.markdown-body .pl-ii{color:#fafbfc;background-color:#b31d28}.markdown-body .pl-c2{color:#fafbfc;background-color:#d73a49}.markdown-body .pl-c2:before{content:"^M"}.markdown-body .pl-sr .pl-cce{font-weight:700;color:#22863a}.markdown-body .pl-ml{color:#735c0f}.markdown-body .pl-mh,.markdown-body .pl-mh .pl-en,.markdown-body .pl-ms{font-weight:700;color:#005cc5}.markdown-body .pl-mi{font-style:italic;color:#24292e}.markdown-body .pl-mb{font-weight:700;color:#24292e}.markdown-body .pl-md{color:#b31d28;background-color:#ffeef0}.markdown-body .pl-mi1{color:#22863a;background-color:#f0fff4}.markdown-body .pl-mc{color:#e36209;background-color:#ffebda}.markdown-body .pl-mi2{color:#f6f8fa;background-color:#005cc5}.markdown-body .pl-mdr{font-weight:700;color:#6f42c1}.markdown-body .pl-ba{color:#586069}.markdown-body .pl-sg{color:#959da5}.markdown-body .pl-corl{text-decoration:underline;color:#032f62}.markdown-body .mb-0{margin-bottom:0!important}.markdown-body .my-2{margin-bottom:8px!important;margin-top:8px!important}.markdown-body .pl-0{padding-left:0!important}.markdown-body .py-0{padding-top:0!important;padding-bottom:0!important}.markdown-body .pl-1{padding-left:4px!important}.markdown-body .pl-2{padding-left:8px!important}.markdown-body .py-2{padding-top:8px!important;padding-bottom:8px!important}.markdown-body .pl-3{padding-left:16px!important}.markdown-body .pl-4{padding-left:24px!important}.markdown-body .pl-5{padding-left:32px!important}.markdown-body .pl-6{padding-left:40px!important}.markdown-body .pl-7{padding-left:48px!important}.markdown-body .pl-8{padding-left:64px!important}.markdown-body .pl-9{padding-left:80px!important}.markdown-body .pl-10{padding-left:96px!important}.markdown-body .pl-11{padding-left:112px!important}.markdown-body .pl-12{padding-left:128px!important}.markdown-body hr{border-bottom-color:#eee}.markdown-body kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body blockquote,.markdown-body details,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eaecef}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li{word-wrap:break-all}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:initial;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:initial;border:0}.markdown-body .commit-tease-sha{display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%;color:#444d56}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body .blob-wrapper{overflow-x:auto;overflow-y:hidden}.markdown-body .blob-wrapper-embedded{max-height:240px;overflow-y:auto}.markdown-body .blob-num{width:1%;min-width:50px;padding-right:10px;padding-left:10px;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;vertical-align:top;cursor:pointer;-webkit-user-select:none;-ms-user-select:none;user-select:none}.markdown-body .blob-num:hover{color:rgba(27,31,35,.6)}.markdown-body .blob-num:before{content:attr(data-line-number)}.markdown-body .blob-code{position:relative;padding-right:10px;padding-left:10px;line-height:20px;vertical-align:top}.markdown-body .blob-code-inner{overflow:visible;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;color:#24292e;word-wrap:normal;white-space:pre}.markdown-body .pl-token.active,.markdown-body .pl-token:hover{cursor:pointer;background:#ffea7f}.markdown-body .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}.markdown-body .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}.markdown-body .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}.markdown-body .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}.markdown-body .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}.markdown-body .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}.markdown-body .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}.markdown-body .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}.markdown-body .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}.markdown-body .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}.markdown-body .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}.markdown-body .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><meta name="generator" content="Gatsby 3.4.0"/><style data-styled="" data-styled-version="5.2.3">.bSRjXS{width:100%;height:60px;border-bottom:1px solid #e1e4e6;position:fixed;background-color:white;z-index:10000;}/*!sc*/
+data-styled.g2[id="Layout__Header-sc-1si20s3-0"]{content:"bSRjXS,"}/*!sc*/
+.jmhfhA{max-width:800px;margin:0 auto;height:100%;}/*!sc*/
+data-styled.g3[id="Layout__HeaderContainer-sc-1si20s3-1"]{content:"jmhfhA,"}/*!sc*/
+.dUoGqk{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;height:100%;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.dUoGqk h1{color:#4c80f1;font-size:24px;font-weight:bold;}/*!sc*/
+.dUoGqk::after{margin-left:10px;font-size:12px;content:"여러분의 개발이야기를 들려주세요!";color:#81878b;}/*!sc*/
+data-styled.g4[id="Layout__TitleContainer-sc-1si20s3-2"]{content:"dUoGqk,"}/*!sc*/
+.ktyqNY{min-height:80vh;padding-top:60px;}/*!sc*/
+data-styled.g5[id="Layout__ContentDiv-sc-1si20s3-3"]{content:"ktyqNY,"}/*!sc*/
+.bGvuYg{width:100%;padding:60px 0;color:#81878b;text-align:center;}/*!sc*/
+data-styled.g6[id="Layout__Footer-sc-1si20s3-4"]{content:"bGvuYg,"}/*!sc*/
+.dVbXdd{max-width:800px;margin:0 auto;}/*!sc*/
+.dVbXdd img{max-width:100%;}/*!sc*/
+data-styled.g16[id="post-page__PageTemplate-csovzx-0"]{content:"dVbXdd,"}/*!sc*/
+.hAnHbU{height:100px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-bottom:1px solid #e1e4e6;padding:20px 0;margin-bottom:50px;}/*!sc*/
+.hAnHbU h1{color:#4d5256;font-size:32px;font-weight:bold;}/*!sc*/
+.hAnHbU img{width:68px;height:68px;border-radius:50%;}/*!sc*/
+.hAnHbU .info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:100%;}/*!sc*/
+.hAnHbU .meta{width:100%;}/*!sc*/
+data-styled.g17[id="post-page__Header-csovzx-1"]{content:"hAnHbU,"}/*!sc*/
+.eVEJgb{font-weight:bold;padding-bottom:5px;margin-bottom:5px;}/*!sc*/
+data-styled.g18[id="post-page__Name-csovzx-2"]{content:"eVEJgb,"}/*!sc*/
+.eTTicY{font-weight:lighter;color:#81878b;}/*!sc*/
+data-styled.g19[id="post-page__CreatedAt-csovzx-3"]{content:"eTTicY,"}/*!sc*/
+</style><link as="script" rel="preload" href="/Tech-Blog/webpack-runtime-38331859f554c28d95c0.js"/><link as="script" rel="preload" href="/Tech-Blog/framework-bee7a8ddabfa6589450d.js"/><link as="script" rel="preload" href="/Tech-Blog/app-26986a0af943e786954a.js"/><link as="script" rel="preload" href="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js"/><link as="script" rel="preload" href="/Tech-Blog/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/blog/javascript_standard/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="Layout__Header-sc-1si20s3-0 bSRjXS"><div class="Layout__HeaderContainer-sc-1si20s3-1 jmhfhA"><div class="Layout__TitleContainer-sc-1si20s3-2 dUoGqk"><a style="text-decoration:none" href="/Tech-Blog/"><h1>DEVLOG</h1></a></div></div></header><article class="Layout__ContentDiv-sc-1si20s3-3 ktyqNY"><article class="post-page__PageTemplate-csovzx-0 dVbXdd"><header class="post-page__Header-csovzx-1 hAnHbU"><div class="info"><h1>자바스크립트 기초/기본</h1><img src="https://avatars.githubusercontent.com/u/48292190?v=4" alt=""/></div><div class="meta"><div class="post-page__Name-csovzx-2 eVEJgb">홍준혁</div><div class="post-page__CreatedAt-csovzx-3 eTTicY">2021년 4월 29일</div></div></header><div class="markdown-body"><h1>[자바스크립트]</h1>
+<p><img src="https://media.vlpt.us/images/bigbrothershin/post/6a70929a-d760-48b1-bf44-c494499dc986/JavaScriptImg.png" alt="image"></p>
+<h1>목차</h1>
+<ul>
+<li>배경</li>
+<li>자바스크립트 시작하기</li>
+<li>자바스크립트 기초문법</li>
+<li>변수</li>
+<li>연산자</li>
+<li>조건문</li>
+<li>선택문</li>
+<li>반복문</li>
+<li>객체</li>
+<li>함수</li>
+<li>글을</li>
+</ul>
+<h1>배경</h1>
+<blockquote>
+<p>HTML,CSS의 기초를 끝냈으니 이제는 JavaScript를 공부할려고 한다.
+사실 기초가 부족하다고 느낀 이유가 JS부분에서 느낀거라서 복습을 진행하면서 꼼꼼히 봐야겠다.</p>
+</blockquote>
+<p><code>React</code>든 <code>Angular</code>든 뭐든, 웹을 할려면 JS가 탄탄해야 하는데, 나는 너무 <code>React</code>에 물든 것 같다. 나중에 <code>React</code>가 망하고 다른 라이브러리가 흥할수도 있는건데, 너무 한 우물만 하는 느낌이라서 웹의 원초인 JS를 열심히 해볼려고 한다.</p>
+<h2>자바스크립트 시작하기</h2>
+<p><strong>프론트엔드 개발 이해하기</strong></p>
+<ul>
+<li>1단계, 고객에게 사이트 개발을 의뢰받는다.</li>
+<li>2단계, 고객의 요구에 맞게 작성된 기획안을 토대로 디자이너가 화면에 보여질 UI를 디자인 한다. 이렇게 완성된 디자인 이미지를 퍼블리셔에게 전달한다.</li>
+<li>3단계, 디자인 파일을 전달받은 퍼블리셔너는 그 이미지를 이용해 HTML을 작성하고 CSS를 이용해 화면의 모양을 잡아 정적인 웹 문서를 완성한다.
+<strong>하지만 이렇게 HTML,CSS로 만들어진 웹사이트는 보이기만 할 뿐, 동작은 하지 않기때문에 JavaScript를 도입해야 한다.</strong> 여기서 개발자들이 사용하는 것이 JavaScript나, JQuery등 을 사용하는 것이다. (이 과정을 프론트엔드 개발이라고 한다.)</li>
+<li>4단계, 완성된 문서를 백엔드(Back-end)에 전달하게 되는데, PHP,ASP등의 언어를 사용해서 <strong>보이지 않는 부분</strong>을 개발한다. (여기서 보이지 않는 부분이라는 것은 데이터베이스와의 통신 등을 말하는 것이다.)</li>
+</ul>
+<p>프론트엔드 측에서 JavaScript란 <strong>정적인 웹 문서에 동작을 부여하는 역활</strong>을 하게 되는데, 이제부터 우리가 배울 내용이 어떻게 동작을 부여하는지에 대해서 배울 예정이다.</p>
+<blockquote>
+<p>탄생 배경 같은 부분들을 생략하도록 하겠다. 그냥 한번 구글에 검색해서 읽어보기를...</p>
+</blockquote>
+<hr>
+<p><strong>자바스크립트로 뭘 할수 있는가</strong></p>
+<p>HTML에서는 Canvas,Drag&#x26;Drop등의 풍부한 API가 내장되어 있는데, 여기서 API란 <strong>HTML에서 제공하는 기능의 모임이라고 생각하면 된다.</strong> 이 API들은 자바스크립트로 만들어졌으며, 이를 사용하기 위해서는 자바스크립트를 이해하고 사용하는 것이 좋다.</p>
+<p>최근에 <code>React</code> <code>Angular</code> <code>Jquery</code>등의 다양한 라이브러리들이 등장하면서 그 어떤 언어들보다 자바스크립트의 사용률이 대폭 증가하고 있다.</p>
+<p><strong>원래는 자바스크립트는 아까 말했듯, 정적인 웹 문서에 동작을 부여하는 역활인데</strong> 최근 Node.JS가 등장하고 백엔드에서도 작업할 수 있고, 다양한 분야에서 사용되고 있다.</p>
+<blockquote>
+<p>개발 환경 준비하는 과정은 생략하도록 하겠다.</p>
+</blockquote>
+<hr>
+<p><strong>자바스크립트 맛보기</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">var age = prompt(&quot;당신의 나이는?&quot;, &quot;0&quot;);
+if (age &gt;= 20) {
+  document.write(&quot;당신은 성인입니다.&quot;);
+} else {
+  document.write(&quot;당신은 미성년자입니다.&quot;);
+}</code>
+        </deckgo-highlight-code>
+<p>이렇게 스크립트 태그안에 작성을 하게 되면, 사용자측에서 프롬프트가 뜨면서 당신의 나이를 물어볼것이다. 그럴 때에 당신이 입력을 하고 기다리면 문서에 조건에 따른 값이 나올것이다.</p>
+<h2>자바스크립트 기초 문법</h2>
+<p>자바스크립트의 선언문은 <code>script</code>라는 태그가 시작한 부분부터 끝나는 부분까지를 스크립트 영역이라고 한다.</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;script&gt;
+  자바스크립트 코드;
+&lt;/script&gt;</code>
+        </deckgo-highlight-code>
+<p>이 스크립트는 <code>head</code>,<code>body</code>에 둬도 상관없는데 이 책에서는 <code>head</code>에 넣는다고 하기때문에 <code>head</code>에 넣기로 하자.</p>
+<p>이제 실제로 한번 해볼건데, 다음과 같이 코드를 작성해보자.
+o</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">document.write(&quot;환영합니다.&quot;);</code>
+        </deckgo-highlight-code>
+<p>이렇게 작성하게 되면 HTML을 빌드했을때 화면에 "환영합니다."가 출력될것이다.</p>
+<p>자바스크립트는 <strong>객체</strong>지향 언어인데 <code>document</code>라는 객체는 문서 객체를 의미하고, 문서 출력 메서드인 <code>write()</code>를 사용해서 문서에 출력한다.</p>
+<p><strong>자바스크립트에서 주석처리를 하는 방법.</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">// 이렇게 쓰면 한줄 주석.
+
+/*
+이렇게
+쓰면
+여러줄
+주석
+*/
+
+&lt;!--HTML은 이렇게 사용하지롱--&gt;</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p><strong>주석처리를 하는 이유?</strong>
+주석처리를 함으로서, 자바스크립트 선언문 안에 코드가 아닌 설명을 할 수있다. 그래서 내가 쓴 코드에 대한 설명같은 걸 달아놓으면, 나중에 협업할때 코드를 알아 볼 수 있기때문에 큰 장점이 될 수 있다.</p>
+</blockquote>
+<p><strong>내부 스크립트 외부로 분리하는 방법</strong>
+자바스크립트 코드와 HTML의 코드는 분리하는게 좋다. (관리를 원할하게 하기 위해서)</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;script src=&quot;JS 파일 경로&quot;&gt;&lt;/script&gt;</code>
+        </deckgo-highlight-code>
+<p>그러면 한번 분리해보겠다.</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;!--statement_test.html--&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;statement_test&lt;/title&gt;
+    &lt;script src=&quot;statement_test.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">//statement_test.js
+
+document.write(&quot;환영합니다.&quot;);</code>
+        </deckgo-highlight-code>
+<p>이렇게 파일을 나눠서 하면 나중에 유지보수할때 훨씬 편하다.</p>
+<p><strong>코드 입력 시 주의 사항</strong>
+자바스크립트 파일을 작성할 때 몇가지 주의해야 할 사항이 있다.</p>
+<ul>
+<li><strong>자바스크립트는 대/소문자를 구분하여 작성한다.</strong></li>
+<li><strong>코드 한 줄을 작성한 후에는 (;)를 쓰는 것이 좋다.</strong></li>
+<li><strong>코드를 작성할 때는 한 줄에 한 문장만 작성하는 것이 좋다.</strong></li>
+<li><strong>문자형 데이터를 작성할 때는 큰따옴표와 작은따옴표의 겹침오류를 주의해야 한다.</strong></li>
+<li><strong>코드를 작성할 때 중괄호{} 또는 소괄호() 짝이 맞아야 한다.</strong></li>
+</ul>
+<h2>변수</h2>
+<p>변수는 변하는 데이터를 저장할 수 있는 메모리 공간이다.
+<strong>변수에는 데이터가 오직 한 개만 저장된다.</strong></p>
+<p>변수에 저장할 수 있는 데이터의 종류로는 문자형(String) 숫자형(Number) 논리형(Boolean) 빈(Null) 데이터 등이 있다.</p>
+<blockquote>
+<p><strong>Var로 변수선언?</strong>
+옛날 책에서는 var이라는 키워드를 사용해서 변수를 선언했다면, 모던 자바스크립트는 const나 let이라는 키워드를 사용해서 변수를 선언한다.</p>
+</blockquote>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let 변수명;
+//or
+let 변수명 = 값;</code>
+        </deckgo-highlight-code>
+<p>위와 같은 방법으로 선언한다.</p>
+<blockquote>
+<p><strong>변수명을 짓는 방법?</strong>
+변수명에는 한글을 사용할 수 없으며, 영문과 숫자 그리고 일부 특수문자(_,$)만 사용할 수 있다.
+그리고 변수명에는 <strong>의미에 맞게 짓는게 좋다.</strong> 그리고 카멜케이스로 작성합니다.</p>
+</blockquote>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let box;</code>
+        </deckgo-highlight-code>
+<p>위 상태에서 box라는 변수는 선언은 했지만 값을 초기화를 해주지 않았기때문에 <code>undefined</code>라는 값을 가지게 된다. 이제 위에서 선언한 box에 값을 대입해보겠다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">box = 100;</code>
+        </deckgo-highlight-code>
+<p>이렇게 하면 undefined에서 100이라는 값을 가지게 되었다.
+그럼 만약에 box에 200을 넣고싶으면 어떻게하면 될까?</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">box = 200;</code>
+        </deckgo-highlight-code>
+<p>이렇게 하게 된다면 기존의 100의 데이터는 사라질것이다.
+<strong>왜냐하면 변수에는 하나의 값만 담을수 있기 때문이다.</strong>
+이제 이렇게 작성한 변수를 화면에 출력해보겠다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">document.write(box);</code>
+        </deckgo-highlight-code>
+<p>이렇게 하면 정상적으로 화면에 잘 출력될것이다.</p>
+<p>이제 <strong>자료형</strong>에 대해서 알아보도록 하겠다.</p>
+<ul>
+<li>
+<p><strong>문자형</strong>
+문자형(String)데이터는 ""나 ''로 감싸고 있다.
+문자형 데이터에 태그를 포함하여 출력하면 태그로 인식한다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const str = &quot;&lt;h1&gt;안녕!&lt;/h1&gt;&quot;;
+document.write(str);</code>
+        </deckgo-highlight-code>
+<ul>
+<li>Result
+  <h1>안녕!</h1>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>숫자형</strong>
+숫자형 데이터는 단어 의미 그대로 숫자를 의미한다.
+주의해야 할것은 "100"은 숫자형 데이터가 아니다. <strong>문자형</strong>데이터다.</p>
+<p>Number()라는 함수를 사용하여 "100"을 숫자형으로 바꿀수 있다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const num = Number(&quot;100&quot;);</code>
+        </deckgo-highlight-code>
+</li>
+<li>
+<p><strong>논리형</strong>
+논리형 데이터는 true(참) false(거짓)이 있는데, 이 데이터는 2개의 데이터를 비교할 때 나오는 결과이다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const 변수명 = true or false;
+//또는
+const 변수명 = Boolean(&quot;안녕&quot;); //true이다.</code>
+        </deckgo-highlight-code>
+<p><code>Boolean()</code>메서드에 데이터를 입력하면 논리형 데이터인 true나 false를 반환한다.</p>
+</li>
+<li>
+<p><strong>null &#x26; undefined</strong>
+undefined는 변수가 선언되기 전의 기본값이고, null은 선언된 변수의 값이 없는 값일 경우를 가르킨다.
+또한, null은 변수에 저장된 데이터를 비우고자 할 때 사용되는 값이다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">var s; //undefined
+var t = &quot;hello&quot;;
+t = null; //null</code>
+        </deckgo-highlight-code>
+</li>
+</ul>
+<blockquote>
+<p><strong>typeof란?</strong></p>
+</blockquote>
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
+          <code slot="code">typeof를 사용하면 지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용한다.</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const num = 100;
+const str = &quot;자바스크립트&quot;;
+
+typeof num; // number
+typeof str; // string</code>
+        </deckgo-highlight-code>
+<h2>연산자</h2>
+<p><strong>자바스크립트에서 연산자의 종류</strong></p>
+<ul>
+<li>
+<p><strong>산술 연산자</strong>
+산술 연산자는 + , - , * / , %가 있다. (초등학교때 배운 그거 맞다.)</p>
+<blockquote>
+<p>산술 연산자로 연산 대상 데이터가 반드시 2개 이상 있어야 한다.</p>
+</blockquote>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const a = 100;
+const b = 200;
+document.write(a + b);</code>
+        </deckgo-highlight-code>
+</li>
+<li>
+<p><strong>문자 결합 연산자</strong>
+문자 결합 연산자는 피연산자가 문자형 데이터이다.
+<strong>여러개의 문자를 하나의 문자형 데이터로 결합할 때 사용한다.</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const name = &quot;홍준혁&quot;;
+
+document.write(&quot;Hello My name is &quot; + name);</code>
+        </deckgo-highlight-code>
+</li>
+<li>
+<p><strong>대입 연산자</strong>
+<strong>대입 연산자는 데이터를 변수에 저장할 때 사용한다.</strong></p>
+<blockquote>
+<p><strong>복합 대입 연산자는 뭔가요?</strong>
+복합 대입 연산자는 += -= *= /= %= 가 있는데, 산술 연산자와 대입 연산자가 <strong>복합적</strong>으로 적용된 것을 말한다.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>증감 연산자</strong>
+<strong>증감연산자는 ++과 --가 있다.</strong></p>
+<blockquote>
+<p>변수의 값을 1만큼 감소시킨다.</p>
+</blockquote>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">변수--;
+--변수;</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p>변수의 값을 1만큼 증가시킨다.</p>
+</blockquote>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">변수++;
+++변수;</code>
+        </deckgo-highlight-code>
+<p>증감연산자의 위치에 따라서 결과도 다르다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let a = 1;
+let b = ++a;
+//a는 2가 된다.
+//변수 b에는 2가 저장된다.
+
+let c = a++;
+//변수 c에는 2가 저장된다.
+//a는 3이 된다.</code>
+        </deckgo-highlight-code>
+</li>
+<li>
+<p><strong>비교 연산자</strong>
+<code>크다</code>,<code>작다</code>,<code>같다</code>와 같이 비교할 때 사용하는 연산자이다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const num1 = 10;
+const num2 = 20;
+if (num1 &lt; num2) {
+  //위 비교연산자는 true를 반환한다.
+  document.write(&quot;num2 is big&quot;);
+}</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const num1 = 10;
+const str1 = &quot;10&quot;;
+
+console.log(num1 == str2); //true
+console.log(num1 === str2); //false</code>
+        </deckgo-highlight-code>
+</li>
+<li>
+<p><strong>논리 연산자</strong>
+논리 연산자는 or, and, not이 있다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">console.log(false || true); //true
+console.log(false &amp;&amp; true); //false</code>
+        </deckgo-highlight-code>
+</li>
+<li>
+<p><strong>삼항 조건 연산자</strong>
+삼항 조건 연산자는 조건에 따라 실행 결과가 달라진다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const result = true &amp;&amp; false ? &quot;true&quot; : &quot;false&quot;;
+
+console.log(result); //&quot;false&quot;</code>
+        </deckgo-highlight-code>
+</li>
+</ul>
+<h3>적정 체중을 구하는 테스트기 만들기</h3>
+<p><strong>🛠적정 체중 구하는 법.</strong></p>
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
+          <code slot="code">적정 체중 = (본인 신장 - 100) x 0.9</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">//source code
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;체중 구하기&lt;/title&gt;
+    &lt;script&gt;
+      const name = prompt(&quot;당신의 이름은?&quot;, &quot;&quot;);
+      const height = prompt(&quot;당신의 신장은?&quot;, &quot;0&quot;);
+      const weight = prompt(&quot;당신의 몸무게는?&quot;, &quot;0&quot;);
+
+      document.write(getNormal());
+
+      function getNormal() {
+        const normal = (height - 100) * 0.9;
+        let result = weight &gt;= normal - 5 &amp;&amp; weight &lt;= normal + 5;
+        result = result ? &quot;적정 체중입니다.&quot; : &quot;적정 체중이 아닙니다.&quot;;
+        return name + &quot; 님은 &quot; + result;
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code>
+        </deckgo-highlight-code>
+<h3>진영이의 하루 지출 내역</h3>
+<p>총 돈이 10000원이 넘으면 얼마나 초과했는지 보여주고 아닐 시에는 돈 관리 잘했다고 칭찬하는 프로그램.</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;script&gt;
+  const price1 = 3000;
+  const price2 = 6000;
+  const price3 = 3000;
+
+  const sum = price1 + price2 + price3;
+  if (sum &gt; 10000) {
+    alert(sum - 10000 + &quot;원 초과!&quot;);
+  } else {
+    alert(&quot;돈 관리 잘했어요!&quot;);
+  }
+&lt;/script&gt;</code>
+        </deckgo-highlight-code>
+<h2>조건문</h2>
+<p>조건문은 조건식의 값이 참인지 거짓인지에 따라 자바스크립트 코드를 제어한다.
+<strong>if 문</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">if(조건식){
+    자바스크립트 코드;
+}</code>
+        </deckgo-highlight-code>
+<p>if문에 조건식을 만족 할때만 코드를 실행한다.
+만약에 조건식에 다음과 같은 값이 오게된다면,</p>
+<blockquote>
+<p>0 , null , "" , undefined</p>
+</blockquote>
+<p>false를 의미하므로 조건문을 실행하지 않는다.</p>
+<p><strong>if ~ else 문</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">if(조건식){
+    자바스크립트 코드;
+}
+else{
+    자바스크립트 코드;
+}</code>
+        </deckgo-highlight-code>
+<p>else문은 if문의 조건을 만족하지 못했을 때에 실행할 코드이다.</p>
+<p><strong>if ~ else if ~ else 문</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">if(조건식){
+    자바스크립트 코드;
+}else if(조건식){
+    자바스크립트 코드;
+}
+else if(조건식){
+    자바스크립트 코드;
+}
+else if(조건식){
+    자바스크립트 코드;
+}
+.
+.
+.
+else {
+    자바스크립트 코드;
+}</code>
+        </deckgo-highlight-code>
+<p>if로부터 조건에 충족하지 않을때 차레대로 else if문을 검토하게 된다.
+그렇게 하다가 중간에 true를 반환하면 그에 해당하는 자바스크립트 코드를 실행하고 조건문을 종료한다.</p>
+<p><strong>중첩 if 문</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">if(조건식){
+    if(조건식){
+        ...
+    }
+}</code>
+        </deckgo-highlight-code>
+<p>위와 같은 코드처럼 중첩하여 조건문을 사용하는 것을 의미한다.</p>
+<p><strong>지금까지 배운 조건문으로 로그인을 구현해보겠다.</strong></p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;로그인&lt;/title&gt;
+    q
+    &lt;script&gt;
+      const id = &quot;qwerty&quot;;
+      const pw = &quot;1234&quot;;
+
+      const user_id = prompt(&quot;아이디는?&quot;, &quot;&quot;);
+      const user_pw = prompt(&quot;비밀번호는?&quot;, &quot;&quot;);
+
+      if (id === user_id) {
+        if (pw === user_pw) {
+          alert(&quot;로그인에 성공했습니다.&quot;);
+          document.write(&quot;환영합니다.&quot;);
+        } else {
+          document.write(&quot;비밀번호가 틀렸습니다.&quot;);
+        }
+      } else {
+        document.write(&quot;아이디가 틀렸습니다.&quot;);
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code>
+        </deckgo-highlight-code>
+<h2>선택문</h2>
+<p><strong>선택문(switch)</strong>문은 변수에 저장된 값과 switch문에 있는 경우(case)의 값을 검사하여 변수와 경우의 값이 일치하는 경우 그에 해당하는 코드를 실행한다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const value = 초기값;
+
+switch(value){
+    case 값1:
+        코드1;
+    case 값2:
+        코드2;
+    case 값3:
+        코드3;
+    ...
+    default 코드;
+}</code>
+        </deckgo-highlight-code>
+<p><strong>default는 case에 없는 경우를 의미한다.</strong></p>
+<p><strong>배운 switch문을 이용하여 프로그램을 만들어보자.</strong></p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Switch Test&lt;/title&gt;
+    &lt;script&gt;
+      const favorite = prompt(&quot;당신이 좋아하는 과일은?&quot;, &quot;&quot;);
+      switch (favorite) {
+        case &quot;사과&quot;:
+          document.write(&quot;사과를 좋아하는군요!&quot;);
+          break;
+        case &quot;바나나&quot;:
+          document.write(&quot;바나나 좋아하는군요!&quot;);
+          break;
+        case &quot;배&quot;:
+          document.write(&quot;배를 좋아하는군요!&quot;);
+          break;
+        default:
+          alert(&quot;보가에 없는 값입니다.&quot;);
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p><strong>각 case마다 break를 걸어주는 이유?</strong>
+브레이크를 걸지 않으면, 처음 충족하는 case를 실행한 다음 밑에 case도 검토를 하기 때문에, 원하는 작업을 하고 끝낼려면 break를 걸어주어야 한다.</p>
+</blockquote>
+<h2>반복문</h2>
+<p>반복문을 사용하면 원하는 횟수만큼 반복하여 실행할 수 있다.</p>
+<p><strong>while문</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const value = 초기값;
+while(조건){
+    자바스크립트 코드;
+    증감식;
+}</code>
+        </deckgo-highlight-code>
+<p>while문의 실행 순서는</p>
+<ol>
+<li>조건식을 검사하고</li>
+<li>만족한다면 중괄호 안에 코드와 증감식을 실행한다.</li>
+</ol>
+<p>를 반복한다.</p>
+<p>이때, 증감식을 써주는 이유는 <strong>실행한 횟수에 따른 조건 값을 다르게 하고 싶기 때문이다.</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let i = 0;
+while (i &lt; 10) {
+  document.write(&quot;안녕하세요&quot; + i, &quot;&lt;br /&gt;&quot;);
+  i++;
+}</code>
+        </deckgo-highlight-code>
+<p>이렇게 작성해주면 반복을 10번을 하게된다.</p>
+<p><strong>while문을 사용해서 1 ~ 100까지 짝수만 출력하는 프로그램을 만들어보도록 하자.</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let i = 1;
+while (i &lt;= 100) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+  i++;
+}
+console.log(&quot;==The End==&quot;);</code>
+        </deckgo-highlight-code>
+<p><strong>do while문</strong>
+do while은 while문과 유사하지만, 조금 다른점이 있다면 조건의 여부와는 상관없이 무조건 처음 한번은 실행하고 조건식을 검사한다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let value = 초기값;
+
+do{
+    자바스크립트 코드;
+    증감식;
+}while(조건식);</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let i = 0;
+
+do {
+  console.log(i);
+  i++;
+} while (i &lt; 10);</code>
+        </deckgo-highlight-code>
+<p><strong>for 문</strong>
+for문은 조건식을 만족할 때까지 특정 코드를 반복하여 실행한다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">for(초기값; 조건식; 증감식){
+    자바스크립트 코드;
+}</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">for (let i = 0; i &lt; 10; i++) {
+  console.log(i);
+}</code>
+        </deckgo-highlight-code>
+<p><strong>break 문</strong>
+반복문에서 break를 만나게 되면 그 반복문은 강제로 중단된다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">for (let i = 0; i &lt; 100; i++) {
+  if (i === 70) {
+    break;
+  }
+}</code>
+        </deckgo-highlight-code>
+<p><strong>continue 문</strong>
+반복문에서만 사용할 수 있는데, 반복을 하다가 continue를 만나게 되면 continue 밑에 있는 코드들을 무시하고 바로 다음 조건식으로 이동한다.</p>
+<h1>객체</h1>
+<p>자바스크립트는 객체 기반의 언이이다.
+객체를 쉽게 이해하기 위해서 예시를 하나 들어보도록 하겠다.</p>
+<blockquote>
+<p>TV가 하나의 객체라고 해보면, TV에는 끄다,키다,음소거하다,볼륨을높히다...등등 많은 기능들이 있는데, 바로 이것이 객체의 개념이다. 하나의 사물을 객체라고 하고, 그 객체안에 다양한 기능,속성들이 있는것이다.</p>
+</blockquote>
+<p>자바스크립트 객체 안에는 메서드, 속성이 있다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">객체.메서드();
+객체.속성; 또는 객체.속성 = 값;</code>
+        </deckgo-highlight-code>
+<p>이렇게 접근할 수 있다.</p>
+<p>여기서 메서드에 대해서 알아보자면,</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">TV.TV를 키다();</code>
+        </deckgo-highlight-code>
+<p>이런 개념이다.</p>
+<p>속성은 다음과 같다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">TV.TV의 길이;</code>
+        </deckgo-highlight-code>
+<p><strong>여기서 중요한 점은 객체안에 존재하지 않는 메서드,속성은 접근할 수 없다.</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">TV.폭팔해라();</code>
+        </deckgo-highlight-code>
+<p>위의 코드와 같은 기능은 일반적인 TV에 있는 기능이 아니므로 오류가 발생한다.</p>
+<p><strong>객체의 종류</strong></p>
+<p>자바스크립트 객체의 종류에는 크게 <strong>내장 객체, 브라우저 객체, 문서 객체 모델로</strong> 나눌 수 있다.</p>
+<ul>
+<li><strong>내장 객체</strong>
+내장 객체는 자바스크립트 엔진에 내장되어 있어 필요한 경우 생성해서 사용할 수 있다.
+대표적인 내장 객체로는 Math(수학), Date(날짜), Array(배열) 등 이 있다.</li>
+<li><strong>브라우저 객체 모델</strong>
+브라우저 객체 모델(BOM)은 브라우저에 계층 구조로 내장되어 있는 객체를 말한다.
+대표적인 브라우저 객체로는 window, screen, location, history등이 있으며,
+window는 document와 location 객체의 상위 객체이다.</li>
+<li><strong>문서 객체 모델</strong>
+문서 객체 모델(DOM)은 HTML문서 구조를 의미한다.
+HTML문서의 기본 구조는 최상위 객체로 html이 있으며, 하위 객체로는 head,body가 있다.
+자바스크립트에서 DOM의 구조를 변경하고 싶으면 문서객체모델을 잘 이해해야 한다.</li>
+</ul>
+<p>하지만 IE8 이하 버전에서는 호환성이 떨어지기 때문에 사용하기 힘들다는 단점이 있다.</p>
+<blockquote>
+<p>이제부터 위에 설명한 세가지의 객체에 대해서 자세히 알아보도록 하겠다.</p>
+</blockquote>
+<h2>내장 객체</h2>
+<p>위에서 언급했듯 내장 객체는 자바스크립트 엔진에 있는 객체이다.</p>
+<p>내장 객체를 생성하는 기본형에 대해서 알아보자.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">참조_변수(인스턴스_이름) = new 생성_함수();</code>
+        </deckgo-highlight-code>
+<p>이제 내장 객체를 이용해서 tv라는 객체를 생성을 해보겠다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const tv = new Object();
+
+tv.color = &quot;black&quot;;
+tv.price = 3000000;
+tv.intro = () =&gt; {
+  console.log(&quot;TV 색깔 : &quot; + tv.color);
+  console.log(&quot;TV 가격 : &quot; + tv.price);
+};
+
+tv.intro();
+//객체 메서드 호출</code>
+        </deckgo-highlight-code>
+<p>자바스크립트에서 지원하는 Object객체 를 사용해 보았는데, 이번에는 <code>Date</code>라는 객체를 사용해보겠다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">참조 변수 = new Date();</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const today = new Date();
+
+console.log(today.getHours());</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p>남은 일 수(밀리초) = 특정 날짜 객체 - 현재 날짜 객체</p>
+</blockquote>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const today = new Date();
+const nowYear = today.getFullYear();
+
+const theDate = new Date(nowYear, 11, 31);
+const diffDate = theDate.getTime() - today.getTime();
+
+const result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+console.log(`연말까지 ${result}일 남았습니다.`);</code>
+        </deckgo-highlight-code>
+<p><strong>수학 객체</strong></p>
+<p>수학 객체는 알고리즘 풀때 자주 쓰이므로 알아두는게 좋다.</p>
+<ul>
+<li>Math.abs()
+<blockquote>
+<p>숫자의 절대값을 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.max()
+<blockquote>
+<p>숫자 중 가장 큰 값을 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.min()
+<blockquote>
+<p>숫자 중 가장 작은 값을 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.pow()
+<blockquote>
+<p>숫자의 거듭제곱값을 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.random()
+<blockquote>
+<p>0 ~ 1 사이의 난수를 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.round()
+<blockquote>
+<p>소수점 첫째 자리에서 반올림하여 정수를 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.ceil()
+<blockquote>
+<p>소수점 첫째에서 무조건 올림하여 정수를 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.floor()
+<blockquote>
+<p>소수점 첫째에서 무조건 내림하여 정수를 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.sqrt()
+<blockquote>
+<p>숫자의 제곱근값을 반환합니다.</p>
+</blockquote>
+</li>
+<li>Math.PI
+<blockquote>
+<p>원주율 상수를 반환합니다.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>0 ~ 10까지 랜덤숫자</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const randomNum = Math.floor(Math.random() * 11);</code>
+        </deckgo-highlight-code>
+<p><strong>배열 객체</strong>
+변수에는 한가지의 데이터만 저장된다고 했었는데, 그러면 여러 개의 데이터를 저장할려면 <strong>배열</strong>을 사용해야 된다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">변수 = new Array(값);</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const arr = new Array(1, 2, 3);</code>
+        </deckgo-highlight-code>
+<p>배열은 각 인덱스에 접근할 수 있다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const arr = new Array(1, 2, 3);
+
+console.log(arr[1]);</code>
+        </deckgo-highlight-code>
+<h3>배열 메서드</h3>
+<ul>
+<li>join
+<blockquote>
+<p>배열 객체의 데이터를 연결 문자 기준으로 1개의 문자형 데이터로 반환합니다.</p>
+</blockquote>
+</li>
+<li>reverse
+<blockquote>
+<p>배열 객체의 데이터 순서를 거꾸로 바꾼 후 반환합니다.</p>
+</blockquote>
+</li>
+<li>sort
+<blockquote>
+<p>배열 객체의 데이터를 오름차순으로 정렬합니다.</p>
+</blockquote>
+</li>
+<li>slice
+<blockquote>
+<p>배열 객체의 데이터 중 원하는 인덱스 구간만큼 잘라서 배열 객체로 가져옵니다.</p>
+</blockquote>
+</li>
+<li>splice
+<blockquote>
+<p>배열 객체의 지정 데이터를 삭제하고 그 구간에서 새 데이터를 삽입할 수 있습니다.</p>
+</blockquote>
+</li>
+<li>concat
+<blockquote>
+<p>2개의 배열 객체를 하나로 결합합니다.</p>
+</blockquote>
+</li>
+<li>pop
+<blockquote>
+<p>배열에 저장된 데이터 중 마지막 인덱스에 저장된 데이터를 삭제합니다.</p>
+</blockquote>
+</li>
+<li>push
+<blockquote>
+<p>배열 객체의 마지막 인덱스에 새 데이터를 삽입합니다.</p>
+</blockquote>
+</li>
+<li>shift
+<blockquote>
+<p>배열 객체에 저장된 데이터 중 첫 번째 인덱스에 저장된 데이터를 삭제합니다.</p>
+</blockquote>
+</li>
+<li>unshift
+<blockquote>
+<p>배열 객체의 가장 앞의 인덱스에 새 데이터를 삽입합니다.</p>
+</blockquote>
+</li>
+<li>length
+<blockquote>
+<p>배열에 저장된 총 데이터의 개수를 반환합니다.</p>
+</blockquote>
+</li>
+</ul>
+<p>등등...</p>
+<p><strong>문자열 객체</strong></p>
+<p>문자열 객체는 문자혈 데이터를 객체로 취급하는 것이다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">참조 변수 = new String(문자형 데이터);</code>
+        </deckgo-highlight-code>
+<p>문자열 객체는 다음과 같이 선언해도 객체가 생성된다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">참조 변수 = &quot;문자형 데이터&quot;;</code>
+        </deckgo-highlight-code>
+<h3>문자열 메서드</h3>
+<ul>
+<li>charAt
+<blockquote>
+<p>문자열에서 인덱스 번호에 해당하는 문자를 반환한다.</p>
+</blockquote>
+</li>
+<li>indexOf
+<blockquote>
+<p>문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 문자의 인데스 번호를 반환한다.</p>
+</blockquote>
+</li>
+<li>lastIndexOf
+<blockquote>
+<p>문자열에서 오른쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 문자의 인데스 번호를 반환한다.</p>
+</blockquote>
+</li>
+<li>match
+<blockquote>
+<p>문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 찾은 문자를 반환한다. 없으면 null</p>
+</blockquote>
+</li>
+<li>replace
+<blockquote>
+<p>문자열에서 왼쪽부터 바꿀 문자와 일치하는 문자를 찾아 제일 먼저 찾은 문자를 새 문자로 치환한다.</p>
+</blockquote>
+</li>
+<li>search
+<blockquote>
+<p>문자열에서 왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 인덱스 번호를 반환한다.</p>
+</blockquote>
+</li>
+<li>slice
+<blockquote>
+<p>a개의 문자를 자르고 b번째 이후에 문자를 자른 후 남은 문자를 반화한다.</p>
+</blockquote>
+</li>
+<li>substring
+<blockquote>
+<p>a인덱스부터 b인덱스 이전 구간의 문자를 반환한다.</p>
+</blockquote>
+</li>
+</ul>
+<p>등등...</p>
+<h2>브라우저 객체 모델</h2>
+<ul>
+<li>
+<p><strong>window 객체의 메서드 종류</strong></p>
+<ul>
+<li>open
+<blockquote>
+<p>URL 페이지를 새 창으로 나타냅니다.</p>
+</blockquote>
+</li>
+<li>alert
+<blockquote>
+<p>경고 창을 나타내고 데이터를 보여줍니다.</p>
+</blockquote>
+</li>
+<li>prompt
+<blockquote>
+<p>질문과 답변으로 질의응답 창을 나타냅니다.</p>
+</blockquote>
+</li>
+<li>move
+<blockquote>
+<p>지정한 새 창의 위치를 이동합니다</p>
+</blockquote>
+</li>
+<li>resizeTo
+<blockquote>
+<p>지정한 새 창의 위치를 이동합니다.</p>
+</blockquote>
+</li>
+<li>setInterval
+<blockquote>
+<p>지속적으로 일정한 시간 간격으로 함수를 호출하여 코드를 실행합니다.</p>
+</blockquote>
+</li>
+<li>setTimeout
+<blockquote>
+<p>단 한 번 일정한 시간 간격으로 함수를 호출하여 코드를 실행한다.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>screen 객체의 속성 종류</strong></p>
+<ul>
+<li>screen.width
+<blockquote>
+<p>화면의 너비값을 반환</p>
+</blockquote>
+</li>
+<li>screen.height
+<blockquote>
+<p>화면의 높이값을 반환</p>
+</blockquote>
+</li>
+<li>screen.availWidth
+<blockquote>
+<p>작업 표시줄을 제외한 화면의 너비값을 반환</p>
+</blockquote>
+</li>
+<li>screen.availHeight
+<blockquote>
+<p>작업 표시줄을 제외한 화면의 높이값을 반환</p>
+</blockquote>
+</li>
+<li>screen.screenDepth
+<blockquote>
+<p>사용자 모니터가 표현 가능한 컬러 bit를 반환</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>location 객체의 속성,메서드 종류</strong></p>
+<ul>
+<li>location.href
+<blockquote>
+<p>주소 영역의 참조 주소를 설정하거나 URL을 반환한다.</p>
+</blockquote>
+</li>
+<li>location.hash
+<blockquote>
+<p>URL의 해시값을 반환한다.</p>
+</blockquote>
+</li>
+<li>location.hostname
+<blockquote>
+<p>URL의 호스트 이름을 설정하거나 반환한다.</p>
+</blockquote>
+</li>
+<li>location.host
+<blockquote>
+<p>URL의 호스트 이름과 포트번호를 반환한다.</p>
+</blockquote>
+</li>
+<li>location.protocol
+<blockquote>
+<p>URL 프로토콜을 반환한다.</p>
+</blockquote>
+</li>
+<li>location.search
+<blockquote>
+<p>URL의 쿼리를 반환한다.</p>
+</blockquote>
+</li>
+<li>location.reload()
+<blockquote>
+<p>페이지를 새로고침한다.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>history 객체의 속성 종류</strong></p>
+<ul>
+<li>history.back()
+<blockquote>
+<p>이전 방문 사이트로 이동한다.</p>
+</blockquote>
+</li>
+<li>history.foward()
+<blockquote>
+<p>다음 방문 사이트로 이동한다.</p>
+</blockquote>
+</li>
+<li>history.go()
+<blockquote>
+<p>이동 숫자에 -2를 입력하면 2단계 이전의 방문 사이트로 이동한다.</p>
+</blockquote>
+</li>
+<li>history.length
+<blockquote>
+<p>방문 기록에 저장된 목록의 개수를 반환한다.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2>함수</h2>
+<p><strong>함수란?</strong></p>
+<blockquote>
+<p>변수에는 데이터를 저장한다고 했었는데, 함수에는 코드를 메모리에 저장했다가 필요할때 마다 호출하여 사용할 수 있다.</p>
+</blockquote>
+<ul>
+<li>함수는 자바스크립트 코드를 저장한다.</li>
+<li>출력문, 제어문 등의 코드를 저장하고 데이터를 반환한다.</li>
+</ul>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function 함수명(){
+    자바스크립트 코드;
+}
+or
+const 함수명 = () =&gt; {
+    자바스크립트 코드;
+}</code>
+        </deckgo-highlight-code>
+<p>함수정의문 {...} 안에 작성된 코드는 즉시 실행되지 않고, 메모리에 할당되어 있다가 함수가 호출되면 실행하는 형식이다.</p>
+<blockquote>
+<p><strong>function과 function()은 다르다?</strong>
+function은 함수 그 자체를 의미하는거고 function()은 함수를 실행하라는 의미이다.</p>
+</blockquote>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function sayHello() {
+  console.log(&quot;Hello&quot;);
+}
+
+sayHello();</code>
+        </deckgo-highlight-code>
+<p><strong>자바스크립트를 이용해 버튼을 클릭할때 마다 배경색을 바꾸는 프로그램</strong></p>
+<p><img src="https://user-images.githubusercontent.com/48292190/115477708-7d336a80-a27f-11eb-8854-2145107fada8.png" alt="image"></p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Background&lt;/title&gt;
+    &lt;script&gt;
+      const color = [&quot;white&quot;, &quot;yellow&quot;, &quot;aqua&quot;, &quot;purple&quot;];
+
+      let i = 0;
+      const changeColor = () =&gt; {
+        i++;
+        if (i &gt;= color.length) {
+          i = 0;
+        }
+        console.log(color[i]);
+        const bodyTag = document.querySelector(&quot;body&quot;);
+        bodyTag.style.backgroundColor = color[i];
+      };
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick=&quot;changeColor()&quot;&gt;배경색 바꾸기&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+        </deckgo-highlight-code>
+<p><strong>매개 변수가 있는 함수 정의문</strong>
+함수를 호출하면서 값을 전달할수 있는 방법은 매개 변수를 받으면 된다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function sayHelloWithName(name){
+    console.log(`${name}, Hello!`);
+}</code>
+        </deckgo-highlight-code>
+<p>이때, 매개변수는 한개뿐만이 아니라 여러개가 될 수도있다.</p>
+<p><strong>함수에서의 return문의 역할</strong></p>
+<p>return문은 함수에서 결괏값을 반환할 때 사용한다. 또한, 함수가 종료된다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">//함수가 종료
+function returnExample(){
+    console.log(&quot;Hello&quot;);
+    console.log(&quot;Hello&quot;);
+    console.log(&quot;Hello&quot;);
+    return;
+    console.log(&quot;Hello&quot;); // not working
+}</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">//결과값을 반환
+function returnValueExample(){
+    return 10 + 20;
+}
+
+const value = returnValueExample();
+console.log(value); //30</code>
+        </deckgo-highlight-code>
+<p><strong>함수 스코프란?</strong></p>
+<blockquote>
+<p>함수 스코프의 의미는 유효 범위를 의미한다.</p>
+</blockquote>
+<p>스코프를 이해하기 위해서는 Local변수와 Global변수를 이해해야 한다.</p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let global; // 글로벌 변수
+
+function a(){
+    let local; // 로컬 변수
+}</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let score = 100;
+
+function a(){
+    let score = 50;
+
+    console.log(score); //50
+}
+
+a();
+
+console.log(score); //100</code>
+        </deckgo-highlight-code>
+<p><strong>전역 함수와 지역 함수</strong></p>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function a(){ // 전역 함수
+    자바스크립트 코드;
+}
+
+function b(){
+    function c(){ // 지역 함수
+        자바스크립트 코드;
+    }
+}</code>
+        </deckgo-highlight-code>
+<h2>객체 생성자 함수의 활용</h2>
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function CheckWeight(name , height , weight){
+  this.userName = name;
+  this.userHeight = height;
+  this.userWeight = weight;
+  this.maxWeight;
+  this.minWeight;
+  
+  this.getInfo = () =&gt; {
+    let str = &quot;&quot;;
+    str += &quot;이름&quot; + this.userName + &quot;,&quot;;
+    str += &quot;키:&quot; + this.userHeight + &quot;,&quot;;
+    str += &quot;몸무게:&quot; + this.userWeight + &quot;&lt;br&gt;&quot;;
+
+    return str;
+  }
+
+  this.getResult = () =&gt; {
+    this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+    this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+    if(this.userWeight &gt;= this.minWeight &amp;&amp; this.minWeight &lt;= this.maxWeight){
+      return &quot;정상 몸무게입니다.&quot;;
+    }else if(this.userWeight &lt; this.minWeight){
+      return &quot;정상  몸무게보다 미달입니다.&quot;;
+    }else{
+      return &quot;정상 뭄무게보다 초과입니다.&quot;;
+    }
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>다음의 예제는 메모리 절약을 위한 프로토타입을 사용하는 방법이다.</p>
+<h2>프로토타입 사용하기</h2>
+<p>객체를 생성한다면 생성한만큼 메모리를 차지하게 된다.
+메모리 공간을 절약하기 위해서 <strong>프로토타입</strong>을 사용하면 된다.
+프로토타입을 사용하여 등록한 함수는 원형(프로토타입)에서 생성된 객체를 공유할 수 있다.</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+      function CheckWeight(name, height, weight) {
+        this.userName = name;
+        this.userHeight = height;
+        this.userWeight = weight;
+        this.maxWeight;
+        this.minWeight;
+      }
+      CheckWeight.prototype.getInfo = function() {
+        let str = &quot;&quot;;
+        str += &quot;이름&quot; + this.userName + &quot;,&quot;;
+        str += &quot;키:&quot; + this.userHeight + &quot;,&quot;;
+        str += &quot;몸무게:&quot; + this.userWeight + &quot;&lt;br&gt;&quot;;
+
+        return str;
+      };
+
+      CheckWeight.prototype.getResult = function() {
+        this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+        this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+        if (
+          this.userWeight &gt;= this.minWeight &amp;&amp;
+          this.minWeight &lt;= this.maxWeight
+        ) {
+          return &quot;정상 몸무게입니다.&quot;;
+        } else if (this.userWeight &lt; this.minWeight) {
+          return &quot;정상  몸무게보다 미달입니다.&quot;;
+        } else {
+          return &quot;정상 뭄무게보다 초과입니다.&quot;;
+        }
+      };
+
+      const hong = new CheckWeight(&quot;홍준혁&quot;, 172, 78);
+      const sol = new CheckWeight(&quot;정든솔&quot;, 171, 46);
+
+      document.write(hong.getInfo());
+      document.write(hong.getResult(), &quot;&lt;br&gt;&quot;);
+
+      document.write(sol.getInfo());
+      document.write(sol.getResult(), &quot;&lt;br&gt;&quot;);
+
+      console.log(hong.getResult == sol.getResult);
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </deckgo-highlight-code>
+<p>여기서 () => {} 화살표 함수를 쓰면 this가 undefined로 나올것이다.
+function으로 키워드를 변경해서 사용해야 한다.</p>
+<h1>글을 마치며...</h1>
+<blockquote>
+<p><strong>내가 진짜 아무것도 모르고 리액트를 했구나!</strong></p>
+</blockquote>
+<p>라는 생각이 들었다. 객체나 함수 부분에서 크게 느꼈는데, 사실 리액트에서 자바스크립트 문법을 쓸때는 정말 "구현"만을 위해서 개발했었던 것 같다. 하지만 그 부분이 정말 잘못된 부분이라는 것을 느꼈다.</p>
+<p>우리 학교를 졸업하신 선배께 질문을 했었는데,
+<img src="https://user-images.githubusercontent.com/48292190/115487778-57fd2700-a294-11eb-9f60-1cba1ea9d5ef.png" alt="image">
+라고 하셨을때 정말 감명 깊었다.</p>
+<p><strong>선배께서 말씀하신대로, 우리는 프론트엔드 개발자지 리액트 개발자가 아니다.</strong>
+그래서 나는 코어 자바스크립트를 좀 더 깊게 공부해볼 생각이다.</p>
+<blockquote>
+<p><strong>리액트를 쓰는 사람이 아니라, 리액트를 만들 수 있는 사람이 되자.</strong></p>
+</blockquote>
+<p>물론, 당연히, 나는 자바스크립트 생태계에 완벽히 다 안다고 생각하지 않는다.
+오히려 아직 빙산의 일각이라고 생각한다.</p>
+<p>아무튼, 긴 글을 마치며 나는 이만...!</p>
+<center>2021-04-21 수<br>홍준혁</center></div></article></article><footer class="Layout__Footer-sc-1si20s3-4 bGvuYg">© All rights reserved. Powered by GitHub Pages.</footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/javascript_standard/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-fd41d3bba3dba0c60639.js"],"app":["/app-26986a0af943e786954a.js"],"component---src-pages-404-js":["/component---src-pages-404-js-facd4f6df0915737842e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-d865c67020b73608437e.js"],"component---src-template-post-page-jsx":["/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js"]};/*]]>*/</script><script src="/Tech-Blog/polyfill-fd41d3bba3dba0c60639.js" nomodule=""></script><script src="/Tech-Blog/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js" async=""></script><script src="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js" async=""></script><script src="/Tech-Blog/app-26986a0af943e786954a.js" async=""></script><script src="/Tech-Blog/framework-bee7a8ddabfa6589450d.js" async=""></script><script src="/Tech-Blog/webpack-runtime-38331859f554c28d95c0.js" async=""></script></body></html>
