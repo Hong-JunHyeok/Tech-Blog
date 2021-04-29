@@ -25,16 +25,16 @@ data-styled.g18[id="post-page__Name-csovzx-2"]{content:"eVEJgb,"}/*!sc*/
 data-styled.g19[id="post-page__CreatedAt-csovzx-3"]{content:"eTTicY,"}/*!sc*/
 </style><link as="script" rel="preload" href="/Tech-Blog/webpack-runtime-ab2dbad76f8b9e9def80.js"/><link as="script" rel="preload" href="/Tech-Blog/framework-bee7a8ddabfa6589450d.js"/><link as="script" rel="preload" href="/Tech-Blog/app-26986a0af943e786954a.js"/><link as="script" rel="preload" href="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js"/><link as="script" rel="preload" href="/Tech-Blog/component---src-template-post-page-jsx-90d0c5fc7ebc470ef2ce.js"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/blog/what_is_gatsby/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="Layout__Header-sc-1si20s3-0 bSRjXS"><div class="Layout__HeaderContainer-sc-1si20s3-1 jmhfhA"><div class="Layout__TitleContainer-sc-1si20s3-2 dUoGqk"><a style="text-decoration:none" href="/Tech-Blog/"><h1>DEVLOG</h1></a></div></div></header><article class="Layout__ContentDiv-sc-1si20s3-3 ktyqNY"><article class="post-page__PageTemplate-csovzx-0 dVbXdd"><header class="post-page__Header-csovzx-1 hAnHbU"><div class="info"><h1>개츠비란 무엇인가?</h1><img src="https://avatars.githubusercontent.com/u/48292190?v=4" alt=""/></div><div class="meta"><div class="post-page__Name-csovzx-2 eVEJgb">홍준혁</div><div class="post-page__CreatedAt-csovzx-3 eTTicY">2021년 4월 29일</div></div></header><div class="markdown-body"><h1>🦹🏼‍♂️ Gatsby</h1>
 <p>Gatsby 사이트를 쉽게 생성하기 위해서 다음과 같은 명령어를 수행해주면 된다.</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">npm install -g gatsby-cli</code>
         </deckgo-highlight-code>
 <p>Gatsby CLI를 통해 쉽고 다양한 기능들을 사용 해볼수있다.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">//개츠비 명령어 보기
 gatsby --help</code>
         </deckgo-highlight-code>
 <h1>🏰 간단히 Hello World 스타터를 이용하여 Gatsby를 빌드해봅시다.</h1>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world</code>
         </deckgo-highlight-code>
 <p>개츠비 Hello World 스타터를 사용해보기 위해 다음 명령어를 해당 폴더에 쳐줍시다.</p>
@@ -44,10 +44,10 @@ gatsby --help</code>
 <li>마지막으로 지정된 GitHub URL은 사용하려는 시작 코드가있는 코드 저장소를 가리킨다.</li>
 </ul>
 <p>생성한 폴더로 가서</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">cd hello-world</code>
         </deckgo-highlight-code>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">gatsby develop</code>
         </deckgo-highlight-code>
 <p>개발모드로 시작해보자.</p>
@@ -79,7 +79,7 @@ gatsby --help</code>
 </blockquote>
 <h1>🕵️‍♂️ 코드 자세히 살펴보기</h1>
 <p>아까 <code>🏰 간단히 Hello World 스타터를 이용하여 Gatsby를 빌드해봅시다.</code>에서 빌드했던 hello-world스타터의 코드를 좀 더 자세히 살펴보도록 하자.</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">gatsby new [SITE_DIRECTORY_NAME]        [URL_OF_STARTER_GITHUB_REPO]</code>
         </deckgo-highlight-code>
 <p>다음과 같은 형식으로 개츠비 프로젝트를 빌드할수 있다는 사실은 이제 다 아는 사실이다.</p>
@@ -89,7 +89,7 @@ gatsby --help</code>
 </blockquote>
 <p>우리는 Gatsby코드에 조금 더 익숙해져야할 필요성이 있다.😋</p>
 <p><code>/src</code> 에 <code>src/pages/index.js</code>를 열어보도록 하자.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 
 export default function Home() {
@@ -104,11 +104,11 @@ export default function Home() {
 </del>
 <h1>핫로딩 문제 해결</h1>
 <p>webpack dev server가 핫 모듈 교체를 위해 0.0.0.0을 localhost로 인식하지 못하는 문제</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">gatsby develop --host localhost --port 8000</code>
         </deckgo-highlight-code>
 <p>위와 같이 실행하면 문제 해결</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 
 export default function Home() {
@@ -130,7 +130,7 @@ export default function Home() {
 이제 실제로 되는 것인지 한번 확인해보도록 하자.</p>
 <p><img src="https://user-images.githubusercontent.com/48292190/115963458-4d73b380-a55a-11eb-8a85-67495f65726b.png" alt="image">
 이렇게 about이라는 파일을 만들고 다음과 같이 작성해주자.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 
 export default function About() {
@@ -141,12 +141,12 @@ export default function About() {
 <a href="http://localhost:8000/about">http://localhost:8000/about</a> 에 접속해보도록 하자.</p>
 <h2>😂개츠비 공식홈페이지에서 설명하는 섹션0 ~ 3정도는 리액트에 대한 설명이므로 설명이 필요한 사람은 보도록 하자.</h2>
 <h1>🚏 Link로 라우팅하기</h1>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import { Link } from &quot;gatsby&quot;;</code>
         </deckgo-highlight-code>
 <p>다음과 같은 코드로 Link라는 아이를 가져오도록 하자.</p>
 <p>이제 index.js에 about으로 가는 코드를 작성해보도록 하자.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { Link } from &quot;gatsby&quot;;
 
@@ -165,12 +165,12 @@ export default function Home() {
 </blockquote>
 <h1>🎨 Gatsby 스타일링</h1>
 <p>tutorial-part-two라는 폴더에 gatsby프로젝트를 하나 더 만들어보자.</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world</code>
         </deckgo-highlight-code>
 <p>src안에 <code>styles</code>라는 폴더를 만들고 그 안에 <code>global.css</code>라는 파일을 만들어보자.</p>
 <p>글로벌 스타일링을 해볼건데, 이는 프로젝트에 전체적으로 사용할 스타일을 지정하는 것이다. 예를들어 타이포그래피라든지 색깔이나 그런것들 말이다.</p>
-<deckgo-highlight-code css  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code css  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">html {
   background-color: lavenderblush;
 }</code>
@@ -197,7 +197,7 @@ export default function Home() {
 <p>1.src/components를 만든 다음에, 새 디렉터리 <code>container.js</code>와 <code>container.module.css</code>를 만들자.</p>
 <p><img src="https://user-images.githubusercontent.com/48292190/115990923-e6f5a080-a600-11eb-9cb8-701f1c76e542.png" alt="image"></p>
 <p>이제 container.js에서 다음과 같이 코딩해주자.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import * as containerStyles from &quot;./container.module.css&quot;;
 
@@ -206,14 +206,14 @@ export default function Container({ children }) {
 }</code>
         </deckgo-highlight-code>
 <p>다음은 css이다.</p>
-<deckgo-highlight-code css  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code css  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">.container {
   margin: 3rem auto;
   max-width: 600px;
 }</code>
         </deckgo-highlight-code>
 <p>이렇게 작업을 해준 다음에 pages에 만든 컴포넌트를 연결해주자.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import Container from &quot;../components/container&quot;;
 export default function About() {
@@ -230,7 +230,7 @@ export default function About() {
 <p>정상적으로 스타일이 적용된 모습을 볼 수 있다.</p>
 <h2>🙃 CSS 모듈을 사용하여 구성 요소 스타일 지정</h2>
 <p><code>pages</code>에 <code>about.module.css</code>를 만들어보자.</p>
-<deckgo-highlight-code css  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code css  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">.user {
   display: flex;
   align-items: center;
@@ -259,7 +259,7 @@ export default function About() {
 }</code>
         </deckgo-highlight-code>
 <p>그 다음 about페이지에 import를 해주도록 하자.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import Container from &quot;../components/containers&quot;;
 import * as styles from &quot;./about.module.css&quot;;
@@ -284,7 +284,7 @@ export default function About() {
 <code>.module.css</code>여야만 합니다. <code>.css</code>는 CSS 모듈이 적용되지 않습니다.</p>
 <p><code>import * as styles from './about.css';</code></p>
 <h2>그럼 한번 제대로 사용해볼까요?</h2>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import Container from &quot;../components/containers&quot;;
 import * as styles from &quot;./about.module.css&quot;;
@@ -338,7 +338,7 @@ export default function About() {
 <p>Gatsby 사이트에 기능을 추가하는 데 도움이되는 JavaScript 패키지입니다.</p>
 </blockquote>
 <p>새로운 예제를 위해서 새로운 프로젝트를 빌드해봅시다.</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">gatsby new tutorial-part-three https://github.com/gatsbyjs/gatsby-starter-hello-world
 
 cd tutorial-part-three</code>
@@ -346,12 +346,12 @@ cd tutorial-part-three</code>
 <p>위 작업을 완료한 다음에 우리가 설치할 플러그인은 <code>Typography.js</code>이다.
 <code>Typography.js</code>는 사이트의 타이포그래피에 대한 글로벌 기본 스타일을 생성하는 JavaScript 라이브러리입니다.</p>
 <p>😊 위 플러그인을 다운받아 봅시다.</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">yarn add gatsby-plugin-typography react-typography typography typography-theme-fairy-gates</code>
         </deckgo-highlight-code>
 <p>다운받을게 생각보다 많네요;; 🤨</p>
 <p>작업이 완료되었으면 gatsby-config.js에 다음과 같이 작성해봅시다.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">module.exports = {
   plugins: [
     {
@@ -367,7 +367,7 @@ cd tutorial-part-three</code>
 <p>자세한 설명은 코딩 후 설명해드리겠습니다.</p>
 <p>src/utils에 typography.js라는 파일을 만들어봅시다.</p>
 <p>다음과 같이 작성해주세요!</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import Typography from &quot;typography&quot;;
 import fairyGateTheme from &quot;typography-theme-fairy-gates&quot;;
 
@@ -383,7 +383,7 @@ export default typography;</code>
 <p>잘 적용이 되었네요!</p>
 <p>이제 page를 몇개 더 만들 예정입니다.
 <code>about.js</code>,<code>contact.js</code>를 만들어주세요. <strong>그런 다음 코드를 작성해주세요</strong></p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">//about.js
 import React from &quot;react&quot;;
 
@@ -398,7 +398,7 @@ export default function About() {
   );
 }</code>
         </deckgo-highlight-code>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">//contact.js
 import React from &quot;react&quot;;
 
@@ -418,7 +418,7 @@ export default function Contact() {
 음... 잘 나왔지만 Layout이 index.js랑 통일되었으면 좋겠습니다.
 그래서 컴포넌트를 하나 만들어서 레이아웃을 통일하는 방법을 알아봅시다.</p>
 <p><code>src/components</code>라는 폴더에 <code>layout.js</code>를 만들어줍시다.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 export default function Layout({ children }) {
   return (
@@ -429,7 +429,7 @@ export default function Layout({ children }) {
 }</code>
         </deckgo-highlight-code>
 <p>그 다음에 만든 레이아웃을 적용해봅시다.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import Layout from &quot;../components/layout&quot;;
 
@@ -444,7 +444,7 @@ export default function About() {
   );
 }</code>
         </deckgo-highlight-code>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import Layout from &quot;../components/layout&quot;;
 
@@ -463,7 +463,7 @@ export default function Contact() {
 <p><img src="https://user-images.githubusercontent.com/48292190/116030501-a5afd000-a696-11eb-8d12-1a7f37d13b9f.png" alt="image"></p>
 <p>아까 <code>index.js</code>랑 디자인이 통일된 느낌이 훨씬 좋아졌습니다.</p>
 <h2>🖐 레이아웃에 제목 추가하는 방법?</h2>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 export default function Layout({ children }) {
   return (
@@ -478,7 +478,7 @@ export default function Layout({ children }) {
 <h2>✋ 페이지 간 NavLink추가</h2>
 <p><code>gatsby</code>에서 지원하는 기능중 하나인 <code>Link</code>라는 기능을 사용해보겠습니다.</p>
 <p>Layout컴포넌트에 다음과 같이 작성해주세요</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { Link } from &quot;gatsby&quot;;
 
@@ -531,16 +531,16 @@ export default function Layout({ children }) {
 </blockquote>
 <p>Gatsby는 GraphQL을 사용하여 구성 요소가 필요한 데이터를 선언 할 수 있도록합니다.</p>
 <p>자, 이제 새로운 내용을 배우니까 새 예제 사이트를 만들어볼까요?</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">gatsby new tutorial-part-four https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-four</code>
         </deckgo-highlight-code>
 <p>위의 작업을 완료한 후, <code>typography.js</code>와 <code>Emotion</code>을 사용해보겠습니다.</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">npm install gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/react</code>
         </deckgo-highlight-code>
 <p>설치를 완료했다면, 저번에 <code>tutorial-part-three</code>에서 만들었던 레이아웃을 만들어주세요!</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { css } from &quot;@emotion/react&quot;;
 import { Link } from &quot;gatsby&quot;;
@@ -581,7 +581,7 @@ export default function Layout({ children }) {
   );
 }</code>
         </deckgo-highlight-code>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import Layout from &quot;../components/layout&quot;;
 
@@ -599,7 +599,7 @@ export default function Home() {
   );
 }</code>
         </deckgo-highlight-code>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import Typography from &quot;typography&quot;;
 import kirkhamTheme from &quot;typography-theme-kirkham&quot;;
 
@@ -607,7 +607,7 @@ const typography = new Typography(kirkhamTheme);
 export default typography;
 export const rhythm = typography.rhythm;</code>
         </deckgo-highlight-code>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
@@ -626,7 +626,7 @@ export const rhythm = typography.rhythm;</code>
 <h1>👾 첫 번째 GraphQL 쿼리</h1>
 <p>사이트를 구축 할 때 사이트 제목과 같은 공통 데이터를 재사용하고 싶을 가 있을거예요. 그런 경우에는 한 위치에 제목을 저장하고 다른 파일에서 해당 위치를 참조할 수 있다면, 나중에 제목을 바꿀 일이 있으면 한 위치의 값만 바꾸면 모든 참조하던 값이 변경되게 되죠.</p>
 <p><code>gatsby-config.js</code>에서 사이트 제목의 값을 추가해보도록 합시다.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">module.exports = {
   siteMetadata: {
     title: `Title from siteMetadata`,
@@ -646,7 +646,7 @@ export const rhythm = typography.rhythm;</code>
 <h2>🕵️‍♂️ 데이터를 가져와봅시다.</h2>
 <p>이제 siteMetadata라는 속성에 title이라는 값이 있으니까 참조를 할 수 있습니다!
 페이지쿼리를 <code>about페이지</code>에서 사용해봅시다.</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { graphql } from &quot;gatsby&quot;;
 import Layout from &quot;../components/layout&quot;;
@@ -687,7 +687,7 @@ export const query = graphql`
 </blockquote>
 <p>StaticQuery는 hooks도 지원합니다.
 그럼 어떤식으로 사용되는지 보도록하죠!</p>
-<deckgo-highlight-code javascript  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code javascript  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { css } from &quot;@emotion/react&quot;;
 import { useStaticQuery, Link, graphql } from &quot;gatsby&quot;;
@@ -752,7 +752,7 @@ export default function Layout({ children }) {
 <p>다음과 같이 실행하고 ▶️ 를 누르면 쿼리문이 실행됩니다.</p>
 <p>그러면 우리가 siteMetadata에 title의 값을 가져와봅시다.</p>
 <p><strong>쿼리문</strong></p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">query MyQuery {
   site{
 		siteMetadata{
@@ -763,7 +763,7 @@ export default function Layout({ children }) {
 </code>
         </deckgo-highlight-code>
 <p><strong>결과</strong></p>
-<deckgo-highlight-code json  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code json  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">{
   &quot;data&quot;: {
     &quot;site&quot;: {
@@ -785,11 +785,11 @@ export default function Layout({ children }) {
 <p>파일 시스템의 파일을 가져오는 플러그인을 한번 설치해볼까요?
 <code>gatsby-source-filesystem</code>을 설치해야 합니다!</p>
 <p>프로젝트 루트에 다음과 같은 명령어를 수행해주세요</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">npm install gatsby-source-filesystem</code>
         </deckgo-highlight-code>
 <p>늘 그랬듯, 플러그인을 설치하면 <code>gatsby-config</code>에 추가해주어야 합니다.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
@@ -816,7 +816,7 @@ export default function Layout({ children }) {
 <p><strong>자, 이제 GraphiQL를 한번 볼까요?</strong></p>
 <p>그러면 탐색기 창에 다음 allFile과 file같은 선택 항목이 표시 되고 사용할 수 있습니다.</p>
 <p>이제 우리는 매우 멋진 작업을 수행할 수 있습니다 🧖🏻‍♂️</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">query MyQuery {
   allFile {
     edges {
@@ -833,7 +833,7 @@ export default function Layout({ children }) {
 }</code>
         </deckgo-highlight-code>
 <p>다음과 같은 쿼리를 작성해보고 실행시켜보면...</p>
-<deckgo-highlight-code json  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code json  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">{
   &quot;data&quot;: {
     &quot;allFile&quot;: {
@@ -889,7 +889,7 @@ export default function Layout({ children }) {
 <p>이제 페이지를 하나 더 만들어봅시다.</p>
 <p><code>src/pages/my-files.js</code>를 만들어줍시다.</p>
 <p>그다음 소스코드를 다음과 같이 작성해줍시다.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { graphql } from &quot;gatsby&quot;;
 import Layout from &quot;../components/layout&quot;;
@@ -919,7 +919,7 @@ export const query = graphql`
 <p><img src="https://user-images.githubusercontent.com/48292190/116166564-422aae80-a739-11eb-8db4-44d7ecc9b53e.png" alt="image"></p>
 <p>잘 콘솔이 찍히나요?</p>
 <p>사실, 데이터를 가져오는 과정은 끝났는데, 여기서 끝나면 섭하니까 데이터를 HTML에 출력해보는 작업을 수행해보도록 하겠습니다.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { graphql } from &quot;gatsby&quot;;
 import Layout from &quot;../components/layout&quot;;
@@ -988,11 +988,11 @@ export const query = graphql`
 <p>Transformer 플러그인?</p>
 <h2>🤨 뭔진 몰라도 일단 따라해보면서 배웁시다!</h2>
 <p><code>gatsby-transformer-remark</code>를 다운받아봅시다.</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">yarn add gatsby-transformer-remark</code>
         </deckgo-highlight-code>
 <p>그 다음 <code>gatsby-config</code>에 뭘 해주어야하는지 알겠죠?</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
@@ -1020,7 +1020,7 @@ export const query = graphql`
 <img src="https://user-images.githubusercontent.com/48292190/116168827-4ad1b380-a73e-11eb-8e9d-4ab8119daec6.png" alt="image"></p>
 <p>그러면 <code>http://localhost:8000/___graphql</code>
 한번 확인을 해보면 <code>allMarkdownRemark</code>가 추가됩니다.</p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">{
   allMarkdownRemark {
     edges {
@@ -1038,7 +1038,7 @@ export const query = graphql`
 }</code>
         </deckgo-highlight-code>
 <p>다음 작업을 수행한 후 한번 보세요!</p>
-<deckgo-highlight-code json  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code json  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">{
   &quot;data&quot;: {
     &quot;allMarkdownRemark&quot;: {
@@ -1066,7 +1066,7 @@ export const query = graphql`
 </blockquote>
 <p><code>pages/index.js</code>에서 graphql작업을 해봅시다.
 어렵지 않아요!</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { graphql } from &quot;gatsby&quot;;
 import { css } from &quot;@emotion/react&quot;;
@@ -1135,7 +1135,7 @@ export const query = graphql`
 <h4>저장하면 바로 적용되는 모습이 정말 매력적입니다.</h4>
 <p>하지만 저는 포스트의 순서를 조금 바꾸고싶습니다...</p>
 <p><strong>다행히! 어려운 작업은 아니죠!</strong></p>
-<deckgo-highlight-code   terminal="carbon" theme="blackboard"  highlight-lines="undefined">
+<deckgo-highlight-code   terminal="carbon" theme="panda"  highlight-lines="undefined">
           <code slot="code">{
   allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
     totalCount
@@ -1174,7 +1174,7 @@ export const query = graphql`
 </blockquote>
 <p><code>gatsby-node.js</code>라는 파일을 루트에 만들어볼까요?
 그 다음 코드를 작성해주세요.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">exports.onCreateNode = ({ node }) =&gt; {
   console.log(`Node created of type &quot;${node.internal.type}&quot;`);
 };</code>
@@ -1188,7 +1188,7 @@ export const query = graphql`
 <img src="https://user-images.githubusercontent.com/48292190/116171563-f7fafa80-a743-11eb-9176-0c8e52ef32c1.png" alt="image"></p>
 <p>MarkdownRemark가 두번 생성되었다는걸 알 수 있습니다.</p>
 <p>이제 마크다운의 파일이름을 사용하여 페이지 슬러그를 만들어보는 작업을 수행해보도록 하겠습니다.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">exports.onCreateNode = ({ node, getNode }) =&gt; {
   if (node.internal.type === `MarkdownRemark`) {
     const fileNode = getNode(node.parent);
@@ -1200,7 +1200,7 @@ export const query = graphql`
 <p>이렇게 하면 파일의 이름을 가져올 수 있습니다.
 <code>gatsby-source-filesystem</code>플러그인에는 슬러그를 만드는 기능이 함께 제공됩니다</p>
 <p>어렵지 않으니 한번 해볼까요?</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode }) =&gt; {
@@ -1213,7 +1213,7 @@ exports.onCreateNode = ({ node, getNode }) =&gt; {
 <strong>이제 새 슬러그를 MarkdownRemark노드에 직접 추가 할 수 있습니다 .</strong></p>
 <p><img src="https://user-images.githubusercontent.com/48292190/116334772-bc7a3200-a810-11eb-9297-b2d85df5c0b4.png" alt="image"></p>
 <p><code>createNodeField</code>를 사용하면 이를 더욱 쉽게 구현할 수 있습니다.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode, actions }) =&gt; {
@@ -1231,7 +1231,7 @@ exports.onCreateNode = ({ node, getNode, actions }) =&gt; {
 <p><img src="https://user-images.githubusercontent.com/48292190/116335242-7a9dbb80-a811-11eb-9bd6-42453fdad513.png" alt="image"></p>
 <p>그러면 노드필드에 slug라는 이름의 필드를 만들어줍니다.</p>
 <p>이제 다음과 같은 작업을 수행해줍시다.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, getNode, actions }) =&gt; {
@@ -1276,7 +1276,7 @@ exports.createPages = async ({ graphql, actions }) =&gt; {
 <p>자, 따라해보세요
 <code>src/templates</code>를 만들고 <code>blog-post.js</code> 파일을 추가합시다.</p>
 <p>다음과 같이 작성합니다.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import Layout from &quot;../components/layout&quot;;
 
@@ -1289,7 +1289,7 @@ export default function BlogPost() {
 }</code>
         </deckgo-highlight-code>
 <p>그 다음 <code>gatsby-node.js</code>를 업데이트 해줍니다.</p>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -1348,7 +1348,7 @@ exports.createPages = async ({ graphql, actions }) =&gt; {
 <p>아직 제목,내용을 적지 않았거든요!</p>
 <p>우리가 데이터를 가져올땐 무엇을 사용한다고 했죠?</p>
 <h3>그렇죠! 바로 <code>GraphQL</code>입니다 🤗</h3>
-<deckgo-highlight-code js  terminal="carbon" theme="blackboard"  highlight-lines="">
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
           <code slot="code">import React from &quot;react&quot;;
 import { graphql } from &quot;gatsby&quot;;
 import Layout from &quot;../components/layout&quot;;
