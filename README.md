@@ -4,7 +4,10 @@
 
 ## 🕵️‍♂️ 개요
 
-[우아한형제들 기술블로그](https://woowabros.github.io/) [Class101 기술블로그](https://class101.dev/) 등... 많은 기업들이 기술블로그를 작성하는 모습을 보고 감명받아서 개발을 시작했습니다.
+- [우아한형제들 기술블로그](https://woowabros.github.io/)
+- [Class101 기술블로그](https://class101.dev/)
+
+등... 많은 기업들이 기술블로그를 작성하는 모습을 보고 감명받아서 개발을 시작했습니다.
 
 기술블로그를 만들기 위해 어떤 스택으로 개발을 할까 고민하다가 학교 선배께 여쭈어 보았는데 **"요즘엔 Gatsby로 많이 빌드를 하더라."** 라고 하셨습니다.
 
@@ -15,6 +18,26 @@
 ## 🤨 기여하는 방법
 
 🦹🏼‍♂️ 이 기술블로그에 기여하는 방법은 **크게 어렵지 않습니다.**(차근차근 따라오신다면요!)
+
+## 1. [이 레포지토리](https://github.com/Hong-JunHyeok/Tech-Blog/tree/source)를 포크(fork)해주세요!
+레포지토리에 우측 상단을 보시면 다음과 같은 버튼이 있을거예요.
+![image](https://user-images.githubusercontent.com/48292190/116492325-ef86f900-a8d6-11eb-9587-1ba3a577675c.png)
+
+`fork`를 눌러서 자신의 레포지토리로 가져가시면 됩니다! 
+![image](https://user-images.githubusercontent.com/48292190/116492449-3e349300-a8d7-11eb-9c14-fb4e0cbf0edf.png)
+
+## 2. 가져온 레포지토리에서 로컬파일로 클론(clone) 해주세요!
+`clone`을 하게되면 자신의 스토리지에 코드가 불러와집니다! 
+
+대부분의 개발자분들이 `Github Desktop`을 사용하니까 그걸 예제로 시도해보겠습니다.
+
+![image](https://user-images.githubusercontent.com/48292190/116492564-82279800-a8d7-11eb-8fa0-2e27af296a33.png)
+
+여기서 **초록색 Code버튼**을 눌러주시고, `Open with Github Desktop`을 눌러주세요!
+
+그러면 `Github Desktop`에서 clone하는 모달 창이 뜰텐데, 그 clone을 눌러서 자신의 코드를 저장할 로컬위치를 지정해주시면 됩니다.
+## 3. 이제 저장된 코드를 열어 수정을 하시면 됩니다!
+
 
 ## 😎 작성 양식
 
