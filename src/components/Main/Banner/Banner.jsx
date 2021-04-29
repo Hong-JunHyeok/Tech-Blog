@@ -16,7 +16,7 @@ export default function Banner() {
           </p>
           <button
             onClick={() => {
-              window.open("https://github.com/Hong-JunHyeok/Tech-Blog","_blank");
+              window.open("https://github.com/Hong-JunHyeok/Tech-Blog/tree/source","_blank");
             }}
           >
             기여하기

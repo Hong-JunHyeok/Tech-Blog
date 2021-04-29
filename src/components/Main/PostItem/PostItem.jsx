@@ -6,7 +6,6 @@ import * as sizes from "../../../styles/sizes.json"
 import TimeCounting from "time-counting"
 
 export default function PostItem({ title, desc, createdAt, name, profile }) {
-  console.log(title, desc, createdAt, name, profile)
   return (
     <Container>
       <Header>
