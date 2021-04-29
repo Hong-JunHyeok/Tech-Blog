@@ -47,6 +47,10 @@
 
 여러분들이 `clone`을 다 하셨더라면 코드를 수정하실 수 있습니다.
 
+### (매우 중요) `source`브랜치로 바꿔주셔야 합니다!
+![image](https://user-images.githubusercontent.com/48292190/116497353-11d24400-a8e2-11eb-8478-d9f2956bc686.png)
+master브랜치는 gh-pages가 빌드하는 브랜치이기 때문에 실질적인 코드는 source 브랜치에 있습니다!
+
 ## src/blog
 
   실질적으로 포스트가 작성되는 공간입니다!
@@ -89,10 +93,19 @@ npm run start
 코드에 작업을 다 하셨으면 **PR**(Pull Request)을 날려야겠죠?
 PR을 해야 이 기술블로그에 기여가 된답니다.
 
+그럼 다시 `Github Desktop`으로 가볼까요?
 
+`Github Desktop`에서 `Command + R` (window면 Ctrl + R) 을 누르게되면 자동으로 PR을 날리는 웹사이트로 이동합니다.
+![image](https://user-images.githubusercontent.com/48292190/116497603-bd7b9400-a8e2-11eb-8ff3-e5dd68ba322c.png)
 
+여기서 
+### Hong-JunHyeok/Tech-Blog의 source브랜치 <- [your name]/Tech-Blog의 source브랜치
 
-#### 😍 DEVLOG에 기여해주셔서 감사합니다!
+로 PR을 날려주시면 됩니다!
+
+### 😍 DEVLOG에 기여해주셔서 감사합니다!
+
+<hr />
 
 ## 🤷‍♀️ 문의
 
