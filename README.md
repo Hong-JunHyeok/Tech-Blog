@@ -111,7 +111,6 @@ PR을 해야 이 기술블로그에 기여가 된답니다.
 ## 🤷‍♀️ 문의
 
 저에게 연락하는 방법들입니다!
-프로젝트에 대해서 궁금한점이나 
 
 #### email : edb1631@naver.com
 #### facebook : https://www.facebook.com/programmingHong/
