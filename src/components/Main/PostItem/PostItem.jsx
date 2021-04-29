@@ -29,6 +29,7 @@ const Container = styled.li`
   width: 100%;
   border-bottom: 1px solid #e1e4e6;
   padding: 8% 0;
+  list-style: none;
 `
 
 const Header = styled.div`
