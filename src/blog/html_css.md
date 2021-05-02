@@ -1,5 +1,5 @@
 ---
-title: "HTML5+CSS3뿌수기"
+title: "👨‍🏫 HTML5+CSS3뿌수기"
 name: "홍준혁"
 createdAt: "2021년 4월 29일"
 profile: "https://avatars.githubusercontent.com/u/48292190?v=4"

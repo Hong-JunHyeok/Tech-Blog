@@ -3,56 +3,153 @@
    License: none (public domain)
 */
 @font-face {
-    font-family: "Noto Sans KR";
-    src: url('../assets/font/Noto_Sans_KR/NotoSansKR-Bold.otf');
+  font-family: "Noto Sans KR";
+  src: url("../assets/font/Noto_Sans_KR/NotoSansKR-Bold.otf");
 }
 @font-face {
-    font-family: "Noto Sans KR";
-    src: url('../assets/font/Noto_Sans_KR/NotoSansKR-Light.otf');
+  font-family: "Noto Sans KR";
+  src: url("../assets/font/Noto_Sans_KR/NotoSansKR-Light.otf");
 }
 @font-face {
-    font-family: "Noto Sans KR";
-    src: url('../assets/font/Noto_Sans_KR/NotoSansKR-Regular.otf');
+  font-family: "Noto Sans KR";
+  src: url("../assets/font/Noto_Sans_KR/NotoSansKR-Regular.otf");
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-    font-family: "Noto Sans KR";
+.waiting {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.waiting::after {
+  content: "조금만 기다려주세요!";
+  font-size: 40px;
+  color: rgba(0, 103, 188, 0.85);
+  font-weight: bold;
+  border: 0 !important;
+}
+.waiting::before{
+	content: "포스트를 작성중입니다";
+	font-weight: bold;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Noto Sans KR";
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }

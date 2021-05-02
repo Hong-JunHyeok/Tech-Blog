@@ -1,5 +1,5 @@
 ---
-title : 개츠비란 무엇인가?
+title : 💜 개츠비란 무엇인가?
 name : 홍준혁
 createdAt: 2021년 4월 29일
 profile: "https://avatars.githubusercontent.com/u/48292190?v=4"

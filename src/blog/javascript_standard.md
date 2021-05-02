@@ -1,5 +1,5 @@
 ---
-title : 자바스크립트 기초/기본 
+title : 🌟 자바스크립트 기초/기본 
 name : 홍준혁
 createdAt: 2021년 4월 29일
 profile: "https://avatars.githubusercontent.com/u/48292190?v=4"
