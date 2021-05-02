@@ -1,0 +1,956 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/Tech-Blog/styles.984b861128ea69ac6677.css" id="gatsby-global-css">@font-face{font-family:Noto Sans KR;src:url(/Tech-Blog/static/NotoSansKR-Bold-29abf35d525346faa333575d2fdc90c8.otf)}@font-face{font-family:Noto Sans KR;src:url(/Tech-Blog/static/NotoSansKR-Light-7bad2c5773f7229b193149e1db41b884.otf)}@font-face{font-family:Noto Sans KR;src:url(/Tech-Blog/static/NotoSansKR-Regular-457762eaaf7bb2aa28936d961835b922.otf)}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:Noto Sans KR}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}.markdown-body .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1:hover .anchor .octicon-link:before,.markdown-body h2:hover .anchor .octicon-link:before,.markdown-body h3:hover .anchor .octicon-link:before,.markdown-body h4:hover .anchor .octicon-link:before,.markdown-body h5:hover .anchor .octicon-link:before,.markdown-body h6:hover .anchor .octicon-link:before{width:16px;height:16px;content:" ";display:inline-block;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'/%3E%3C/svg%3E")}.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body details{display:block}.markdown-body summary{display:list-item}.markdown-body a{background-color:initial}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body strong{font-weight:inherit;font-weight:bolder}.markdown-body h1{margin:.67em 0}.markdown-body img{border-style:none}.markdown-body code,.markdown-body kbd,.markdown-body pre{font-family:monospace,monospace;font-size:1em}.markdown-body hr{box-sizing:initial;overflow:visible}.markdown-body input{font:inherit;margin:0;overflow:visible}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body input{font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body a{color:#0366d6;text-decoration:none}.markdown-body a:hover{text-decoration:underline}.markdown-body strong{font-weight:600}.markdown-body hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border-bottom:1px solid #dfe2e5}.markdown-body hr:after,.markdown-body hr:before{display:table;content:""}.markdown-body hr:after{clear:both}.markdown-body table{border-spacing:0;border-collapse:collapse}.markdown-body td,.markdown-body th{padding:0}.markdown-body details summary{cursor:pointer}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:0;margin-bottom:0}.markdown-body h1{font-size:32px}.markdown-body h1,.markdown-body h2{font-weight:600}.markdown-body h2{font-size:24px}.markdown-body h3{font-size:20px}.markdown-body h3,.markdown-body h4{font-weight:600}.markdown-body h4{font-size:16px}.markdown-body h5{font-size:14px}.markdown-body h5,.markdown-body h6{font-weight:600}.markdown-body h6{font-size:12px}.markdown-body p{margin-top:0;margin-bottom:10px}.markdown-body blockquote{margin:0}.markdown-body ol,.markdown-body ul{padding-left:0;margin-top:0;margin-bottom:0}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body dd{margin-left:0}.markdown-body code,.markdown-body pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}.markdown-body pre{margin-top:0;margin-bottom:0}.markdown-body input::-webkit-inner-spin-button,.markdown-body input::-webkit-outer-spin-button{margin:0;-webkit-appearance:none;appearance:none}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .border{border:1px solid #e1e4e8!important}.markdown-body .border-0{border:0!important}.markdown-body .border-bottom{border-bottom:1px solid #e1e4e8!important}.markdown-body .rounded-1{border-radius:3px!important}.markdown-body .bg-white{background-color:#fff!important}.markdown-body .bg-gray-light{background-color:#fafbfc!important}.markdown-body .text-gray-light{color:#6a737d!important}.markdown-body .pl-3,.markdown-body .px-3{padding-left:16px!important}.markdown-body .px-3{padding-right:16px!important}.markdown-body .f6{font-size:12px!important}.markdown-body .lh-condensed{line-height:1.25!important}.markdown-body .text-bold{font-weight:600!important}.markdown-body .pl-c{color:#6a737d}.markdown-body .pl-c1,.markdown-body .pl-s .pl-v{color:#005cc5}.markdown-body .pl-e,.markdown-body .pl-en{color:#6f42c1}.markdown-body .pl-s .pl-s1,.markdown-body .pl-smi{color:#24292e}.markdown-body .pl-ent{color:#22863a}.markdown-body .pl-k{color:#d73a49}.markdown-body .pl-pds,.markdown-body .pl-s,.markdown-body .pl-s .pl-pse .pl-s1,.markdown-body .pl-sr,.markdown-body .pl-sr .pl-cce,.markdown-body .pl-sr .pl-sra,.markdown-body .pl-sr .pl-sre{color:#032f62}.markdown-body .pl-smw,.markdown-body .pl-v{color:#e36209}.markdown-body .pl-bu{color:#b31d28}.markdown-body .pl-ii{color:#fafbfc;background-color:#b31d28}.markdown-body .pl-c2{color:#fafbfc;background-color:#d73a49}.markdown-body .pl-c2:before{content:"^M"}.markdown-body .pl-sr .pl-cce{font-weight:700;color:#22863a}.markdown-body .pl-ml{color:#735c0f}.markdown-body .pl-mh,.markdown-body .pl-mh .pl-en,.markdown-body .pl-ms{font-weight:700;color:#005cc5}.markdown-body .pl-mi{font-style:italic;color:#24292e}.markdown-body .pl-mb{font-weight:700;color:#24292e}.markdown-body .pl-md{color:#b31d28;background-color:#ffeef0}.markdown-body .pl-mi1{color:#22863a;background-color:#f0fff4}.markdown-body .pl-mc{color:#e36209;background-color:#ffebda}.markdown-body .pl-mi2{color:#f6f8fa;background-color:#005cc5}.markdown-body .pl-mdr{font-weight:700;color:#6f42c1}.markdown-body .pl-ba{color:#586069}.markdown-body .pl-sg{color:#959da5}.markdown-body .pl-corl{text-decoration:underline;color:#032f62}.markdown-body .mb-0{margin-bottom:0!important}.markdown-body .my-2{margin-bottom:8px!important;margin-top:8px!important}.markdown-body .pl-0{padding-left:0!important}.markdown-body .py-0{padding-top:0!important;padding-bottom:0!important}.markdown-body .pl-1{padding-left:4px!important}.markdown-body .pl-2{padding-left:8px!important}.markdown-body .py-2{padding-top:8px!important;padding-bottom:8px!important}.markdown-body .pl-3{padding-left:16px!important}.markdown-body .pl-4{padding-left:24px!important}.markdown-body .pl-5{padding-left:32px!important}.markdown-body .pl-6{padding-left:40px!important}.markdown-body .pl-7{padding-left:48px!important}.markdown-body .pl-8{padding-left:64px!important}.markdown-body .pl-9{padding-left:80px!important}.markdown-body .pl-10{padding-left:96px!important}.markdown-body .pl-11{padding-left:112px!important}.markdown-body .pl-12{padding-left:128px!important}.markdown-body hr{border-bottom-color:#eee}.markdown-body kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body blockquote,.markdown-body details,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eaecef}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li{word-wrap:break-all}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:initial;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:initial;border:0}.markdown-body .commit-tease-sha{display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%;color:#444d56}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body .blob-wrapper{overflow-x:auto;overflow-y:hidden}.markdown-body .blob-wrapper-embedded{max-height:240px;overflow-y:auto}.markdown-body .blob-num{width:1%;min-width:50px;padding-right:10px;padding-left:10px;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;color:rgba(27,31,35,.3);text-align:right;white-space:nowrap;vertical-align:top;cursor:pointer;-webkit-user-select:none;-ms-user-select:none;user-select:none}.markdown-body .blob-num:hover{color:rgba(27,31,35,.6)}.markdown-body .blob-num:before{content:attr(data-line-number)}.markdown-body .blob-code{position:relative;padding-right:10px;padding-left:10px;line-height:20px;vertical-align:top}.markdown-body .blob-code-inner{overflow:visible;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;color:#24292e;word-wrap:normal;white-space:pre}.markdown-body .pl-token.active,.markdown-body .pl-token:hover{cursor:pointer;background:#ffea7f}.markdown-body .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}.markdown-body .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}.markdown-body .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}.markdown-body .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}.markdown-body .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}.markdown-body .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}.markdown-body .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}.markdown-body .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}.markdown-body .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}.markdown-body .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}.markdown-body .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}.markdown-body .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style><meta name="generator" content="Gatsby 3.4.0"/><style data-styled="" data-styled-version="5.2.3">.bSRjXS{width:100%;height:60px;border-bottom:1px solid #e1e4e6;position:fixed;background-color:white;z-index:10000;}/*!sc*/
+data-styled.g2[id="Layout__Header-sc-1si20s3-0"]{content:"bSRjXS,"}/*!sc*/
+.jmhfhA{max-width:800px;margin:0 auto;height:100%;}/*!sc*/
+data-styled.g3[id="Layout__HeaderContainer-sc-1si20s3-1"]{content:"jmhfhA,"}/*!sc*/
+.dUoGqk{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;height:100%;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.dUoGqk h1{color:#4c80f1;font-size:24px;font-weight:bold;}/*!sc*/
+.dUoGqk::after{margin-left:10px;font-size:12px;content:"여러분의 개발이야기를 들려주세요!";color:#81878b;}/*!sc*/
+data-styled.g4[id="Layout__TitleContainer-sc-1si20s3-2"]{content:"dUoGqk,"}/*!sc*/
+.ktyqNY{min-height:80vh;padding-top:60px;}/*!sc*/
+data-styled.g5[id="Layout__ContentDiv-sc-1si20s3-3"]{content:"ktyqNY,"}/*!sc*/
+.bGvuYg{width:100%;padding:60px 0;color:#81878b;text-align:center;}/*!sc*/
+data-styled.g6[id="Layout__Footer-sc-1si20s3-4"]{content:"bGvuYg,"}/*!sc*/
+.dVbXdd{max-width:800px;margin:0 auto;}/*!sc*/
+.dVbXdd img{max-width:100%;}/*!sc*/
+data-styled.g16[id="post-page__PageTemplate-csovzx-0"]{content:"dVbXdd,"}/*!sc*/
+.hAnHbU{height:100px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-bottom:1px solid #e1e4e6;padding:20px 0;margin-bottom:50px;}/*!sc*/
+.hAnHbU h1{color:#4d5256;font-size:32px;font-weight:bold;}/*!sc*/
+.hAnHbU img{width:68px;height:68px;border-radius:50%;}/*!sc*/
+.hAnHbU .info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:100%;}/*!sc*/
+.hAnHbU .meta{width:100%;}/*!sc*/
+data-styled.g17[id="post-page__Header-csovzx-1"]{content:"hAnHbU,"}/*!sc*/
+.eVEJgb{font-weight:bold;padding-bottom:5px;margin-bottom:5px;}/*!sc*/
+data-styled.g18[id="post-page__Name-csovzx-2"]{content:"eVEJgb,"}/*!sc*/
+.eTTicY{font-weight:lighter;color:#81878b;}/*!sc*/
+data-styled.g19[id="post-page__CreatedAt-csovzx-3"]{content:"eTTicY,"}/*!sc*/
+</style><link as="script" rel="preload" href="/Tech-Blog/webpack-runtime-38331859f554c28d95c0.js"/><link as="script" rel="preload" href="/Tech-Blog/framework-bee7a8ddabfa6589450d.js"/><link as="script" rel="preload" href="/Tech-Blog/app-26986a0af943e786954a.js"/><link as="script" rel="preload" href="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js"/><link as="script" rel="preload" href="/Tech-Blog/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/blog/react_standard/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="Layout__Header-sc-1si20s3-0 bSRjXS"><div class="Layout__HeaderContainer-sc-1si20s3-1 jmhfhA"><div class="Layout__TitleContainer-sc-1si20s3-2 dUoGqk"><a style="text-decoration:none" href="/Tech-Blog/"><h1>DEVLOG</h1></a></div></div></header><article class="Layout__ContentDiv-sc-1si20s3-3 ktyqNY"><article class="post-page__PageTemplate-csovzx-0 dVbXdd"><header class="post-page__Header-csovzx-1 hAnHbU"><div class="info"><h1>🎮리액트(React.js)로 만드는 틱택토</h1><img src="https://avatars.githubusercontent.com/u/48292190?v=4" alt=""/></div><div class="meta"><div class="post-page__Name-csovzx-2 eVEJgb">홍준혁</div><div class="post-page__CreatedAt-csovzx-3 eTTicY">2021년 5월 2일</div></div></header><div class="markdown-body"><h1>⚛️React.js Standard</h1>
+<blockquote>
+<h3>⚠️ 이 글은 React.js 공식 자습서에 의존하고 있는 글입니다.</h3>
+</blockquote>
+<p>아래의 사진은 공식 자습서에서 설명하고 있는 문구입니다.
+<img src="https://user-images.githubusercontent.com/48292190/116520103-3c85c200-a90d-11eb-8f19-a33faeaadd10.png" alt="image"></p>
+<p><strong>그만큼 쉬우신 거지~</strong></p>
+<p><img src="https://blog.kakaocdn.net/dn/biT2IR/btqZ4AhxqLX/TQCSmdNKu1ZtDaHYVbNcBK/img.png" alt="무야호"></p>
+<p>그럼 한번 시작해볼까요?</p>
+<h1>🤨시작하기에 앞서...</h1>
+<p>리액트의 공식 자습서에서는 리액트를 이용해서 간단한 게임을 만드는데, 게임을 만들고 싶지 않아도 한번 해보는게 도움이 된다고 합니다...<strong>공식 문서에서 강조하는 내용이니만큼 집중해서 해보겠습니다!</strong></p>
+<p>⭐️ 이번 예제를 통해 배우는 내용은</p>
+<ul>
+<li>React의 기본(components, props, state)</li>
+<li>일반적인 테크닉</li>
+<li>깊은 통찰력</li>
+</ul>
+<p>등을 배울 예정입니다.</p>
+<blockquote>
+<p>🔥 자습서의 코드를 복사 붙여넣기 하는거보다, 직접 써보면서 하는 방식을 추천드립니다!</p>
+</blockquote>
+<p>우리가 최종적으로 만들 게임은 <a href="https://codepen.io/gaearon/pen/gWWZgR?editors=0010">여기</a> 있습니다.</p>
+<p><strong>참고로 class형 컴포넌트를 사용하더라구요... 요즘에는 function형 컴포넌트를 많이 사용한답니다!</strong> 그래도 class형도 알면 좋으니 한번 따라해보도록 하죠!</p>
+<h3>😝 틱택토 게임 해보셨나요?</h3>
+<p>했든 안했든 우리가 만들 게임이기 때문에 한번쯤은 플레이 해보는것을 추천드립니다!</p>
+<p><a href="https://www.google.com/search?q=%ED%8B%B1%ED%83%9D%ED%86%A0+%EA%B2%8C%EC%9E%84&#x26;rlz=1C5CHFA_enKR950KR950&#x26;oq=%ED%8B%B1%ED%83%9D%ED%86%A0+%EA%B2%8C%EC%9E%84&#x26;aqs=chrome.0.0l10.2290j0j4&#x26;sourceid=chrome&#x26;ie=UTF-8">틱택토게임 직접 해보기</a></p>
+<h3>🥶 리액트를 배우기 전에 필요한 지식</h3>
+<p>우리가 리액트를 하기 전에 넘어야할 산이 있습니다! (사실 그렇게 높은 산은 아니예요)
+바로 <strong>HTML</strong> , <strong>JavaScript</strong>입니다.
+완전 잘 할 필요는 없습니다. 그냥 기본만 알고있으면 충분히 할 수 있습니다!</p>
+<p>(함수, 객체, 배열, 가능하다면 클래스 같은 프로그래밍 개념을 알고있어야합니다.)</p>
+<h3>React란?</h3>
+<p>리액트는 선언적이고 효율적인 JavaScript 라이브러리입니다.
+<strong>컴포넌트</strong>라고 불리는 작고 고립된 코드의 파편을 이용하여 복잡한 UI를 구성합니다.</p>
+<deckgo-highlight-code jsx  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">import React from &quot;react&quot;;
+import &quot;./styles.css&quot;;
+
+class ShoppingList extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;{this.props.name}&#39;s Shopping List&lt;/h1&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Instagram&lt;/li&gt;
+          &lt;li&gt;WhatsApp&lt;/li&gt;
+          &lt;li&gt;Oculus&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ShoppingList;</code>
+        </deckgo-highlight-code>
+<p>쇼핑리스트라는 컴포넌트를 만들어서 복잡?한 UI를 단순화시킬 수 있습니다.</p>
+<p>우리는 컴포넌트를 사용하여 React에게 화면에 표현하고 싶은 것이 무엇인지 알려줍니다.</p>
+<p><strong>데이터가 변경될때 React는 효율적으로 업데이트를 하고 다시 렌더링합니다.</strong></p>
+<p>🤨 아직 효율적에 대해서 아직은 생각하지 맙시다...우리는 리액트에 기능에 좀 더 집중하도록 하자구요.</p>
+<p>우리가 return{} 문 안에 html과 유사하게 생긴 코드를 볼 수 있을텐데 왜 <strong>유사하다</strong>라고 했냐면 <code>JSX</code>라는 문법입니다... html이 아닌것이지요!</p>
+<p>그럼 JSX가 html로 변환하는 과정은 어떻게 이루어질까요?
+다음과 같이 동작합니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">return React.createElement(
+  &quot;div&quot;,
+  { className: &quot;shopping-list&quot; },
+  React.createElement(&quot;h1&quot; /* ... h1 children ... */),
+  React.createElement(&quot;ul&quot; /* ... ul children ... */)
+);</code>
+        </deckgo-highlight-code>
+<p>좀 더 자세히 볼까요?</p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116552443-fdb73280-a933-11eb-9499-54e3ad76f87e.png" alt="image"></p>
+<p>😊 결국엔 리액트도 JS라는게 다시하번 느껴지죠?</p>
+<p>JSX 내부의 중괄호 안에 어떤 JavaScript 표현식도 사용할 수 있습니다.</p>
+<p>무슨말인지 자세히 알아보도록 할까요?</p>
+<p>우리가 JSX를 html태그만 사용했었는데 DOM컴포넌트도 렌더링할 수 있지만, Custom React Component도 사용할 수 있습니다.</p>
+<p>무슨소리인지 잘 모르시겠다구요? 자세히 알아보도록 합시다.</p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116553859-897d8e80-a935-11eb-9d2c-8fd6dcc54092.png" alt="image"></p>
+<p>이렇게 동작하게 되는것이죠!</p>
+<h2>🤫 초기코드 살펴보기</h2>
+<p>공식 자습서에서 설명하는 코드인 <a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0010">여기</a>에서 한번 코드를 살펴보도록 하겠습니다.</p>
+<p><code>src/index</code>를 열어주세요</p>
+<p>코드를 살펴보면 세 가지의 React 컴포넌트를 확인할 수 있습니다.</p>
+<ul>
+<li>Square</li>
+<li>Board</li>
+<li>Game</li>
+</ul>
+<p><code>Square</code>컴포넌트는 button을 렌더링하고,</p>
+<p><code>Board</code>컴포넌트는 사각형 9개를 렌더링합니다.</p>
+<p>마지막으로 <code>Game</code> 컴포넌트는 게임판을 렌더링하며 나중에 수정할 자리 표시자 값을 가지고 있습니다.</p>
+<h2>Props를 통해 데이터 전달하기</h2>
+<blockquote>
+<h3>⚠️여러분은 예제 사이트(미완성 된 코드)에서 내용을 추가하면 됩니다.</h3>
+</blockquote>
+<p><strong>코드를 절대로! 복사 붙여넣기 하지 마세요! 그냥 따라치면서 익힙시다.</strong></p>
+<p>Square에 value prop을 전달하기 위해 Board의 renderSquare함수 코드를 작성해봅시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Board extends React.Component {
+  renderSquare(i) {
+    return &lt;Square value={i} /&gt;;
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>이제 값을 표시하기 위해 render함수에서 {this.props.value}를 추가해줍시다!</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Square extends React.Component {
+  render() {
+    return &lt;button className=&quot;square&quot;&gt;{this.props.value}&lt;/button&gt;;
+  }
+}</code>
+        </deckgo-highlight-code>
+<p><img src="https://user-images.githubusercontent.com/48292190/116555543-7c619f00-a937-11eb-860e-a01b45d9ffe4.png" alt="image"></p>
+<p>그럼 다음과 같이 각 Square에 value가 잘 전달된것을 볼 수 있습니다!</p>
+<p>이제 Props의 전달입니다!</p>
+<p><code>Board</code>컴포넌트에서 -> <code>Square</code>컴포넌트로 <strong>부모 컴포넌트에서 자식 컴포넌트로</strong> 값을 전달한것이지요!</p>
+<h2>사용자와 상호작용 하는 컴포넌트 만들기</h2>
+<p><code>Square</code>컴포넌트를 클릭하면 "X"가 체크되도록 해보겠습니다!</p>
+<p>그러면 <code>click</code>했을때에 어떠한 동작을 해주어야겠죠?</p>
+<p>어떻게 하는지 보도록 하겠습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Square extends React.Component {
+  render() {
+    return (
+      &lt;button
+        className=&quot;square&quot;
+        onClick={() =&gt; {
+          alert(&quot;click&quot;);
+        }}
+      &gt;
+        {this.props.value}
+      &lt;/button&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p><code>onClick</code>이라는 속성을 button컴포넌트에 주도록 합시다.</p>
+<p>그러면 함수를 받게되는데 그때 alert하는 로직을 작성해주게 되는겁니다.</p>
+<p>그렇게 어려운 내용은 아니지요?</p>
+<p>Square 컴포넌트를 클릭한 것을 <strong>“기억하게”</strong> 만들어 “X” 표시를 채워 넣으려고 합니다.</p>
+<p>음...**"기억하게"**라고 하니까 감이 안오죠?</p>
+<p>무언가를 “기억하기”위해 component는 <strong>state</strong>를 사용합니다.</p>
+<p>새로운 개념이 나왔습니다! <strong>state</strong></p>
+<p>클래스형 컴포넌트는 <code>this.state</code>로 접근할 수 있습니다.</p>
+<p>한번 예제를 볼까요?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+
+  render() {
+    return (
+      &lt;button className=&quot;square&quot; onClick={() =&gt; alert(&quot;click&quot;)}&gt;
+        {this.props.value}
+      &lt;/button&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>생성자 (constructor)를 이용해서 state를 초기화합니다.</p>
+<blockquote>
+<h1>JavaScript클래스 super</h1>
+<p>JavaScript 클래스에서 하위 클래스의 생성자를 정의할 때 항상 super를 호출해야 합니다. 즉 모든 리액트 컴포넌트는 React.Component 클래스를 상속받으므로 <code>super(props)</code>을 반드시 작성해야 합니다.</p>
+</blockquote>
+<p>이제 클릭하면 박스안에 값이 X로 바뀌게 구현해보겠습니다.</p>
+<p>이제 setState를 통해 state를 업데이트 해주도록 하겠습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">render() {
+    return (
+      &lt;button className=&quot;square&quot; onClick={() =&gt; {
+          this.setState({
+            value: &#39;x&#39;
+          })
+        }}&gt;
+        {this.state.value}
+      &lt;/button&gt;
+    );
+  }</code>
+        </deckgo-highlight-code>
+<p>이렇게 되면 다음과 같이 누르면 X가 잘 업데이트가 될겁니다.</p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116779507-7f809a80-aab1-11eb-8911-8ec9bd52d63b.png" alt="image"></p>
+<p>여기서 setState되는 과정이 이해를 못하실 수도 있습니다. 하지만 걱정하지 마세요. 나중에 더 자세히 설명해드리겠습니다.</p>
+<p>이제 해야할 작업이 무엇일까요?</p>
+<h1>🙆‍♂️ 게임 완성하기</h1>
+<blockquote>
+<p>완전한 게임을 위해 게임판의 “X”와 “O”를 번갈아 표시할 필요가 있으며 승자를 결정하는 방법이 필요합니다.</p>
+</blockquote>
+<p>차근차근 해보도록 하겠습니다.</p>
+<p>각 Square가 아닌 부모 Board 컴포넌트에 게임의 상태를 저장하는 것이 가장 좋은 방법입니다.</p>
+<p>Board컴포넌트에 생성자를 추가하고 9개의 사각형에 9개의 null배열을 초기 state로 설정을 해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      squares: Array(9).fill(null),
+    };
+  }
+
+  renderSquare(i) {
+    return &lt;Square value={i} /&gt;;
+  }</code>
+        </deckgo-highlight-code>
+<p>그러면 나중에 Board를 채울때 다음과 같은 배열의 형태일것입니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">[&quot;O&quot;, null, &quot;X&quot;, &quot;X&quot;, &quot;X&quot;, &quot;O&quot;, &quot;O&quot;, null, null];</code>
+        </deckgo-highlight-code>
+<p>현재 renderSquare의 상태는</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code"> renderSquare(i) {
+    return &lt;Square value={i} /&gt;;
+  }</code>
+        </deckgo-highlight-code>
+<p>다음과 같은 형태일텐데, 이를 수정해주어야합니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">  renderSquare(i) {
+    return &lt;Square value={this.state.squares[i]}/&gt;;
+  }</code>
+        </deckgo-highlight-code>
+<p>그러면 이제 위에서 생성자를 이용해서 선언했던 state의 null값이 정상적으로 들어갔을겁니다.</p>
+<blockquote>
+<p>Square는 이제 빈 사각형에 'X', 'O', 또는 null인 value prop을 받습니다.</p>
+</blockquote>
+<p>Board에서 Square로 함수를 전달하고 Square는 사각형을 클릭할 때 함수를 호출할 것입니다.</p>
+<p>다음과 같이 작성해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">renderSquare(i) {
+    return (
+      &lt;Square
+        value={this.state.squares[i]}
+        onClick={() =&gt; this.handleClick(i)}
+      /&gt;
+    );
+  }</code>
+        </deckgo-highlight-code>
+<p>이제 Board에서 <code>Square</code>로 <code>value</code>와 onClick 두 개의 props를 전달하였습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Square extends React.Component {
+  render() {
+    return (
+      &lt;button className=&quot;square&quot; onClick={() =&gt; this.props.onClick()}&gt;
+        {this.props.value}
+      &lt;/button&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>그러면 Square컴포넌트는 이렇게 수정하면 됩니다.
+<code>constructor</code>가 없어졌는데, props로 값을 받기때문에 <code>constructor</code>의 필요성이 없어진 것입니다.</p>
+<p>그리고 <code>onClick</code>에 전달해준 <code>handleClick</code>이라는 함수는 아직 정의해주지 않았으니, 이제 차차 해보도록 하겠습니다.</p>
+<blockquote>
+<p>지금은 "this.handleClick is not a function"이라는 문구가 뜰 것입니다.</p>
+</blockquote>
+<blockquote>
+<h1>이벤트 이름 작성 팁</h1>
+<p>React에서 이벤트를 나타내는 prop에는 on[Event], 이벤트를 처리하는 함수에는 handle[Event]를 사용하는 것이 일반적입니다.</p>
+</blockquote>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">handleClick(i) {
+    const squares = this.state.squares.slice();
+    squares[i] = &#39;X&#39;;
+    this.setState({squares: squares});
+  }</code>
+        </deckgo-highlight-code>
+<p>이제 실행결과를 확인해보면 원래 작업과 동일하다는걸 알 수 있을겁니다.
+하지만 다른점은 <strong>부모 컴포넌트에서 값을 관리한다는 것이죠.</strong></p>
+<p>Board의 상태가 변할때마다 Square컴포넌트는 자동으로 랜더링 해줍니다.</p>
+<p>로직이 이해안되는 사람들이 있을겁니다...! 하지만 한번 알아보도록 하죠.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const squares = this.state.squares.slice();</code>
+        </deckgo-highlight-code>
+<p>이 부분은 <code>.slice()</code>를 사용함으로써 기존 배열을 수정하지 않고 <code>squares</code>의 배열을 복사하는 부분입니다. 왜 기존 배열을 수정하지 않고 배열을 복사해서 하였는지 궁금하죠?</p>
+<h1>불변성이란?</h1>
+<p>이전 코드에서 slice를 사용해서 squares의 사본을 만드는 작업을 했었습니다.</p>
+<p>일반적으로 데이터를 변경하는 방법에는 두가지의 방법이 있습니다.</p>
+<blockquote>
+<h2>객체 변경을 통해 데이터를 수정하기</h2>
+</blockquote>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">var player = { score: 1, name: &quot;Jeff&quot; };
+player.score = 2;
+// 이제 player는 {score: 2, name: &#39;Jeff&#39;}입니다.</code>
+        </deckgo-highlight-code>
+<blockquote>
+<h2>객체 변경없이 데이터를 수정하기</h2>
+</blockquote>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">var player = { score: 1, name: &quot;Jeff&quot; };
+
+var newPlayer = Object.assign({}, player, { score: 2 });
+// 이제 player는 변하지 않았지만 newPlayer는 {score: 2, name: &#39;Jeff&#39;}입니다.
+
+// 만약 객체 spread 구문을 사용한다면 이렇게 쓸 수 있습니다.
+// var newPlayer = {...player, score: 2};</code>
+        </deckgo-highlight-code>
+<p>최종 결과는 동일하지만 객체 변경없이 데이터를 수정하면 얻을수 있는 이점이 몇몇개 있습니다!(이를 불변성을 유지한다고 합니다.) 그것이 우리가 setState를 사용하는 이유입니다. 한번 알아볼까요?</p>
+<ul>
+<li>
+<h1>복잡한 특징들을 단순하게 만듦</h1>
+<p>직접적인 데이터 변이를 피하는 것은 이전 버전의 게임 이력을 유지하고 나중에 재사용할 수 있게 만듭니다.</p>
+</li>
+<li>
+<h1>변화를 감지함</h1>
+<p>객체가 직접적으로 수정되기 때문에 복제가 가능한 객체에서 변화를 감지하는 것은 어렵습니다.</p>
+<p><strong>불변 객체에서 변화를 감지하는 것은 상당히 쉽습니다. 참조하고 있는 불변 객체가 이전 객체와 다르다면 객체는 변한 것입니다.</strong></p>
+</li>
+<li>
+<h1>React에서 다시 렌더링하는 시기를 결정함</h1>
+<p>변하지 않는 데이터는 변경이 이루어졌는지 쉽게 판단할 수 있으며 이를 바탕으로 컴포넌트가 다시 렌더링할지를 결정할 수 있습니다.</p>
+</li>
+</ul>
+<p>이제 무슨느낌인지 잘 아시겠지요?</p>
+<h1>함수 컴포넌트 작성하는 방법.</h1>
+<p>아까 이 글을 시작하기 전에 요즘에는 클래스형 컴포넌트는 잘 사용하지 않는다고 했었죠? 그래서 요즘에는 <strong>함수형 컴포넌트 + Hooks</strong>를 이용한 구조를 많이 사용한답니다.</p>
+<p>Square컴포넌트를 함수형 컴포넌트로 리팩토링 해볼까요?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Square extends React.Component {
+  render() {
+    return (
+      &lt;button className=&quot;square&quot; onClick={() =&gt; this.props.onClick()}&gt;
+        {this.props.value}
+      &lt;/button&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>이게 클래스형으로 만든 클래스 컴포넌트이고,</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Square(props) {
+  return (
+    &lt;button className=&quot;square&quot; onClick={props.onClick}&gt;
+      {props.value}
+    &lt;/button&gt;
+  );
+}</code>
+        </deckgo-highlight-code>
+<p>그 다음 이것이 함수형으로 작성한 컴포넌트입니다.</p>
+<p><strong>코드가 훨씬 깔끔하죠?</strong></p>
+<p>잘 보시면 <code>this</code>가 없어졌습니다.</p>
+<blockquote>
+<p>Square를 함수 컴포넌트로 수정했을 때 onClick={() => this.props.onClick()}을 onClick={props.onClick}로 간결하게 작성했습니다. 양쪽 모두 괄호가 사라진 것에 주목해주세요.</p>
+</blockquote>
+<h1>순서 만들기</h1>
+<p>우리가 틱택토 게임을 만들때 X만 표시되었었죠? 하지만 O도 표시되게 하기위해서 로직을 좀 더 수정해야 합니다.</p>
+<p>첫번째 차례를 X로 하겠습니다. 아래의 코드를 집중해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Board extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      squares : Array(9).fill(null),
+      xIsNext : true
+    }
+  }</code>
+        </deckgo-highlight-code>
+<p>조건부 연산을 위한 xIsNext라는 state를 선언해주세요.</p>
+<p>그리고 handleClick을 조금 수정해주도록 하겠습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">    handleClick(i) {
+    const squares = this.state.squares.slice();
+    squares[i] = this.state.xIsNext ? &#39;X&#39; : &#39;O&#39;;
+    this.setState({
+      squares: squares,
+      xIsNext: !this.state.xIsNext,
+    });
+  }</code>
+        </deckgo-highlight-code>
+<p>이러면 xIsNext가 toggle(번갈아서)되므로 X,O가 반복되는 모습을 볼 수 있습니다.</p>
+<p><strong>Board의 render 안에 있는 “status” 텍스트도 바꿔서 어느 플레이어가 다음 차례인지 알려주겠습니다.</strong></p>
+<p>state변수를 다음과 같이 수정해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const status = `Next player : ${this.state.xIsNext ? &quot;X&quot; : &quot;O&quot;}`;</code>
+        </deckgo-highlight-code>
+<h1>승자 결정하기</h1>
+<p>이전 코드에서는 누가 다음에 둬야할지 구현했다면 이제 우리가 할 작업은 승부가 나는 때와 더이상 둘 곳이 없을때를 알려주어야합니다.</p>
+<p>그럴려면 약간의 알고리즘? 이 필요한데 아래의 코드를 보도록 하죠.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function calculateWinner(squares) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i &lt; lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] &amp;&amp; squares[a] === squares[b] &amp;&amp; squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+  return null;
+}</code>
+        </deckgo-highlight-code>
+<p>위 함수가 승자판별을 위한 함수입니다.</p>
+<p>lines의 경우의 수를 탐색해서 누가 승자인지 판별하는 것이지요.</p>
+<p>이제 어떤식으로 <code>calculateWinner</code>를 사용하는지 볼까요?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">let status;
+const winner = calculateWinner(this.state.squares);
+
+if (winner) {
+  status = &quot;Winner&quot; + winner;
+} else {
+  status = &quot;Next Player&quot; + (this.state.xIsNext ? &quot;X&quot; : &quot;O&quot;);
+}</code>
+        </deckgo-highlight-code>
+<p>이러고 화면을 보면 정상적으로 Winner가 뜨는것을 볼 수 있습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116800460-39bce400-ab3c-11eb-93f3-5afbb36c6450.png" alt="image"></p>
+<p>하지만 해야할 작업이 아직 더 남아있습니다.</p>
+<p>누군가가 승리하거나 Square가 이미 채워졌다면 Board의 handleClick 함수가 클릭을 무시하도록 해야합니다.</p>
+<p>그럴려면 조건문을 하나 더 만들어야겠죠?</p>
+<p><code>handleClick</code>함수를 다음과 같이 수정해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">handleClick(i) {
+    const squares = this.state.squares.slice();
+    if(calculateWinner(squares) || squares[i]){
+      return ;
+    }
+    squares[i] = this.state.xIsNext ? &#39;X&#39; : &#39;O&#39;;
+    this.setState({
+      squares: squares,
+      xIsNext: !this.state.xIsNext,
+    });
+  }</code>
+        </deckgo-highlight-code>
+<p>그러면 누군가가 승리하거나 Square가 이미 채워졌다면 Board의 handleClick 함수가 클릭을 무시되게 할 수 있습니다.</p>
+<h1>🥳 축하해요! 틱택토 게임을 만들었어요!</h1>
+<p>하지만 여기서 더 멋있는 기능을 구현해보도록 해보죠! 바로 <code>시간여행</code>이라는 기능입니다. 경기에서 이전 차례로 “시간여행”을 만들겠습니다.</p>
+<h1>시간 여행 추가하기</h1>
+<p>이 기능은 불변성을 유지하지 않고 구현했다면 어려웠을 겁니다. 하지만 우리는 불변성을 유지해주었기 때문에 기록을 남길 수 있는것이죠.
+(조금 햇갈릴 수 있습니다. 하지만 천천히 따라와보도록 합시다.)</p>
+<p><strong>과거의 squares 배열들을 history라는 다른 배열에 저장할 것입니다.</strong></p>
+<p>즉 <strong>history배열은 게임의 모든 정보가 포함되어 있는것이죠.</strong></p>
+<p><code>Board</code>컴포넌트의 생성자를 다음과 같이 수정해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">  constructor(props){
+    super(props)
+    this.state = {
+      history : [{
+          squares : Array(9).fill(null),
+      }],
+      xIsNext : true
+    }
+  }</code>
+        </deckgo-highlight-code>
+<p>오류가 날겁니다. 이제 하나하나 수정해보도록 하죠.</p>
+<p>Game 컴포넌트에서 Board 컴포넌트로 squares와 onClick props를 전달하겠습니다. 그러면 생성자가 Board에는 필요가 없겠죠?</p>
+<ul>
+<li>
+<p>constructor를 Board에서 제거해주세요.</p>
+</li>
+<li>
+<p>Board의 renderSquare 안의 this.state.squares[i]를 this.props.squares[i]로 바꿔주세요.</p>
+</li>
+<li>
+<p>Board의 renderSquare 안의 this.handleClick(i)을 this.props.onClick(i)으로 바꿔주세요.</p>
+</li>
+</ul>
+<p>그렇게 하게되면 Board컴포넌트는 다음과 같은 코드형식일겁니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Board extends React.Component {
+  handleClick(i) {
+    const squares = this.state.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? &quot;X&quot; : &quot;O&quot;;
+    this.setState({
+      squares: squares,
+      xIsNext: !this.state.xIsNext,
+    });
+  }
+
+  renderSquare(i) {
+    return (
+      &lt;Square
+        value={this.props.squares[i]}
+        onClick={() =&gt; this.props.onClick(i)}
+      /&gt;
+    );
+  }
+
+  render() {
+    let status;
+    const winner = calculateWinner(this.state.squares);
+
+    if (winner) {
+      status = &quot;Winner&quot; + winner;
+    } else {
+      status = &quot;Next Player&quot; + (this.state.xIsNext ? &quot;X&quot; : &quot;O&quot;);
+    }
+
+    return (
+      &lt;div&gt;
+        &lt;div className=&quot;status&quot;&gt;{status}&lt;/div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        &lt;/div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        &lt;/div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>Board컴포넌트에서</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;div className=&quot;status&quot;&gt;{status}&lt;/div&gt;</code>
+        </deckgo-highlight-code>
+<p>이 부분을 지워주세요.</p>
+<p>그 다음 handleClick 함수를 Game컴포넌트로 이동시켜주세요!
+Game컴포넌트랑 state가 다르게 구성되어있기 때문에 handleClick함수를 수정해주어야 합니다.</p>
+<p>아래와 같이 수정해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">  handleClick(i) {
+    const history = this.state.history;
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? &#39;X&#39; : &#39;O&#39;;
+    this.setState({
+      history: history.concat([{
+        squares: squares,
+      }]),
+      xIsNext: !this.state.xIsNext,
+    });
+  }</code>
+        </deckgo-highlight-code>
+<p>current는 가장 최근의 squares를 의미합니다.</p>
+<p>그리고 <code>push</code>를 안쓰고 <code>concat</code>을 사용하는 이유는 새로운 배열을 만들어주기 때문에 더욱 좋습니다.</p>
+<p>이제 Board컴포넌트는 renderSquare와 render만을 필요로 합니다.</p>
+<p>전체적인 코드를 확인해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Square(props) {
+  return (
+    &lt;button className=&quot;square&quot; onClick={props.onClick}&gt;
+      {props.value}
+    &lt;/button&gt;
+  );
+}
+
+class Board extends React.Component {
+  renderSquare(i) {
+    return (
+      &lt;Square
+        value={this.props.squares[i]}
+        onClick={() =&gt; this.props.onClick(i)}
+      /&gt;
+    );
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        &lt;/div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        &lt;/div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      history: [
+        {
+          squares: Array(9).fill(null),
+        },
+      ],
+      xIsNext: true,
+    };
+  }
+
+  handleClick(i) {
+    const history = this.state.history;
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? &quot;X&quot; : &quot;O&quot;;
+    this.setState({
+      history: history.concat([
+        {
+          squares: squares,
+        },
+      ]),
+      xIsNext: !this.state.xIsNext,
+    });
+  }
+
+  render() {
+    const history = this.state.history;
+    const current = history[history.length - 1];
+    const winner = calculateWinner(current.squares);
+
+    let status;
+    if (winner) {
+      status = &quot;Winner: &quot; + winner;
+    } else {
+      status = &quot;Next player: &quot; + (this.state.xIsNext ? &quot;X&quot; : &quot;O&quot;);
+    }
+
+    return (
+      &lt;div className=&quot;game&quot;&gt;
+        &lt;div className=&quot;game-board&quot;&gt;
+          &lt;Board
+            squares={current.squares}
+            onClick={(i) =&gt; this.handleClick(i)}
+          /&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;game-info&quot;&gt;
+          &lt;div&gt;{status}&lt;/div&gt;
+          &lt;ol&gt;{/* TODO */}&lt;/ol&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+// ========================================
+
+ReactDOM.render(&lt;Game /&gt;, document.getElementById(&quot;root&quot;));
+
+function calculateWinner(squares) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i &lt; lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] &amp;&amp; squares[a] === squares[b] &amp;&amp; squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+  return null;
+}</code>
+        </deckgo-highlight-code>
+<h1>🚙 과거의 이동 표시하기</h1>
+<p>이제 틱택토게임은 플레이어의 행동 하나하나를 기록하고있기 때문에 과거의 이동 행적을 표시할 수 있습니다.</p>
+<p>JavaScript에서 배열은 데이터를 다른 데이터와 함께 매핑할 때 사용하는 <strong>map()</strong> 함수를 가지고 있습니다.</p>
+<p>map의 사용벙을 알아보도록 합시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const arr = [1, 2, 3, 4];
+const mapArr = arr.map((element) =&gt; element * 2);
+console.log(mapArr); //2,4,6,8</code>
+        </deckgo-highlight-code>
+<p><strong>map 함수를 사용하여 이동 기록을 화면에 표시되는 React 버튼 엘리먼트로 맵핑할 수 있으며 과거의 이동으로 “돌아가는” 버튼 목록을 표시할 수 있습니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const moves = history.map((step, move) =&gt; {
+  const desc = move ? &quot;Go to move #&quot; + move : &quot;Go to game start&quot;;
+  return (
+    &lt;li&gt;
+      &lt;button onClick={() =&gt; this.jumpTo(move)}&gt;{desc}&lt;/button&gt;
+    &lt;/li&gt;
+  );
+});</code>
+        </deckgo-highlight-code>
+<p><img src="https://user-images.githubusercontent.com/48292190/116808497-12820900-ab74-11eb-8ef4-43fb1f3da7ac.png" alt="image"></p>
+<p>오류가 나지만 정상적으로 버튼이 랜더링 되는 모습을 볼 수 있죠?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const desc = move ? &quot;Go to move #&quot; + move : &quot;Go to game start&quot;;</code>
+        </deckgo-highlight-code>
+<p>위 코드는 map함수에서 두번째 파라미터로 index라는 값을 전달해주는데, 이는 0부터 시작해서 함수의 length - 1까지 주어지는 값입니다. 즉 index가 0이라면 조건부를 통해서 처음 시작인지 아닌지를 판별하는 것이지요.</p>
+<p>자 오류를 한번 볼까요?</p>
+<p>**Warning: Each child in a list should have a unique "key" prop.**라고 하네요!</p>
+<blockquote>
+<p><strong>경고: 배열이나 이터레이터의 자식들은 고유의 “key” prop을 가지고 있어야 합니다.</strong></p>
+</blockquote>
+<p>key가 정확이 무엇이고 어떤 역할을 하는 속성일까요?</p>
+<p>리스트를 렌더링할 때 React는 렌더링하는 리스트 아이템들에 대한 정보를 저장합니다. <strong>리스트를 업데이트 할 때 React는 무엇이 변했는 지 결정해야 합니다</strong>. 리스트의 아이템들은 추가, 제거, 재배열, 업데이트 될 수 있습니다.</p>
+<p>위의 코드가</p>
+<deckgo-highlight-code jsx  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;li&gt;Alexa: 7 tasks left&lt;/li&gt;
+&lt;li&gt;Ben: 5 tasks left&lt;/li&gt;</code>
+        </deckgo-highlight-code>
+<p>아래와 같이 바뀐다고 생각해봅시다.</p>
+<deckgo-highlight-code jsx  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;li&gt;Ben: 9 tasks left&lt;/li&gt;
+&lt;li&gt;Claudia: 8 tasks left&lt;/li&gt;
+&lt;li&gt;Alexa: 5 tasks left&lt;/li&gt;</code>
+        </deckgo-highlight-code>
+<p>프로그래머의 눈에는 task 개수가 업데이트되었을 뿐만 아니라 Alexa와 Ben의 순서가 바뀌고 Claudia가 두 사람 사이에 추가되었다고 생각할 것입니다. 하지만 우리가 집중해야하는건 <strong>React의 프로그램입니다.</strong></p>
+<p>리액트는 우리의 시각과 달리 프로그래머가 의도한 바가 무엇인지 알지 못합니다.</p>
+<p>그렇기 때문에 key를 지정해줌으로써 각 리스트는 다른 리스트들과는 다르다는걸 알려주어야합니다.</p>
+<p>아래와 같은 형식으로 말이죠.</p>
+<deckgo-highlight-code jsx  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;li key={user.id}&gt;
+  {user.name}: {user.taskCount} tasks left
+&lt;/li&gt;</code>
+        </deckgo-highlight-code>
+<p>그러면 우리가 React에게 각 리스트가 다르다는걸 알려줄 필요가 있을까요?</p>
+<p>목록을 다시 렌더링하면 React는 각 리스트 아이템의 키를 가져가며 이전 리스트 아이템에서 일치하는 키를 탐색합니다. 현재 리스트에서 이전에 존재하지 않는 키를 가지고 있다면 React는 새로운 컴포넌트를 생성합니다.</p>
+<p><strong>키는 각 컴포넌트를 구별할 수 있도록 하여 React에게 다시 렌더링할 때 state를 유지할 수 있게 합니다. 만약 컴포넌트의 키가 변한다면 컴포넌트는 제거되고 새로운 state와 함께 다시 생성됩니다.</strong></p>
+<p>React는 자동으로 key를 어떤 컴포넌트를 업데이트 할 지 판단하는 데에 사용합니다. 컴포넌트는 key를 조회할 수 없습니다.</p>
+<p>React 개발자피셜 : <strong>"동적인 리스트를 만들 때마다 적절한 키를 할당할 것을 강력하게 추천합니다. 적절한 키가 없는 경우 데이터 재구성을 고려해 볼 수 있습니다."</strong></p>
+<p>아까 오류부터 해결해볼까요?</p>
+<p>틱택토 게임의 기록에서 과거의 이동 정보는 이동의 순차적인 숫자를 고유한 ID로 가졌습니다. 이동은 순서가 바뀌거나 삭제되거나 중간에 삽입될 수 없기 때문에 이동의 인덱스를 키로 사용해도 안전합니다.</p>
+<p>다음과 같이 코드를 작성하면 오류는 없어질것입니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const moves = history.map((step, move) =&gt; {
+  const desc = move ? &quot;Go to move #&quot; + move : &quot;Go to game start&quot;;
+  return (
+    &lt;li key={move}&gt;
+      &lt;button onClick={() =&gt; this.jumpTo(move)}&gt;{desc}&lt;/button&gt;
+    &lt;/li&gt;
+  );
+});</code>
+        </deckgo-highlight-code>
+<h1>⌚️ 시간 여행 구현하기</h1>
+<p>이제 버튼을 클릭하면 그 step으로 돌아가는 기능을 구현해보도록 할까요?</p>
+<p>지금은 눌러도 아무런 기능을 하지 못합니다.오히여 오류가 날겁니다. 왜냐하면 구현을 안해놨거든요!</p>
+<p>state를 하나 더 만들어볼까요?</p>
+<p>stepNumber: 0를 하나 선언해주세요!</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      history: [{
+        squares: Array(9).fill(null),
+      }],
+      stepNumber: 0,
+      xIsNext: true,
+    };
+  }</code>
+        </deckgo-highlight-code>
+<p>그 다음 <code>jumpTo</code>를 선언해주세요</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">  jumpTo(step) {
+    this.setState({
+      stepNumber: step,
+      xIsNext: (step % 2) === 0,
+    });
+  }</code>
+        </deckgo-highlight-code>
+<p>로직에 대해서 이야기를 좀 해볼까요?
+이 jumpTo는</p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116811509-bbd0fb00-ab84-11eb-81ce-8af7854c0be4.png" alt="image"></p>
+<p>다음 버튼이 클릭되었을때 실행할 함수입니다.</p>
+<p>클릭이 되면 setState를 진행하는데, stepNumber를 클릭한 step으로 설정하고, xIsNext를 해당 step의 값으로 바꾸어줍니다.</p>
+<p>이제 handleClick을 조금 수정할 차례입니다.</p>
+<p><strong>stepNumber state는 현재 사용자에게 표시되는 이동을 반영합니다.</strong></p>
+<p><code>stepNumber: history.length</code>를 추가해서 <code>stepNumber</code>를 업데이트 해야합니다.</p>
+<p>최종 코드입니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Square(props) {
+  return (
+    &lt;button className=&quot;square&quot; onClick={props.onClick}&gt;
+      {props.value}
+    &lt;/button&gt;
+  );
+}
+
+class Board extends React.Component {
+  renderSquare(i) {
+    return (
+      &lt;Square
+        value={this.props.squares[i]}
+        onClick={() =&gt; this.props.onClick(i)}
+      /&gt;
+    );
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        &lt;/div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        &lt;/div&gt;
+        &lt;div className=&quot;board-row&quot;&gt;
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      history: [
+        {
+          squares: Array(9).fill(null),
+        },
+      ],
+      stepNumber: 0,
+      xIsNext: true,
+    };
+  }
+
+  handleClick(i) {
+    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? &quot;X&quot; : &quot;O&quot;;
+    this.setState({
+      history: history.concat([
+        {
+          squares: squares,
+        },
+      ]),
+      stepNumber: history.length,
+      xIsNext: !this.state.xIsNext,
+    });
+  }
+
+  jumpTo(step) {
+    this.setState({
+      stepNumber: step,
+      xIsNext: step % 2 === 0,
+    });
+  }
+
+  render() {
+    const history = this.state.history;
+    const current = history[this.state.stepNumber];
+    const winner = calculateWinner(current.squares);
+
+    const moves = history.map((step, move) =&gt; {
+      const desc = move ? &quot;Go to move #&quot; + move : &quot;Go to game start&quot;;
+      return (
+        &lt;li key={move}&gt;
+          &lt;button onClick={() =&gt; this.jumpTo(move)}&gt;{desc}&lt;/button&gt;
+        &lt;/li&gt;
+      );
+    });
+
+    let status;
+    if (winner) {
+      status = &quot;Winner: &quot; + winner;
+    } else {
+      status = &quot;Next player: &quot; + (this.state.xIsNext ? &quot;X&quot; : &quot;O&quot;);
+    }
+
+    return (
+      &lt;div className=&quot;game&quot;&gt;
+        &lt;div className=&quot;game-board&quot;&gt;
+          &lt;Board
+            squares={current.squares}
+            onClick={(i) =&gt; this.handleClick(i)}
+          /&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;game-info&quot;&gt;
+          &lt;div&gt;{status}&lt;/div&gt;
+          &lt;ol&gt;{moves}&lt;/ol&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+// ========================================
+
+ReactDOM.render(&lt;Game /&gt;, document.getElementById(&quot;root&quot;));
+
+function calculateWinner(squares) {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i &lt; lines.length; i++) {
+    const [a, b, c] = lines[i];
+    if (squares[a] &amp;&amp; squares[a] === squares[b] &amp;&amp; squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+  return null;
+}</code>
+        </deckgo-highlight-code>
+<h1>🎊 축하합니다! 틱택토 게임을 만드셨군요!</h1>
+<p>이제 리액트의 기술을 조금 터득했을 거라고 믿습니다! 지금까지 정말 수고하셨습니다.</p></div></article></article><footer class="Layout__Footer-sc-1si20s3-4 bGvuYg">© All rights reserved. Powered by GitHub Pages.</footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/react_standard/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-fd41d3bba3dba0c60639.js"],"app":["/app-26986a0af943e786954a.js"],"component---src-pages-404-js":["/component---src-pages-404-js-facd4f6df0915737842e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-d865c67020b73608437e.js"],"component---src-template-post-page-jsx":["/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js"]};/*]]>*/</script><script src="/Tech-Blog/polyfill-fd41d3bba3dba0c60639.js" nomodule=""></script><script src="/Tech-Blog/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js" async=""></script><script src="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js" async=""></script><script src="/Tech-Blog/app-26986a0af943e786954a.js" async=""></script><script src="/Tech-Blog/framework-bee7a8ddabfa6589450d.js" async=""></script><script src="/Tech-Blog/webpack-runtime-38331859f554c28d95c0.js" async=""></script></body></html>
