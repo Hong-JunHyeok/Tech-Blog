@@ -23,5 +23,1387 @@ data-styled.g17[id="post-page__Header-csovzx-1"]{content:"hAnHbU,"}/*!sc*/
 data-styled.g18[id="post-page__Name-csovzx-2"]{content:"eVEJgb,"}/*!sc*/
 .eTTicY{font-weight:lighter;color:#81878b;}/*!sc*/
 data-styled.g19[id="post-page__CreatedAt-csovzx-3"]{content:"eTTicY,"}/*!sc*/
-</style><link as="script" rel="preload" href="/Tech-Blog/webpack-runtime-d85e9d38bb0a871b2fec.js"/><link as="script" rel="preload" href="/Tech-Blog/framework-bee7a8ddabfa6589450d.js"/><link as="script" rel="preload" href="/Tech-Blog/app-26986a0af943e786954a.js"/><link as="script" rel="preload" href="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js"/><link as="script" rel="preload" href="/Tech-Blog/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/blog/react_standard/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="Layout__Header-sc-1si20s3-0 bSRjXS"><div class="Layout__HeaderContainer-sc-1si20s3-1 jmhfhA"><div class="Layout__TitleContainer-sc-1si20s3-2 dUoGqk"><a style="text-decoration:none" href="/Tech-Blog/"><h1>DEVLOG</h1></a></div></div></header><article class="Layout__ContentDiv-sc-1si20s3-3 ktyqNY"><article class="post-page__PageTemplate-csovzx-0 dVbXdd"><header class="post-page__Header-csovzx-1 hAnHbU"><div class="info"><h1>👨‍🎤 리액트, 박살내버리기.</h1><img src="https://avatars.githubusercontent.com/u/48292190?v=4" alt=""/></div><div class="meta"><div class="post-page__Name-csovzx-2 eVEJgb">홍준혁</div><div class="post-page__CreatedAt-csovzx-3 eTTicY">2021년 5월 3일</div></div></header><div class="markdown-body"><div class="waiting">
-</div></div></article></article><footer class="Layout__Footer-sc-1si20s3-4 bGvuYg">© All rights reserved. Powered by GitHub Pages.</footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/react_standard/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-fd41d3bba3dba0c60639.js"],"app":["/app-26986a0af943e786954a.js"],"component---src-pages-404-js":["/component---src-pages-404-js-facd4f6df0915737842e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-68d9f373d0bca8dd50d8.js"],"component---src-template-post-page-jsx":["/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js"]};/*]]>*/</script><script src="/Tech-Blog/polyfill-fd41d3bba3dba0c60639.js" nomodule=""></script><script src="/Tech-Blog/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js" async=""></script><script src="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js" async=""></script><script src="/Tech-Blog/app-26986a0af943e786954a.js" async=""></script><script src="/Tech-Blog/framework-bee7a8ddabfa6589450d.js" async=""></script><script src="/Tech-Blog/webpack-runtime-d85e9d38bb0a871b2fec.js" async=""></script></body></html>
+</style><link as="script" rel="preload" href="/Tech-Blog/webpack-runtime-d85e9d38bb0a871b2fec.js"/><link as="script" rel="preload" href="/Tech-Blog/framework-bee7a8ddabfa6589450d.js"/><link as="script" rel="preload" href="/Tech-Blog/app-26986a0af943e786954a.js"/><link as="script" rel="preload" href="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js"/><link as="script" rel="preload" href="/Tech-Blog/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/blog/react_standard/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/Tech-Blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><header class="Layout__Header-sc-1si20s3-0 bSRjXS"><div class="Layout__HeaderContainer-sc-1si20s3-1 jmhfhA"><div class="Layout__TitleContainer-sc-1si20s3-2 dUoGqk"><a style="text-decoration:none" href="/Tech-Blog/"><h1>DEVLOG</h1></a></div></div></header><article class="Layout__ContentDiv-sc-1si20s3-3 ktyqNY"><article class="post-page__PageTemplate-csovzx-0 dVbXdd"><header class="post-page__Header-csovzx-1 hAnHbU"><div class="info"><h1>👨‍🎤 리액트, 박살내버리기.</h1><img src="https://avatars.githubusercontent.com/u/48292190?v=4" alt=""/></div><div class="meta"><div class="post-page__Name-csovzx-2 eVEJgb">홍준혁</div><div class="post-page__CreatedAt-csovzx-3 eTTicY">2021년 5월 3일</div></div></header><div class="markdown-body"><h1>⚛️ 리액트의 기초</h1>
+<blockquote>
+<h3>⚠️ 이 글은 React.js 공식 자습서에 의존하고 있는 글입니다.</h3>
+</blockquote>
+<hr />
+<h1>목차</h1>
+<p>이번 목차는 다음과 같습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116813790-88946900-ab90-11eb-9e42-46a285a0f2ea.png" alt="image"></p>
+<h1>목적</h1>
+<p>리액트 공식 사이트에서 TicTacToe가 예제로 나왔는데 이를 보고 이해를 하지 못하는 사람들도 많고 햇갈리는 부분이 있을수도 있기때문에 이를 보완하고자. 이 기초 파트를 준비했습니다.</p>
+<blockquote>
+<h3>⚠️ 이 글은 React.js 공식 자습서에 의존하고 있는 글입니다.</h3>
+</blockquote>
+<p>시작해보도록 하겠습니다.</p>
+<h1>JSX</h1>
+<h2>🤨 JSX 소개</h2>
+<p>먼저, 아래의 코드를 보도록 합시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</code>
+        </deckgo-highlight-code>
+<p>위의 문법은 HTML도, 문자열도 아닙니다.</p>
+<p><strong>JavaScript를 확장한 문법인 JSX라고 합니다.</strong></p>
+<p>JSX는 JavaScript의 모든 기능이 포함되어 있습니다.</p>
+<p><strong>JSX는 엘리먼트(element)를 생성합니다.</strong></p>
+<p>React에서는 이벤트가 처리되는 방식, 시간에 따라 state가 변하는 방식, 화면에 표시하기 위해 데이터가 준비되는 방식 등 <strong>렌더링 로직이 본질적으로 다른 UI 로직과 연결된다는 사실을 받아들입니다.</strong></p>
+<p><img src="https://blog.kakaocdn.net/dn/bgsR0l/btqBSOXRul7/vqCF5iy4EpEpxY3qIulYCK/img.png" alt="image"></p>
+<p>JSX는 사실 리액트에서 <code>필수</code>로 요구되는 문법은 아닙니다. <a href="https://ko.reactjs.org/docs/react-without-jsx.html">관련 링크</a></p>
+<p>대부분의 사람은 JavaScript 코드 안에서 UI 관련 작업을 할 때 시각적으로 더 도움이 된다고 생각합니다.</p>
+<p>이제 JSX를 사용하는 방법을 알아보도록 하겠습니다.
+예제를 보면 이해가 수월해질 겁니다.</p>
+<h2>JSX에 표현식 포함하기</h2>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const name = &quot;Josh Perez&quot;;
+const element = &lt;h1&gt;Hello, {name}&lt;/h1&gt;;</code>
+        </deckgo-highlight-code>
+<p>JSX에 {}안에는 모든 JavaScript표현식을 넣을 수 있습니다.</p>
+<p>예를 들면 <code>2 + 2</code>나 <code>user.name</code>이나 <code>formatTime(time)</code>등이나 사용할 수 있는것이죠.</p>
+<h2>JSX도 표현식입니다</h2>
+<p>컴파일이 끝나면, JSX 표현식이 정규 JavaScript 함수 호출이 되고 JavaScript 객체로 인식됩니다.</p>
+<p>그러면 우리가 무슨작업을 할 수 있냐면,</p>
+<p>다음과 같은 작업을 수행할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function getGreeting(user) {
+  if (user) {
+    return &lt;h1&gt;Hello, {formatName(user)}!&lt;/h1&gt;;
+  }
+  return &lt;h1&gt;Hello, Stranger.&lt;/h1&gt;;
+}</code>
+        </deckgo-highlight-code>
+<p>지금 집중해서 볼 부분은 if문입니다. 이러한 표현식이 가능한것이죠.</p>
+<p><strong>JSX를 if 구문 및 for loop 안에 사용하고, 변수에 할당하고, 인자로서 받아들이고, 함수로부터 반환할 수 있습니다.</strong></p>
+<h2>JSX 속성 정의</h2>
+<p>속성에 따옴표를 이용해 문자열 리터럴을 정의할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = &lt;div tabIndex=&quot;0&quot;&gt;&lt;/div&gt;;</code>
+        </deckgo-highlight-code>
+<p>또한 JavaScript표현식도 넣을 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = &lt;img src={user.avatarUrl}&gt;&lt;/img&gt;;</code>
+        </deckgo-highlight-code>
+<blockquote>
+<h2>⚠️주의할 점</h2>
+<p>어트리뷰트에 JavaScript 표현식을 삽입할 때 중괄호 주변에 따옴표를 입력하지 마세요. 따옴표(문자열 값에 사용) 또는 중괄호(표현식에 사용) 중 하나만 사용하고, 동일한 어트리뷰트에 두 가지를 동시에 사용하면 안 됩니다.</p>
+</blockquote>
+<p>JSX는 HTML보다 JavaScript에 더 가깝기때문에 <strong>React DOM은 HTML 어트리뷰트 이름 대신 camelCase 프로퍼티 명명 규칙을 사용합니다.</strong></p>
+<p>대표적인 예로는 <code>class</code>가 아니라 <code>className</code>입니다.</p>
+<h2>JSX로 자식 정의</h2>
+<p>태그가 비어있다면 XML처럼 /> 를 이용해 바로 닫아주어야 합니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = &lt;img src={user.avatarUrl} /&gt;;</code>
+        </deckgo-highlight-code>
+<p>JSX태그는 자식을 표함할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = (
+  &lt;div&gt;
+    &lt;h1&gt;Hello!&lt;/h1&gt;
+    &lt;h2&gt;Good to see you here.&lt;/h2&gt;
+  &lt;/div&gt;
+);</code>
+        </deckgo-highlight-code>
+<p><strong>JSX태그는 반드시 최상위 태그가 닫혀있어여합니다.</strong></p>
+<h2>JSX는 주입 공격을 방지합니다</h2>
+<p>XSS인 사이트 간 스크립팅 공격을 방지할 수 있습니다. 기본적으로 React DOM은 JSX에 삽입된 모든 값을 렌더링하기 전에 이스케이프 하므로 가능한 일이죠. <strong>애플리케이션에서 명시적으로 작성되지 않은 내용은 주입되지 않습니다. 모든 항목은 렌더링 되기 전에 문자열로 변환됩니다.</strong></p>
+<p><img src="https://portswigger.net/web-security/images/cross-site-scripting.svg" alt="image"></p>
+<h2>JSX는 객체를 표현합니다.</h2>
+<p>Babel은 JSX를 React.createElement() 호출로 컴파일합니다.</p>
+<p>코드를 보고 알아보도록 하죠.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = &lt;h1 className=&quot;greeting&quot;&gt;Hello, world!&lt;/h1&gt;;</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = React.createElement(
+  &quot;h1&quot;,
+  { className: &quot;greeting&quot; },
+  &quot;Hello, world!&quot;
+);</code>
+        </deckgo-highlight-code>
+<p><strong>이제 createElement가 무엇을 만드는지 보도록 할까요?</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">// 주의: 다음 구조는 단순화되었습니다
+const element = {
+  type: &quot;h1&quot;,
+  props: {
+    className: &quot;greeting&quot;,
+    children: &quot;Hello, world!&quot;,
+  },
+};</code>
+        </deckgo-highlight-code>
+<p>위와 같은 형식으로 만들어줍니다. 즉, 객체를 표현합니다.</p>
+<blockquote>
+<p>이러한 객체를 “React 엘리먼트”라고 하며, 화면에서 보고 싶은 것을 나타내는 표현이라 생각하면 됩니다. React는 이 객체를 읽어서, DOM을 구성하고 최신 상태로 유지하는 데 사용합니다.</p>
+</blockquote>
+<h1>엘리먼트 랜더링</h1>
+<blockquote>
+<p>"엘리먼트는 React 앱의 가장 작은 단위입니다." - 리액트 공식문서</p>
+</blockquote>
+<p>이번에 알아볼것은 엘리먼트의 랜더링입니다.</p>
+<p>엘리먼트는 <strong>화면에 표시할 내용</strong>을 기술합니다.</p>
+<blockquote>
+<p>이쯤되면 <strong>컴포넌트</strong>와 <strong>엘리먼트</strong>가 햇갈릴 수 있습니다.
+엘리먼트는 컴포넌트의 “구성 요소”입니다. 자세한 설명은 다음장에 계속 설명하겠습니다.</p>
+</blockquote>
+<h2>DOM에 엘리먼트 렌더링하기</h2>
+<p>HTML파일 어딘가에 <div>가 있다고 생각해봅시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</code>
+        </deckgo-highlight-code>
+<p>이 안에 들어가는 모든 엘리먼트를 React DOM에서 관리하기 때문에 이것을 “루트(root)” DOM 노드라고 부릅니다.</p>
+<p><strong>React로 구현된 애플리케이션은 일반적으로 하나의 루트 DOM 노드가 있습니다.</strong> React를 기존 앱에 통합하려는 경우 원하는 만큼 많은 수의 독립된 루트 DOM 노드가 있을 수 있습니다.</p>
+<p><strong>React 엘리먼트를 루트 DOM 노드에 렌더링하려면 둘 다 ReactDOM.render()로 전달하면 됩니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = &lt;h1&gt;Hello, world&lt;/h1&gt;;
+ReactDOM.render(element, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<h2>렌더링 된 엘리먼트 업데이트하기</h2>
+<p>React 엘리먼트는 <strong>불변객체</strong>입니다.</p>
+<p><strong>불변객체</strong>... 이부분이 중요한 부분입니다.</p>
+<p>엘리먼트를 생성한 이후에는 해당 엘리먼트의 자식이나 속성을 변경할 수 없습니다. 엘리먼트는 영화에서 하나의 프레임과 같이 특정 시점의 UI를 보여줍니다.</p>
+<p><strong>UI를 업데이트하는 유일한 방법은 새로운 엘리먼트를 생성하고 이를 ReactDOM.render()로 전달하는 것입니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function tick() {
+  const element = (
+    &lt;div&gt;
+      &lt;h1&gt;Hello, world!&lt;/h1&gt;
+      &lt;h2&gt;It is {new Date().toLocaleTimeString()}.&lt;/h2&gt;
+    &lt;/div&gt;
+  );
+  ReactDOM.render(element, document.getElementById(&quot;root&quot;));
+}
+
+setInterval(tick, 1000);</code>
+        </deckgo-highlight-code>
+<p>위의 함수는 1초마다 새로운 리액트 DOM을 랜더링합니다.</p>
+<blockquote>
+<p>실제로 대부분의 React 앱은 ReactDOM.render()를 한 번만 호출합니다.</p>
+</blockquote>
+<h2>변경된 부분만 업데이트하기</h2>
+<blockquote>
+<p>React DOM은 해당 엘리먼트와 그 자식 엘리먼트를 이전의 엘리먼트와 비교하고 DOM을 원하는 상태로 만드는데 필요한 경우에만 DOM을 업데이트합니다.</p>
+</blockquote>
+<p>이 말이 무슨말이냐면 "변경된 부분만 업데이트"하는 것입니다.</p>
+<p><img src="https://ko.reactjs.org/c158617ed7cc0eac8f58330e49e48224/granular-dom-updates.gif" alt="gif"></p>
+<p>매초 전체 UI를 다시 그리도록 엘리먼트를 만들었지만 React DOM은 내용이 변경된 텍스트 노드만 업데이트했습니다.</p>
+<h1>Components and Props</h1>
+<p>컴포넌트의 개념을 설명해보도록 하겠습니다.</p>
+<p><strong>컴포넌트는 JavaScript 함수와 유사합니다. “props”라고 하는 임의의 입력을 받은 후, 화면에 어떻게 표시되는지를 기술하는 React 엘리먼트를 반환합니다.</strong></p>
+<h2>함수 컴포넌트와 클래스 컴포넌트</h2>
+<p>컴포넌트를 정의하는 가장 간단한 방법은 JavaScript함수를 사용하는 것입니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function SimpleComponent(props) {
+  return &lt;h1&gt;Hello Function Component, I am {props.name}&lt;/h1&gt;;
+}</code>
+        </deckgo-highlight-code>
+<p>이 함수는 데이터를 가진 props (props는 속성을 나타내는 데이터입니다)라는 객체 인자를 받은 후, React엘리먼트를 반환합니다.</p>
+<p><strong>이것이 함수형 컴포넌트입니다.</strong></p>
+<p>ES6 Class문법을 사용하여 클래스형 컴포넌트도 정의할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Welcome extends React.Component {
+  render() {
+    return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>Class형에는 몇 가지 추가기능이 있습니다.
+<strong>함수 컴포넌트와 클래스 컴포넌트 둘 다 몇 가지 추가 기능이 있으며</strong> 이에 대해서는 다음에 자세히 설명하겠습니다.</p>
+<h1>컴포넌트 렌더링</h1>
+<p>React 엘리먼트는 사용자 정의 컴포넌트로 나타낼 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const element = &lt;Welcome name=&quot;Sara&quot; /&gt;;</code>
+        </deckgo-highlight-code>
+<p><code>name="Sara"</code>라고 된 부분이 있죠? 그 부분을 우리가 <strong>props를 전달한다</strong> 라고 합니다.</p>
+<p>즉, props를 전달함으로서 다음과 같은 로직이 가능한것이죠.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Welcome(props) {
+  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+
+const element = &lt;Welcome name=&quot;Sara&quot; /&gt;;
+ReactDOM.render(element, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<h1>컴포넌트 합성</h1>
+<p>컴포넌트는 자신의 출력에 다른 컴포넌트를 참조할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Welcome(props) {
+  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Welcome name=&quot;Sara&quot; /&gt;
+      &lt;Welcome name=&quot;Cahal&quot; /&gt;
+      &lt;Welcome name=&quot;Edite&quot; /&gt;
+    &lt;/div&gt;
+  );
+}
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>React 앱에서는 버튼, 폼, 다이얼로그, 화면 등의 모든 것들이 흔히 컴포넌트로 표현됩니다.</p>
+<h1>컴포넌트 추출</h1>
+<p>컴포넌트를 추출하는 과정은 컴포넌트를 여러 개의 작은 컴포넌트로 나누는 과정을 의미합니다.</p>
+<p>이 과정을 과감히 해버리세요! 다음 코드를 봅시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Comment(props) {
+  return (
+    &lt;div className=&quot;Comment&quot;&gt;
+      &lt;div className=&quot;UserInfo&quot;&gt;
+        &lt;img
+          className=&quot;Avatar&quot;
+          src={props.author.avatarUrl}
+          alt={props.author.name}
+        /&gt;
+        &lt;div className=&quot;UserInfo-name&quot;&gt;{props.author.name}&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;Comment-text&quot;&gt;{props.text}&lt;/div&gt;
+      &lt;div className=&quot;Comment-date&quot;&gt;{formatDate(props.date)}&lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code>
+        </deckgo-highlight-code>
+<p>음... 이게 React를 쓰는건지 HTML을 쓰는건지 잘 모르시겠죠?</p>
+<p>그래서 컴포넌트를 추출하는 과정을 통해 좀 더 직관적인 코드로 변경해보겠습니다.</p>
+<p>img태그부터 추출해보겠습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Avatar(props) {
+  return (
+    &lt;img className=&quot;Avatar&quot; src={props.user.avatarUrl} alt={props.user.name} /&gt;
+  );
+}</code>
+        </deckgo-highlight-code>
+<p>그러면 Comment코드상에선,</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Comment(props) {
+  return (
+    &lt;div className=&quot;Comment&quot;&gt;
+      &lt;div className=&quot;UserInfo&quot;&gt;
+        &lt;Avatar user={props.author} /&gt;
+        &lt;div className=&quot;UserInfo-name&quot;&gt;{props.author.name}&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;Comment-text&quot;&gt;{props.text}&lt;/div&gt;
+      &lt;div className=&quot;Comment-date&quot;&gt;{formatDate(props.date)}&lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code>
+        </deckgo-highlight-code>
+<p>이렇게 치환될 수 있겠죠.</p>
+<p>그 다음 UserInfo컴포넌트도 만들어 보겠습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function UserInfo(props) {
+  return (
+    &lt;div className=&quot;UserInfo&quot;&gt;
+      &lt;Avatar user={props.user} /&gt;
+      &lt;div className=&quot;UserInfo-name&quot;&gt;{props.user.name}&lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code>
+        </deckgo-highlight-code>
+<p>이제 Comment가 더욱 단순해질 수 있겠죠?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Comment(props) {
+  return (
+    &lt;div className=&quot;Comment&quot;&gt;
+      &lt;UserInfo user={props.author} /&gt;
+      &lt;div className=&quot;Comment-text&quot;&gt;{props.text}&lt;/div&gt;
+      &lt;div className=&quot;Comment-date&quot;&gt;{formatDate(props.date)}&lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code>
+        </deckgo-highlight-code>
+<p>이 작업이 굉장히 귀찮고 지루할 수 있습니다. 하지만 재사용 가능한 컴포넌트를 만들어 놓는 것은 더 큰 앱에서 작업할 때 두각을 나타냅니다.</p>
+<p><strong>UI 일부가 여러 번 사용되거나 (Button, Panel, Avatar), UI 일부가 자체적으로 복잡한 (App, FeedStory, Comment) 경우에는 별도의 컴포넌트로 만드는 게 좋습니다.</strong></p>
+<p><img src="https://media.vlpt.us/images/devgosunman/post/f0f69596-9dc9-4533-ba90-e12fd55a8c62/react%20state.jpg" alt="image"></p>
+<h1>props는 읽기 전용입니다.</h1>
+<p>무슨 말인지 한번 볼까요?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function sum(a, b) {
+  return a + b;
+}</code>
+        </deckgo-highlight-code>
+<p>위의 함수는 <strong>순수 함수</strong>라고 합니다.</p>
+<p>순수 함수에 대해서는 <a href="https://velog.io/@chdb57/%E3%85%87%E3%85%87%E3%85%87%E3%85%87%E3%85%87%E3%85%87%E3%85%87%E3%85%87">여기</a>를 참조해보시길 바랍니다.</p>
+<p><strong>모든 React 컴포넌트는 자신의 props를 다룰 때 반드시 순수 함수처럼 동작해야 합니다.</strong></p>
+<p>애플리케이션 UI는 동적이며 시간에 따라 변합니다. 그래서 위 규칙을 위반하지 않고 사용자 액션, 네트워크 응답 및 다른 요소에 대한 응답으로 시간에 따라 자신의 출력값을 변경할 수 있는 방법은 <code>State</code>입니다.</p>
+<p>이제 자세히 한번 알아보도록 할까요?</p>
+<p><img src="https://blog.kakaocdn.net/dn/b7Ing6/btqDrkNbvBs/Mi1pUyMUSRYYLmE6zvjAG0/img.png" alt="image"></p>
+<h1>State and Lifecycle</h1>
+<p>이전에 째깍거리는 시계를 랜더링 한거 기억나시죠? 출력값을 변경하기 위해서 새로 엘리먼트를 랜더링하는 작업을 해주었습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">ReactDOM.render();</code>
+        </deckgo-highlight-code>
+<p>일단 <code>Clock</code>이라는 컴포넌트를 만들어서 캡슐화를 진행해줍시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Clock(props) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Hello, world!&lt;/h1&gt;
+      &lt;h2&gt;It is {props.date.toLocaleTimeString()}.&lt;/h2&gt;
+    &lt;/div&gt;
+  );
+}
+
+function tick() {
+  ReactDOM.render(&lt;Clock date={new Date()} /&gt;, document.getElementById(&quot;root&quot;));
+}
+
+setInterval(tick, 1000);</code>
+        </deckgo-highlight-code>
+<p>이렇게 진행하면 되겠죠?</p>
+<p>하지만 우리가 구현하고 싶은건</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">ReactDOM.render(&lt;Clock /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>딱 이코드 한번만 실행하고 싶습니다.</p>
+<p>이럴때 <code>state</code>를 사용해야 할 차례입니다.</p>
+<p><strong>State는 props와 유사하지만, 비공개이며 컴포넌트에 의해 완전히 제어됩니다.</strong></p>
+<h1>함수에서 클래스로 변환하기</h1>
+<p>state를 사용할려면 class형 컴포넌트를 사용해야 합니다.function형 컴포넌트에는 state를 사용할 수 없습니다. (React hooks를 쓰면 그게 가능해집니다.)</p>
+<p>다음 코드를 한번 살펴볼까요?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Clock extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;h2&gt;It is {this.props.date.toLocaleTimeString()}.&lt;/h2&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+function tick() {
+  ReactDOM.render(&lt;Clock date={new Date()} /&gt;, document.getElementById(&quot;root&quot;));
+}
+
+setInterval(tick, 1000);</code>
+        </deckgo-highlight-code>
+<p>이러면 함수형 컴포넌트를 클래스형 컴포넌트로 변환이 완료되었습니다.</p>
+<h1>클래스에 로컬 State 추가하기</h1>
+<p>class형 컴포넌트에 constructor를 정의해 주신다음에 다음과 같은 코드를 작성해주세요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }</code>
+        </deckgo-highlight-code>
+<p>이 과정이 state를 선언하는 과정입니다.
+super(props)이 부분은 모든 class형 컴포넌트는 super(props)를 해주어야 합니다. (상속되어지는 관계이기 때문이죠)</p>
+<p>그 다음 this.state = {...} 이 부분이 state를 선언하는 부분입니다.</p>
+<p>date라는 속성에 new Date()를 하게 됨으로써 현제 시간을 data라는 state에 담게 되는것이죠.</p>
+<p><strong>최종 코드는 다음과 같습니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;h2&gt;It is {this.state.date.toLocaleTimeString()}.&lt;/h2&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;Clock /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>하지만 실행해보면 안움직이죠?</p>
+<p>당연합니다! <strong>왜냐하면 매초 스스로 움직이라는 코드를 작성하지 않았으니까요!</strong></p>
+<p>한번 해보도록 하겠습니다.</p>
+<h1>생명주기 메서드를 클래스에 추가하기</h1>
+<p>Clock이 처음 DOM에 랜더링 될때마다 타이머를 설정할려고 합니다.
+또한 DOM이 삭제될때마다 타이머를 해제할려고 합니다.</p>
+<p>여기, 좋은 기능이 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">  componentDidMount() {
+  }
+
+  componentWillUnmount() {
+  }</code>
+        </deckgo-highlight-code>
+<p>이 기능을 사용하면 쉽게 랜더링 될 때, 삭제될 때를 확보할 수 있습니다.</p>
+<p>이러한 메서드들을 <strong>생명주기 메서드라고 합니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(() =&gt; this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date(),
+    });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;h2&gt;It is {this.state.date.toLocaleTimeString()}.&lt;/h2&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;Clock /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>다음과 같이 작성해주세요.</p>
+<p>코드가 이해가지 않는 분들을 위한 설명타임이 있겠습니다.</p>
+<p><code>componentDidMount</code>는 컴포넌트가 랜더링 될 시기를 의미합니다.
+그러면</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">componentDidMount() {
+    this.timerID = setInterval(() =&gt; this.tick(), 1000);
+  }</code>
+        </deckgo-highlight-code>
+<p>다음과 같은 코드는 <strong>컴포넌트가 마운트 될 때 매초 tick이라는 함수를 실행한다는 의미입니다.</strong></p>
+<p><code>componentWillUnmount</code>는 컴포넌트가 삭제될 시기를 의미합니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">componentWillUnmount() {
+    clearInterval(this.timerID);
+  }</code>
+        </deckgo-highlight-code>
+<p>다음과 같은 코드는 interval된 타이머 함수를 컴포넌트가 삭제될 때 제거하겠다는 의미입니다.</p>
+<h1>State 업데이트는 비동기적일 수도 있습니다.</h1>
+<p>이 부분에서 state사용에 오류가 나는 경우가 많이 있습니다.</p>
+<p>this.props와 this.state가 비동기적으로 업데이트될 수 있기 때문에 다음 state를 계산할 때 해당 값에 의존해서는 안 됩니다.</p>
+<p>예를 한번 들어볼까요?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">// Wrong
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});</code>
+        </deckgo-highlight-code>
+<p>이 업데이트는 실패할 수 있습니다.</p>
+<p>이를 수정하기 위해 객체보다는 함수를 인자로 사용하는 다른 형태의 setState()를 사용합니다. 그 함수는 이전 state를 첫 번째 인자로 받아들일 것이고, 업데이트가 적용된 시점의 props를 두 번째 인자로 받아들일 것입니다.</p>
+<p>즉, 다음 형식으로 작성하면 됩니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">// Correct
+this.setState((state, props) =&gt; ({
+  counter: state.counter + props.increment,
+}));</code>
+        </deckgo-highlight-code>
+<p>이전 state와 업데이트가 적용된 props를 받고 진행을 할겁니다.</p>
+<blockquote>
+<p>물론 화살표 함수 말고 그냥 function키워드 함수도 가능합니다.</p>
+</blockquote>
+<p><img src="https://media.vlpt.us/images/daybreak/post/4dfb762a-30f3-48ed-a380-4260f8c7e39f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-07-09%2016.39.35.png" alt="image"></p>
+<p>이 부분 정확히 짚고 넘어가주세요!</p>
+<h1>State 업데이트는 병합됩니다</h1>
+<p><code>setState()</code>를 호출할 때 React는 제공한 객체를 현재 state로 병합합니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">  constructor(props) {
+    super(props);
+    this.state = {
+      posts: [],
+      comments: []
+    };
+  }</code>
+        </deckgo-highlight-code>
+<p>다양한 독립적인 변수를 선언할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">  componentDidMount() {
+    fetchPosts().then(response =&gt; {
+      this.setState({
+        posts: response.posts
+      });
+    });
+
+    fetchComments().then(response =&gt; {
+      this.setState({
+        comments: response.comments
+      });
+    });
+  }</code>
+        </deckgo-highlight-code>
+<p><strong>this.setState({comments})는 this.state.posts에 영향을 주진 않지만 this.state.comments는 완전히 대체됩니다.</strong></p>
+<h1>데이터는 아래로 흐릅니다.</h1>
+<p>컴포넌트는 자신의 state를 자식 컴포넌트에 props로 전달할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;FormattedDate date={this.state.date} /&gt;</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p>FormattedDate 컴포넌트는 date를 자신의 props로 받을 것이고 이것이 Clock의 state로부터 왔는지, Clock의 props에서 왔는지, 수동으로 입력한 것인지 알지 못합니다.</p>
+</blockquote>
+<p><strong>트리구조가 props들의 폭포라고 상상하면 각 컴포넌트의 state는 임의의 점에서 만나지만 동시에 아래로 흐르는 부가적인 수원(water source)이라고 할 수 있습니다.</strong></p>
+<h1>이벤트 처리하기 🎪</h1>
+<p>React에서 이벤트를 처리하는 방식은 DOM엘리먼트에서 이벤트를 처리하는 방식과 거의 동일합니다.</p>
+<p>단, 문법적 차이가 있습니다.</p>
+<ul>
+<li>React의 이벤트는 소문자 대신 캐멀 케이스(camelCase)를 사용합니다.</li>
+<li>JSX를 사용하여 문자열이 아닌 함수로 이벤트 핸들러를 전달합니다.</li>
+</ul>
+<p>HTML에서 이벤트를 처리하는 방법은 다음과 같습니다.</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;button onclick=&quot;activateLasers()&quot;&gt;Activate Lasers&lt;/button&gt;</code>
+        </deckgo-highlight-code>
+<p>React에서는 조금 다른방식으로 처리합니다.</p>
+<deckgo-highlight-code jsx  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;button onClick={activateLasers}&gt;Activate Lasers&lt;/button&gt;</code>
+        </deckgo-highlight-code>
+<p>또 다른 차이점으로, React에서는 false를 반환해도 기본 동작을 방지할 수 없습니다. 반드시 preventDefault를 명시적으로 호출해야 합니다.</p>
+<p>이게 무슨 말인지 이해가 되지 않는다면 다음의 코드를 살펴보세요.</p>
+<p>HTML에서 a태그의 새 페이지를 여는 동작을 방지하기 위해서 다음과 같이 씁니다.</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;a href=&quot;#&quot; onclick=&quot;console.log(&#39;The link was clicked.&#39;); return false&quot;&gt;
+  Click me
+&lt;/a&gt;</code>
+        </deckgo-highlight-code>
+<p>리액트에서는 return false를 한다고 해결되지 않습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log(&quot;The link was clicked.&quot;);
+  }
+
+  return (
+    &lt;a href=&quot;#&quot; onClick={handleClick}&gt;
+      Click me
+    &lt;/a&gt;
+  );
+}</code>
+        </deckgo-highlight-code>
+<p><code>preventDefault()</code>라는 함수를 사용해서 <strong>React 이벤트는 브라우저 고유 이벤트와 정확히 동일하게 동작하지는 않습니다.</strong></p>
+<p>또한 React에서 <code>addEventListener</code>를 사용할 필요가 없습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isToggleOn: true };
+
+    // 콜백에서 `this`가 작동하려면 아래와 같이 바인딩 해주어야 합니다.
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState((state) =&gt; ({
+      isToggleOn: !state.isToggleOn,
+    }));
+  }
+
+  render() {
+    return (
+      &lt;button onClick={this.handleClick}&gt;
+        {this.state.isToggleOn ? &quot;ON&quot; : &quot;OFF&quot;}
+      &lt;/button&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;Toggle /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>이렇게 작성하면 정삭적으로 onClick이 리스닝 됩니다.</p>
+<p>하지만 코드를 보면 조금 햇갈리는 부분이 있을겁니다.</p>
+<p>바로 <code>.bind</code>부분인데요.</p>
+<p>JSX콜백 안에서 this의 의미를 생각해 보아야합니다.</p>
+<p><strong>JavaScript에서 클래스 메서드는 기본적으로 바인딩되어 있지 않습니다</strong></p>
+<h1>이벤트 핸들러에 인자 전달하기</h1>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;button onClick={(e) =&gt; this.deleteRow(id, e)}&gt;Delete Row&lt;/button&gt;
+&lt;button onClick={this.deleteRow.bind(this, id)}&gt;Delete Row&lt;/button&gt;</code>
+        </deckgo-highlight-code>
+<ul>
+<li>화살표 함수를 사용하면 event를 명시적으로 전달해 주어야하고,</li>
+<li>bind를 하면 자동으로 event가 전달됩니다.</li>
+</ul>
+<h1>조건부 렌더링</h1>
+<p>React에서는 원하는 동작을 캡슐화하는 컴포넌트를 만들 수 있습니다.</p>
+<p>React에서 조건부 렌더링은 JavaScript에서의 조건 처리와 같이 동작합니다</p>
+<p>한번 보도록 할까요?</p>
+<p>로그인을 할 때 로그인 상태에 맞는 컴포넌트를 렌더링 해주어야 합니다.</p>
+<p>예를 들어서 밑에 두 컴포넌트가 있다고 해봅시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function UserGreeting(props) {
+  return &lt;h1&gt;Welcome back!&lt;/h1&gt;;
+}
+
+function GuestGreeting(props) {
+  return &lt;h1&gt;Please sign up.&lt;/h1&gt;;
+}</code>
+        </deckgo-highlight-code>
+<p>그러면 로그인이 되었을때와 안되었을때를 나누어서 조건부 렌더링을 해야하죠?</p>
+<p>이제 그 방법을 살펴보도록 하겠습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return &lt;UserGreeting /&gt;;
+  }
+  return &lt;GuestGreeting /&gt;;
+}
+
+ReactDOM.render(
+  // Try changing to isLoggedIn={true}:
+  &lt;Greeting isLoggedIn={false} /&gt;,
+  document.getElementById(&quot;root&quot;)
+);</code>
+        </deckgo-highlight-code>
+<p>props로 전달받은 isLoggedIn이라는 상태를 기반으로 <code>if</code>으로 조건부 렌더링을 하는 부분이 보이죠?</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">if (isLoggedIn) {
+  return &lt;UserGreeting /&gt;;
+}
+return &lt;GuestGreeting /&gt;;</code>
+        </deckgo-highlight-code>
+<p>이부분을 유심히 봐주세요.</p>
+<p><strong>이 예시는 isLoggedIn prop에 따라서 다른 인사말을 렌더링 합니다.</strong></p>
+<p>컴포넌트 단위 말고도 엘리먼트 단위로도 구현할 수 있습니다.</p>
+<p>다음과 같은 컴포넌트가 있다고 생각해봅시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function LoginButton(props) {
+  return &lt;button onClick={props.onClick}&gt;Login&lt;/button&gt;;
+}
+
+function LogoutButton(props) {
+  return &lt;button onClick={props.onClick}&gt;Logout&lt;/button&gt;;
+}</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class LoginControl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleLogoutClick = this.handleLogoutClick.bind(this);
+    this.state = { isLoggedIn: false };
+  }
+
+  handleLoginClick() {
+    this.setState({ isLoggedIn: true });
+  }
+
+  handleLogoutClick() {
+    this.setState({ isLoggedIn: false });
+  }
+
+  render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    let button;
+    if (isLoggedIn) {
+      button = &lt;LogoutButton onClick={this.handleLogoutClick} /&gt;;
+    } else {
+      button = &lt;LoginButton onClick={this.handleLoginClick} /&gt;;
+    }
+
+    return (
+      &lt;div&gt;
+        &lt;Greeting isLoggedIn={isLoggedIn} /&gt;
+        {button}
+      &lt;/div&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;LoginControl /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>이제 만들었던 컴포넌트를 이렇게 렌더링할 수 있습니다.</p>
+<p>여기서 if문을 사용해서 조건부 렌더링 해도 되지만, 다양한 방법을 사용해서 축약형으로 사용할 수 있습니다.</p>
+<h1>논리 &#x26;&#x26; 연산자로 If를 인라인으로 표현하기</h1>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Mailbox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Hello!&lt;/h1&gt;
+      {unreadMessages.length &gt; 0 &amp;&amp; (
+        &lt;h2&gt;You have {unreadMessages.length} unread messages.&lt;/h2&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+
+const messages = [&quot;React&quot;, &quot;Re: React&quot;, &quot;Re:Re: React&quot;];
+ReactDOM.render(
+  &lt;Mailbox unreadMessages={messages} /&gt;,
+  document.getElementById(&quot;root&quot;)
+);</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p>JavaScript에서 true &#x26;&#x26; expression은 항상 expression으로 평가되고 false &#x26;&#x26; expression은 항상 false로 평가됩니다.</p>
+</blockquote>
+<p>따라서 &#x26;&#x26; 뒤의 엘리먼트는 조건이 true일때 출력이 됩니다. 조건이 false라면 React는 무시합니다.</p>
+<h1>조건부 연산자로 If-Else구문 인라인으로 표현하기</h1>
+<p>흔히 아는 삼항연산자를 사용해서 이를 더 축약할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">render() {
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    &lt;div&gt;
+      The user is &lt;b&gt;{isLoggedIn ? &#39;currently&#39; : &#39;not&#39;}&lt;/b&gt; logged in.
+    &lt;/div&gt;
+  );
+}</code>
+        </deckgo-highlight-code>
+<p>이는 간단한 예시이지만, 나중에 조건이 많아지면 이 방법이 복잡할 수 있습니다.</p>
+<p><strong>JavaScript와 마찬가지로, 가독성이 좋다고 생각하는 방식을 선택하면 됩니다. 또한 조건이 너무 복잡하다면 컴포넌트를 분리하기 좋을 때 일 수도 있다는 것을 기억하세요.</strong></p>
+<h1>컴포넌트가 렌더링하는 것을 막기</h1>
+<p>저는 무슨 프로그램이는 최적화가 가장 중요하다고 생각합니다.</p>
+<p>이 부분은 최적화와 관련된 부분이므로 집중해서 공부해보겠습니다.</p>
+<p>아래의 예시에서는 <WarningBanner />가 warn prop의 값에 의해서 렌더링됩니다. prop이 false라면 컴포넌트는 렌더링하지 않게 됩니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function WarningBanner(props) {
+  if (!props.warn) {
+    return null;
+  }
+
+  return &lt;div className=&quot;warning&quot;&gt;Warning!&lt;/div&gt;;
+}
+
+class Page extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { showWarning: true };
+    this.handleToggleClick = this.handleToggleClick.bind(this);
+  }
+
+  handleToggleClick() {
+    this.setState((state) =&gt; ({
+      showWarning: !state.showWarning,
+    }));
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;WarningBanner warn={this.state.showWarning} /&gt;
+        &lt;button onClick={this.handleToggleClick}&gt;
+          {this.state.showWarning ? &quot;Hide&quot; : &quot;Show&quot;}
+        &lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;Page /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>컴포넌트의 render 메서드로부터 null을 반환하는 것은 생명주기 메서드 호출에 영향을 주지 않습니다. 그 예로 componentDidUpdate는 계속해서 호출되게 됩니다.</p>
+<h1>리스트와 Key</h1>
+<p>먼저 JavaScript에서 리스트를 어떻게 변환하는지 살펴봅시다.</p>
+<p>TicTacToe를 구현하면서 key와 리스트 관련해서 이슈가 있었던 적이있죠?</p>
+<p>이번 챕터에서는 그걸 더 자세히 알아볼려고 해요.</p>
+<p>리액트에서 엘리먼트 리스트를 만드는 방법은 다음과 유사합니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((number) =&gt; number * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]</code>
+        </deckgo-highlight-code>
+<ul>
+<li>여러개의 컴포넌트 렌더링하기</li>
+</ul>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((number) =&gt; &lt;li&gt;{number}&lt;/li&gt;);</code>
+        </deckgo-highlight-code>
+<p>이러면 listItems는 다음과 같은 모습을 하고있을 겁니다.</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;li&gt;1&lt;/li&gt;
+&lt;li&gt;2&lt;/li&gt;
+&lt;li&gt;3&lt;/li&gt;
+&lt;li&gt;4&lt;/li&gt;
+&lt;li&gt;5&lt;/li&gt;</code>
+        </deckgo-highlight-code>
+<p>간단하죠?</p>
+<p><strong>일반적으로 컴포넌트 안에서 리스트를 렌더링합니다.</strong></p>
+<p>다음과 같이 작성합니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt; &lt;li&gt;{number}&lt;/li&gt;);
+  return &lt;ul&gt;{listItems}&lt;/ul&gt;;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  &lt;NumberList numbers={numbers} /&gt;,
+  document.getElementById(&quot;root&quot;)
+);</code>
+        </deckgo-highlight-code>
+<p>자, 실행해보세요.</p>
+<p>오류가 뜨나요?</p>
+<p>코드를 위의 코드 그대로 쓴 게 맞다면, 오류뜨는게 정상입니다.
+<img src="https://user-images.githubusercontent.com/48292190/116847416-6ef13100-ac25-11eb-9a79-ae3cd0c6873a.png" alt="image"></p>
+<p><strong>리스트의 각 항목에 key를 넣어야 한다는 경고가 표시됩니다.</strong></p>
+<p>“key”는 엘리먼트 리스트를 만들 때 포함해야 하는 특수한 문자열 어트리뷰트입니다.</p>
+<p>key의 역할에 대해서는 다음에 더욱 자세히 설명해보죠.</p>
+<p>지금은 오류부터 해결해 보자구요.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt; &lt;li key={number}&gt;{number}&lt;/li&gt;);
+  return &lt;ul&gt;{listItems}&lt;/ul&gt;;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  &lt;NumberList numbers={numbers} /&gt;,
+  document.getElementById(&quot;root&quot;)
+);</code>
+        </deckgo-highlight-code>
+<p>어때요 오류가 잘 없어졌나요?</p>
+<h1>key</h1>
+<p>이제 key가 하는 역할을 좀 더 자세히 알아보도록 하겠습니다.</p>
+<p>key는 일종의 식별하기 위한 속성입니다.</p>
+<p>어떤 항목을 변경, 추가 또는 삭제할지 식별하는 것을 돕습니다.</p>
+<p>Key를 선택하는 가장 좋은 방법은 리스트의 다른 항목들 사이에서 해당 항목을 고유하게 식별할 수 있는 문자열을 사용하는 것입니다. 대부분의 경우 데이터의 ID를 key로 사용합니다.</p>
+<p><strong>정말 만약에 데이터에 id항목이 없다면 최후의 수단으로 index를 사용할 수 있습니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const todoItems = todos.map((todo, index) =&gt; (
+  // Only do this if items have no stable IDs
+  &lt;li key={index}&gt;{todo.text}&lt;/li&gt;
+));</code>
+        </deckgo-highlight-code>
+<p>권장하는 방법은 아니며, 이로 인해 성능이 저하되거나 컴포넌트의 state와 관련된 문제가 발생할 수 있습니다.</p>
+<p><strong>만약 리스트 항목에 명시적으로 key를 지정하지 않으면 React는 기본적으로 인덱스를 key로 사용합니다.</strong></p>
+<p>그래서 오류로만 끝나는 것이죠.</p>
+<p>다음은 잘못된 key의 사용법입니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function ListItem(props) {
+  const value = props.value;
+  return (
+    // 틀렸습니다! 여기에는 key를 지정할 필요가 없습니다.
+    &lt;li key={value.toString()}&gt;{value}&lt;/li&gt;
+  );
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt; (
+    // 틀렸습니다! 여기에 key를 지정해야 합니다.
+    &lt;ListItem value={number} /&gt;
+  ));
+  return &lt;ul&gt;{listItems}&lt;/ul&gt;;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  &lt;NumberList numbers={numbers} /&gt;,
+  document.getElementById(&quot;root&quot;)
+);</code>
+        </deckgo-highlight-code>
+<p>다음은 key의 옳은 사용법입니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function ListItem(props) {
+  // 맞습니다! 여기에는 key를 지정할 필요가 없습니다.
+  return &lt;li&gt;{props.value}&lt;/li&gt;;
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt; (
+    // 맞습니다! 배열 안에 key를 지정해야 합니다.
+    &lt;ListItem key={number.toString()} value={number} /&gt;
+  ));
+  return &lt;ul&gt;{listItems}&lt;/ul&gt;;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  &lt;NumberList numbers={numbers} /&gt;,
+  document.getElementById(&quot;root&quot;)
+);</code>
+        </deckgo-highlight-code>
+<p>감이 잡히시나요?</p>
+<h1>Key는 형제 사이에서만 고유한 값이어야 한다.</h1>
+<p>이 부분은 코드를 보면 이해가 가실겁니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function Blog(props) {
+  const sidebar = (
+    &lt;ul&gt;
+      {props.posts.map((post) =&gt; (
+        &lt;li key={post.id}&gt;{post.title}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+  const content = props.posts.map((post) =&gt; (
+    &lt;div key={post.id}&gt;
+      &lt;h3&gt;{post.title}&lt;/h3&gt;
+      &lt;p&gt;{post.content}&lt;/p&gt;
+    &lt;/div&gt;
+  ));
+  return (
+    &lt;div&gt;
+      {sidebar}
+      &lt;hr /&gt;
+      {content}
+    &lt;/div&gt;
+  );
+}
+
+const posts = [
+  { id: 1, title: &quot;Hello World&quot;, content: &quot;Welcome to learning React!&quot; },
+  { id: 2, title: &quot;Installation&quot;, content: &quot;You can install React from npm.&quot; },
+];
+ReactDOM.render(&lt;Blog posts={posts} /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>post.id가 두번 사용되었는데 잘 실행됩니다.</p>
+<p>즉 여기서 알 수 있는 사실은,</p>
+<p><strong>Key는 배열 안에서 형제 사이에서 고유해야 하고 전체 범위에서 고유할 필요는 없습니다. 두 개의 다른 배열을 만들 때 동일한 key를 사용할 수 있습니다.</strong></p>
+<p>React에서 key는 힌트를 제공하지만 컴포넌트로 전달하지는 않습니다.</p>
+<p>즉, 컴포넌트에서 key에 접근할 수 없다는 것이지요.</p>
+<p>만약 다음과 같이 속성을 전달했다고 해봅시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const content = posts.map((post) =&gt; (
+  &lt;Post key={post.id} id={post.id} title={post.title} /&gt;
+));</code>
+        </deckgo-highlight-code>
+<p>그 다음 컴포넌트에서 props.key를 접근할려고 하면 읽을 수 없습니다.</p>
+<p><strong>이제 어느정도 key개념이 이해가 가시나요?</strong></p>
+<h1>💬 폼</h1>
+<p>최소한 여러분들이 HTML에서 form태그를 사용해봤다면
+다음코드를 이해하실 수 있을겁니다.</p>
+<deckgo-highlight-code html  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;form&gt;
+  &lt;label&gt;
+    Name:
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;
+  &lt;/label&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;</code>
+        </deckgo-highlight-code>
+<p><strong>이 폼은 사용자가 폼을 제출하면 새로운 페이지로 이동하는 기본 HTML 폼 동작을 수행합니다.</strong></p>
+<p>React에서 동일한 동작을 원한다면 그대로 사용하면 됩니다. 그러나 대부분의 경우, JavaScript 함수로 폼의 제출을 처리하고 사용자가 폼에 입력한 데이터에 접근하도록 하는 것이 편리합니다</p>
+<p>이를 위한 표준 방식은 “제어 컴포넌트 (controlled components)“라고 불리는 기술을 이용하는 것입니다.</p>
+<h2>제어 컴포넌트 (Controlled Component)</h2>
+<p>HTML에서 <code>&#x3C;input></code>, <code>&#x3C;textarea></code>, <code>&#x3C;select></code>와 같은 폼 엘리먼트는 일반적으로 사용자의 입력을 기반으로 자신의 state를 관리하고 업데이트합니다. React에서는 변경할 수 있는 state가 일반적으로 컴포넌트의 state 속성에 유지되며 setState()에 의해 업데이트됩니다.</p>
+<p><strong>React에 의해 값이 제어되는 입력 폼 엘리먼트를 “제어 컴포넌트 (controlled component)“라고 합니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: &quot;&quot; };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    alert(&quot;A name was submitted: &quot; + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      &lt;form onSubmit={this.handleSubmit}&gt;
+        &lt;label&gt;
+          Name:
+          &lt;input
+            type=&quot;text&quot;
+            value={this.state.value}
+            onChange={this.handleChange}
+          /&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+      &lt;/form&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>value 어트리뷰트는 폼 엘리먼트에 설정되므로 표시되는 값은 항상 this.state.value가 되고 React state는 신뢰 가능한 단일 출처 (single source of truth)가 됩니다. React state를 업데이트하기 위해 모든 키 입력에서 handleChange가 동작하기 때문에 사용자가 입력할 때 보여지는 값이 업데이트됩니다.</p>
+<p>제어 컴포넌트로 사용하면, input의 값은 항상 React state에 의해 결정됩니다. 코드를 조금 더 작성해야 한다는 의미이지만, <strong>다른 UI 엘리먼트에 input의 값을 전달하거나 다른 이벤트 핸들러에서 값을 재설정할 수 있습니다.</strong></p>
+<h2>textarea 태그</h2>
+<p>HTML에서 <code>&#x3C;textarea></code> 엘리먼트는 텍스트를 자식으로 정의합니다.</p>
+<p>React에서 <code>&#x3C;textarea></code>는 value 어트리뷰트를 대신 사용합니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;textarea value={this.state.value} onChange={this.handleChange} /&gt;</code>
+        </deckgo-highlight-code>
+<p>이런식으로 사용합니다.</p>
+<h2>select 태그</h2>
+<p>HTML에서 <code>&#x3C;select></code>는 드롭 다운 목록을 만듭니다. 예를 들어, 이 HTML은 과일 드롭 다운 목록을 만듭니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;select&gt;
+  &lt;option value=&quot;grapefruit&quot;&gt;Grapefruit&lt;/option&gt;
+  &lt;option value=&quot;lime&quot;&gt;Lime&lt;/option&gt;
+  &lt;option selected value=&quot;coconut&quot;&gt;
+    Coconut
+  &lt;/option&gt;
+  &lt;option value=&quot;mango&quot;&gt;Mango&lt;/option&gt;
+&lt;/select&gt;</code>
+        </deckgo-highlight-code>
+<p>selected 옵션이 있으므로 Coconut 옵션이 초기값이 되는 점을 주의해주세요.</p>
+<p>React에서는 selected 어트리뷰트를 사용하는 대신 <strong>최상단 select태그에 value 어트리뷰트를 사용합니다.</strong> 한 곳에서 업데이트만 하면되기 때문에 제어 컴포넌트에서 사용하기 더 편합니다. 아래는 예시입니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class FlavorForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: &quot;coconut&quot; };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    alert(&quot;Your favorite flavor is: &quot; + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      &lt;form onSubmit={this.handleSubmit}&gt;
+        &lt;label&gt;
+          Pick your favorite flavor:
+          &lt;select value={this.state.value} onChange={this.handleChange}&gt;
+            &lt;option value=&quot;grapefruit&quot;&gt;Grapefruit&lt;/option&gt;
+            &lt;option value=&quot;lime&quot;&gt;Lime&lt;/option&gt;
+            &lt;option value=&quot;coconut&quot;&gt;Coconut&lt;/option&gt;
+            &lt;option value=&quot;mango&quot;&gt;Mango&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/label&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+      &lt;/form&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p><code>전반적으로 &#x3C;input type="text">, &#x3C;textarea> 및 &#x3C;select> 모두 매우 비슷하게 동작합니다. 모두 제어 컴포넌트를 구현하는데 value 어트리뷰트를 허용합니다.</code></p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116849907-9a2a4f00-ac2a-11eb-8719-49bef877e570.png" alt="image"></p>
+<h1>file input 태그</h1>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">&lt;input type=&quot;file&quot; /&gt;</code>
+        </deckgo-highlight-code>
+<p>값이 읽기 전용이기 때문에 React에서는 비제어 컴포넌트입니다.</p>
+<h1>다중 입력 제어하기</h1>
+<p>여러 input 엘리먼트를 제어해야할 때, 각 엘리먼트에 name 어트리뷰트를 추가하고 event.target.name 값을 통해 핸들러가 어떤 작업을 할 지 선택할 수 있게 해줍니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Reservation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isGoing: true,
+      numberOfGuests: 2,
+    };
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.type === &quot;checkbox&quot; ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  render() {
+    return (
+      &lt;form&gt;
+        &lt;label&gt;
+          Is going:
+          &lt;input
+            name=&quot;isGoing&quot;
+            type=&quot;checkbox&quot;
+            checked={this.state.isGoing}
+            onChange={this.handleInputChange}
+          /&gt;
+        &lt;/label&gt;
+        &lt;br /&gt;
+        &lt;label&gt;
+          Number of guests:
+          &lt;input
+            name=&quot;numberOfGuests&quot;
+            type=&quot;number&quot;
+            value={this.state.numberOfGuests}
+            onChange={this.handleInputChange}
+          /&gt;
+        &lt;/label&gt;
+      &lt;/form&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p><code>computed property name</code>를 사용해서 더욱 간단하게 state를 업데이트를 할 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">this.setState({
+  [name]: value,
+});</code>
+        </deckgo-highlight-code>
+<p>computed property name를 사용하지 않는다면 코드의 양이 길어질 겁니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">var partialState = {};
+partialState[name] = value;
+this.setState(partialState);</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p>setState()는 자동적으로 현재 state에 일부 state를 병합하기 때문에 바뀐 부분에 대해서만 호출하면 됩니다.</p>
+</blockquote>
+<h1>제어되는 Input Null 값</h1>
+<p>value prop을 지정하면 의도하지 않는 한 사용자가 변경할 수 없습니다. value를 설정했는데 여전히 수정할 수 있다면 실수로 value를 undefined나 null로 설정했을 수 있습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">ReactDOM.render(&lt;input value=&quot;hi&quot; /&gt;, mountNode);
+
+setTimeout(function () {
+  ReactDOM.render(&lt;input value={null} /&gt;, mountNode);
+}, 1000);</code>
+        </deckgo-highlight-code>
+<p><strong>위 코드는 첫 번째 입력은 잠겨있지만 1초 후 입력이 가능해집니다.</strong></p>
+<h1>State 끌어올리기</h1>
+<p><img src="https://user-images.githubusercontent.com/48292190/116857141-4bcf7d00-ac37-11eb-8ab4-4b753b17af9c.png" alt="image"></p>
+<blockquote>
+<p>⚠️ 이 파트는 어려운 여정이 될수도 있습니다. 정신 바짝차리고 따라오세요.</p>
+</blockquote>
+<p><strong>이번 섹션에서는 주어진 온도에서 물의 끓는 여부를 추정하는 온도 계산기를 만들어볼 것입니다.</strong></p>
+<p>먼저 <code>BoilingVerdict</code>이라는 컴포넌트부터 만들어봅시다.</p>
+<p><strong>이 컴포넌트는 섭씨온도를 의미하는 celsius prop를 받아서 이 온도가 물이 끓기에 충분한지 여부를 출력합니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function BoilingVerdict(props) {
+  if (props.celsius &gt;= 100) {
+    return &lt;p&gt;The water would boil.&lt;/p&gt;;
+  }
+  return &lt;p&gt;The water would not boil.&lt;/p&gt;;
+}</code>
+        </deckgo-highlight-code>
+<p>그 다음 <code>Calculator</code>라는 컴포넌트도 하나 만들어보도록 하겠습니다.</p>
+<p><strong>이 컴포넌트는 온도를 입력할 수 있는 <code>&#x3C;input></code>을 렌더링하고 그 값을 this.state.temperature에 저장합니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = { temperature: &quot;&quot; };
+  }
+
+  handleChange(e) {
+    this.setState({ temperature: e.target.value });
+  }
+
+  render() {
+    const temperature = this.state.temperature;
+    return (
+      &lt;fieldset&gt;
+        &lt;legend&gt;Enter temperature in Celsius:&lt;/legend&gt;
+        &lt;input value={temperature} onChange={this.handleChange} /&gt;
+        &lt;BoilingVerdict celsius={parseFloat(temperature)} /&gt;
+      &lt;/fieldset&gt;
+    );
+  }
+}</code>
+        </deckgo-highlight-code>
+<p>이제 렌더링된 화면을 보도록 하겠습니다.</p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116857877-7a9a2300-ac38-11eb-827a-5e9fcd473273.png" alt="image"></p>
+<p><em>100도가 넘어가면 자동으로 렌더링 되는 모습을 볼 수 있죠?</em></p>
+<h1>두 번째 Input 추가하기</h1>
+<p>이제 화씨 입력칸도 만들어야하기 때문에 Calculator에서 TemperatureInput라는 컴포넌트를 만들어서 위로 올리는 작업을 해주어야 합니다.</p>
+<p>다음과 같이 TemperatureInput에 로직들을 올려주고, Calculator에서 두개의 TemperatureInput을 랜더링 시켜줍시다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const scaleNames = {
+  c: &quot;Celsius&quot;,
+  f: &quot;Fahrenheit&quot;,
+};
+
+class TemperatureInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = { temperature: &quot;&quot; };
+  }
+
+  handleChange(e) {
+    this.setState({ temperature: e.target.value });
+  }
+
+  render() {
+    const temperature = this.state.temperature;
+    const scale = this.props.scale;
+    return (
+      &lt;fieldset&gt;
+        &lt;legend&gt;Enter temperature in {scaleNames[scale]}:&lt;/legend&gt;
+        &lt;input value={temperature} onChange={this.handleChange} /&gt;
+      &lt;/fieldset&gt;
+    );
+  }
+}
+
+function BoilingVerdict(props) {
+  if (props.celsius &gt;= 100) {
+    return &lt;p&gt;The water would boil.&lt;/p&gt;;
+  }
+  return &lt;p&gt;The water would not boil.&lt;/p&gt;;
+}
+
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = { temperature: &quot;&quot; };
+  }
+
+  handleChange(e) {
+    this.setState({ temperature: e.target.value });
+  }
+
+  render() {
+    const temperature = this.state.temperature;
+    return (
+      &lt;div&gt;
+        &lt;TemperatureInput scale=&quot;c&quot; /&gt;
+        &lt;TemperatureInput scale=&quot;f&quot; /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;Calculator /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>그러면 화면에 input 컴포넌트가 2개가 나올겁니다.</p>
+<p><img src="https://user-images.githubusercontent.com/48292190/116858378-3bb89d00-ac39-11eb-8e66-b23f42869d52.png" alt="image"></p>
+<p>둘 중 하나에 온도를 입력하더라도 다른 하나는 갱신되지 않는 문제가 있습니다.</p>
+<p>이제 하나하나 개발해봅시다.</p>
+<h1>변환 함수 작성하기</h1>
+<p>섭씨를 화씨로, 또는 그 반대로 변환해주는 함수를 작성해보겠습니다.</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function toCelsius(fahrenheit) {
+  return ((fahrenheit - 32) * 5) / 9;
+}
+
+function toFahrenheit(celsius) {
+  return (celsius * 9) / 5 + 32;
+}</code>
+        </deckgo-highlight-code>
+<p>다음은 공식입니다.</p>
+<p>두 함수는 공식을 반환합니다.</p>
+<p>이제 temperature 문자열과 변환 함수를 인수로 취해서 문자열을 반환하는 또 다른 함수를 작성해보겠습니다</p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">function tryConvert(temperature, convert) {
+  const input = parseFloat(temperature);
+  if (Number.isNaN(input)) {
+    return &quot;&quot;;
+  }
+  const output = convert(input);
+  const rounded = Math.round(output * 1000) / 1000;
+  return rounded.toString();
+}</code>
+        </deckgo-highlight-code>
+<blockquote>
+<p>예를 들어 tryConvert('abc', toCelsius)는 빈 문자열을 반환하고 tryConvert('10.22', toFahrenheit)는 '50.396'을 반환합니다.</p>
+</blockquote>
+<h1>State 끌어올리기</h1>
+<p>우리는 두 입력값이 서로의 것과 동기화된 상태로 있길 원합니다. 섭씨온도 입력값을 변경할 경우 화씨온도 입력값 역시 변환된 온도를 반영할 수 있어야 하며, 그 반대의 경우에도 마찬가지여야 합니다.</p>
+<p><strong>React에서 state를 공유하는 일은 그 값을 필요로 하는 컴포넌트 간의 가장 가까운 공통 조상으로 state를 끌어올림으로써 이뤄낼 수 있습니다.</strong></p>
+<deckgo-highlight-code js  terminal="carbon" theme="panda"  highlight-lines="">
+          <code slot="code">const scaleNames = {
+  c: &quot;Celsius&quot;,
+  f: &quot;Fahrenheit&quot;,
+};
+
+function toCelsius(fahrenheit) {
+  return ((fahrenheit - 32) * 5) / 9;
+}
+
+function toFahrenheit(celsius) {
+  return (celsius * 9) / 5 + 32;
+}
+
+function tryConvert(temperature, convert) {
+  const input = parseFloat(temperature);
+  if (Number.isNaN(input)) {
+    return &quot;&quot;;
+  }
+  const output = convert(input);
+  const rounded = Math.round(output * 1000) / 1000;
+  return rounded.toString();
+}
+
+function BoilingVerdict(props) {
+  if (props.celsius &gt;= 100) {
+    return &lt;p&gt;The water would boil.&lt;/p&gt;;
+  }
+  return &lt;p&gt;The water would not boil.&lt;/p&gt;;
+}
+
+class TemperatureInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    this.props.onTemperatureChange(e.target.value);
+  }
+
+  render() {
+    const temperature = this.props.temperature;
+    const scale = this.props.scale;
+    return (
+      &lt;fieldset&gt;
+        &lt;legend&gt;Enter temperature in {scaleNames[scale]}:&lt;/legend&gt;
+        &lt;input value={temperature} onChange={this.handleChange} /&gt;
+      &lt;/fieldset&gt;
+    );
+  }
+}
+
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+    this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+    this.state = { temperature: &quot;&quot;, scale: &quot;c&quot; };
+  }
+
+  handleCelsiusChange(temperature) {
+    this.setState({ scale: &quot;c&quot;, temperature });
+  }
+
+  handleFahrenheitChange(temperature) {
+    this.setState({ scale: &quot;f&quot;, temperature });
+  }
+
+  render() {
+    const scale = this.state.scale;
+    const temperature = this.state.temperature;
+    const celsius =
+      scale === &quot;f&quot; ? tryConvert(temperature, toCelsius) : temperature;
+    const fahrenheit =
+      scale === &quot;c&quot; ? tryConvert(temperature, toFahrenheit) : temperature;
+
+    return (
+      &lt;div&gt;
+        &lt;TemperatureInput
+          scale=&quot;c&quot;
+          temperature={celsius}
+          onTemperatureChange={this.handleCelsiusChange}
+        /&gt;
+        &lt;TemperatureInput
+          scale=&quot;f&quot;
+          temperature={fahrenheit}
+          onTemperatureChange={this.handleFahrenheitChange}
+        /&gt;
+        &lt;BoilingVerdict celsius={parseFloat(celsius)} /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+ReactDOM.render(&lt;Calculator /&gt;, document.getElementById(&quot;root&quot;));</code>
+        </deckgo-highlight-code>
+<p>완성된 최종 코드입니다.</p>
+<p>이제 대충 리액트에 대한 전반적인 느낌은 가지고 계시겠죠?</p>
+<p>이제 여러분들이 해야할 것은</p>
+<h1>리액트로 사고하기 입니다.</h1>
+<p><a href="https://ko.reactjs.org/docs/thinking-in-react.html">이 링크</a>로 가셔서 리액트로 사고하는 방법을 좀 더 연구해보세요!</p>
+<h1>수고하셨습니다!</h1>
+<p><img src="https://i.pinimg.com/originals/a1/7c/c1/a17cc10c65943d6b1f319b72aa4aa1d5.gif" alt="image"></p>
+<p>이제 여러분은 간단한 리액트 개념에 대해서 알아보았습니다!</p></div></article></article><footer class="Layout__Footer-sc-1si20s3-4 bGvuYg">© All rights reserved. Powered by GitHub Pages.</footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/react_standard/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-fd41d3bba3dba0c60639.js"],"app":["/app-26986a0af943e786954a.js"],"component---src-pages-404-js":["/component---src-pages-404-js-facd4f6df0915737842e.js"],"component---src-pages-index-js":["/component---src-pages-index-js-68d9f373d0bca8dd50d8.js"],"component---src-template-post-page-jsx":["/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js"]};/*]]>*/</script><script src="/Tech-Blog/polyfill-fd41d3bba3dba0c60639.js" nomodule=""></script><script src="/Tech-Blog/component---src-template-post-page-jsx-7e898f8f7869d0c70edd.js" async=""></script><script src="/Tech-Blog/commons-d45e1a24fbc2ddfc6eaf.js" async=""></script><script src="/Tech-Blog/app-26986a0af943e786954a.js" async=""></script><script src="/Tech-Blog/framework-bee7a8ddabfa6589450d.js" async=""></script><script src="/Tech-Blog/webpack-runtime-d85e9d38bb0a871b2fec.js" async=""></script></body></html>
