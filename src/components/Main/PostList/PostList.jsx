@@ -1,9 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import * as sizes from "../../../styles/sizes.json"
 
-export default function PostList({ children, data }) {
+export default function PostList({ children }) {
 
   return <Container>{children}</Container>
 }
